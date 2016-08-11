@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping >
+	<!--订单明细信息-->
+	<class entity-name="order_form_info" table="order_form_info" dynamic-update="true">
+	    <id name="id" type="string">
+				<generator class="uuid.hex"></generator>
+		</id>
+        <!-- 订单ID -->
+        <property name="order_form_ID" type="string" />
+        <!-- 商品名称 -->
+        <property name="commodity_Name" type="string" />
+        <!-- 商品数量 -->
+        <property name="commodity_Count" type="string" />
+        <!-- 商品成本价 -->
+        <property name="commodity_Cost" type="string" />
+        <!-- 商品销售价 -->
+        <property name="commodity_Price" type="string" />
+    </class>
+</hibernate-mapping>

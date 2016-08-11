@@ -1,0 +1,994 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>添加至卡包</title><meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    name="viewport" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta name="format-detection" content="telephone=no" />
+<link rel="shortcut icon" href="userImage/Ico.ico" type="image/x-icon">
+<script src="userjs/common.js?v=20140925" type="text/javascript"></script>
+<script src="userjs/base_H5.js?v=20160130"></script>
+<script>
+    var Global = {
+        payDomain:"pay.shenhua3688.com",
+        conUrl: "http://web.wddcn.com/dzd",
+        huobidanwei: "￥",
+        closeLastVisitBar: function () {
+            document.getElementById("tip_bar").innerHTML = "";
+        },
+        LastVisit: function () {
+            var date = Date.parse(new Date());
+            if (typeof (sessionStorage.FirstVisit) == "undefined"
+                                                    && typeof (window.localStorage["LastVisitUrl881301"]) != "undefined"
+                                                    && window.localStorage["LastVisitUrl881301"] != ""
+                                        && window.localStorage["LastVisitUrl881301"] != location.href
+                                        && parseInt(date) < parseInt(window.localStorage["LastVisitTime881301"]) + 3600000) {
+
+                var str = ' <div style="width: 100%; height: 35px; line-height: 35px; position: fixed; bottom: 63px;z-index: 999999; background-color: #5d646c; color: #fff; font-size: 14px;">' +
+                            '<div onclick="Global.closeLastVisitBar()" style="float: left; text-align: center; width: 12%; height: 100%;"><img src="/moban/xfc/img/icon_close.png" style="width: 20px; margin-top: 6px;" /></div>' +
+                            '<a href="' + window.localStorage["LastVisitUrl881301"] + '" style="color:#fff;"><div style="float: left; width: 68%; height: 100%;">您可以回到上一次访问的页面</div>' +
+                            '<div style="float: left; width: 20%; height: 100%; text-align: center; vertical-align: middle;background-color: #fd5001; font-size: 16px;">Go</div></div></a>';
+                setTimeout(function () {
+                    document.getElementById("tip_bar").innerHTML = str;
+                    setTimeout(function () {
+                        Global.closeLastVisitBar();
+                    }, 10000)
+                }, 1500)
+
+            }
+
+            sessionStorage.FirstVisit = "0";
+            window.localStorage["LastVisitUrl881301"] = location.href;
+            window.localStorage["LastVisitTime881301"] = date;
+            window.localStorage["LastVisitTitle881301"] = document.title;
+        },
+        Init: function () {
+            Global.LastVisit();
+        }
+    };
+
+    Global.Init();
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?60bc21fba153655fcb1ba6fef3c0351b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    <link rel="stylesheet" type="text/css" href="usercss/base.css" />
+    <link rel="stylesheet" type="text/css" href="usercss/cart.css" />
+    <style>
+        .tmt-btn_l
+        {
+            display: block;
+            text-align: center;
+            height: 39px;
+            line-height: 39px;
+            font-size: 18px;
+        }
+        .tmt-btn_positive
+        {
+            color: #FFF;
+            background-color: #04BE02;
+        }
+        .tmt-btn_positive.tmt-btn_disable
+        {
+            color: rgba(255,255,255,.3);
+        }
+    </style>
+</head>
+<body>
+        <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        name="viewport">
+    <meta name="format-detection" content="telephone=no">
+</head>
+<style>@mem{} html, body {  font-size:12px; margin:0px;  font-family: "Microsoft YaHei" ! important; }  .hide{display:none;}
+.v_header{width:100%;height:45px;} .v_header .vv_header{width:100%;height:45px;line-height:45px; text-align:center;color:#fff;font-size:18px; background-color:#19993d;}.v_header .vv_header.fixed{ position:fixed;z-index:999999999;top:0px;} 
+.vv_header .topbar_back{  position:absolute;left:0px;width:55px;line-height:45px;} .vv_header .topbar_back .icon_back{width:14px;height:20px;margin-top: 14px; background:url(/moban/custom/img/button_back.png) no-repeat; background-size:100%;;} .top_menu_back{position:absolute;z-index:2;right:0px;width:85px;line-height:45px;}  .top_menu_back_back{position:absolute;z-index:1;right:0px;width:85px;line-height:45px;background-color: #000;opacity: 0.1;}  .v_header_right_menu a{color:#fff;}
+</style>
+<body>
+    <div id="v_header" class="v_header" style="display:none;">
+        <div class="vv_header">
+            <a id="v_header_reback" href="javascript:history.go(-1);">
+                <div class="topbar_back">
+                <center>
+                <div class="icon_back"></div>
+                   </center></div>
+            </a>
+            <div class="top_menu_back_back hide">
+                &nbsp;
+            </div>
+            <div class="v_header_right_menu">
+                <div class="top_menu_back">
+                </div>
+            </div>
+            <span class="v_header_title"></span>
+        </div>
+    </div>
+</body>
+<script>
+    var header = {
+        title: function (title) {
+            $(".v_header .v_header_title").eq(0).html(title);
+            if ("$platForm" == "wddAppDzd") {
+                sessionStorage.platformType = "$platForm"
+            }
+            if (sessionStorage.platformType) {
+                if (sessionStorage.platformType == "wddAppDzd") {
+                    $(".v_header .vv_header").eq(0).addClass("fixed");
+                } else {
+                    document.getElementById("v_header").style.display = "block";
+                }
+            } else {
+                document.getElementById("v_header").style.display="block";
+            }
+        },
+        fixed: function () {
+            $(".v_header .vv_header").eq(0).addClass("fixed");
+        },
+        closefixed: function () {
+            $(".v_header .vv_header").eq(0).removeClass("fixed");
+        },
+        rightMenu: function (html, hide) {
+            if (html != '' && hide == null)
+                $(".v_header .top_menu_back_back").eq(0).removeClass("hide");
+            $(".v_header .v_header_right_menu").eq(0).html(html);
+        },
+        binReback: function (url) {
+            if (url != "")
+                $(".v_header #v_header_reback").eq(0).attr("href", url);
+        },
+        rebackhide: function () {
+            $(".v_header #v_header_reback").eq(0).hide();
+        }
+    }
+</script>
+</html>
+  <!--  <header id="common_hd" class="c_txt rel">
+        <a href="mycoupon.html?sid=881301" id="hd_back" class="abs comm_p8">返回</a>
+        <h1 class="hd_tle bold">
+            添加优惠券</h1>
+    </header>-->
+        <div style="padding: 10px">
+        <table style="width: 100%">
+            <tr>
+                <td class="r_txt" style="width: 50px;">
+                    券码：
+                </td>
+                <td>
+                    <input class="input" id="code" value="" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div style="height: 1em">
+    </div>
+    <center>
+        <div class="c_txt block margin_auto blue_bg tybtn_radius" style="width: 95%; height: 2.5em;">
+            <div id="submit" class="btn_radius" style="width: 100%; height: 2.5em; line-height: 2.5em;
+                text-align: center; color: #fff;">
+                <strong>添加</strong>
+            </div>
+        </div>
+    </center>
+     <style>
+    @mem {
+    }
+
+    .footer_icon {
+        width: 41px;
+        height: 41px;
+    }
+
+    .footer_icon_0 {
+        background: url(userImage/menu1.png) no-repeat;
+        background-size: auto 100%;
+        background-position: 0 0;
+    }
+
+        .footer_icon_0.cur {
+            background: url(userImage/menu1.png) no-repeat;
+            background-size: auto 100%;
+            background-position: -41px 0;
+        }
+
+    .footer_icon_1 {
+        background: url(userImage/menu2.png) no-repeat;
+        background-size: auto 100%;
+        background-position: 0 0;
+    }
+
+        .footer_icon_1.cur {
+            background: url(userImage/menu2.png) no-repeat;
+            background-size: auto 100%;
+            background-position: -41px 0;
+        }
+
+    .footer_icon_2 {
+        background: url(userImage/menu3.png) no-repeat;
+        background-size: auto 100%;
+        background-position: 0 0;
+    }
+
+        .footer_icon_2.cur {
+            background: url(userImage/menu3.png) no-repeat;
+            background-size: auto 100%;
+            background-position: -41px 0;
+        }
+
+    .footer_icon_3 {
+        background: url(userImage/menu4.png) no-repeat;
+        background-size: auto 100%;
+        background-position: 0 0;
+    }
+
+        .footer_icon_3.cur {
+            background: url(userImage/menu4.png) no-repeat;
+            background-size: auto 100%;
+            background-position: -41px 0;
+        }
+
+    .button_tab_menu {
+        bottom: 0;
+        -webkit-transition: bottom 1s ease;
+        transition: bottom 1s ease;
+    }
+
+        .button_tab_menu.out {
+            bottom: -68px;
+        }
+
+    a.makeIconL {
+        float: left;
+        border-top: 1px solid #fff;
+        border-right: 1px solid #fff;
+        box-shadow: 0px 1px 1px #d6d6d5;
+    }
+
+    a.makeIconR {
+        float: right;
+        border-top: 1px solid #fff;
+        border-left: 1px solid #fff;
+        box-shadow: 0px -1px 1px #d6d6d5 inset;
+    }
+
+    .roundMakebg {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        background: rgba(0,0,0,.5);
+        width: 100%;
+        height: 100%;
+        z-index: 99991;
+    }
+
+    .roundMakeBox {
+        position: fixed;
+        z-index: 99992;
+        bottom: -68px;
+        text-align: center;
+        left: 50%;
+        margin-left: -250px;
+        width: 499px;
+    }
+
+    .roundLink {
+        position: relative;
+        bottom: 0px;
+        z-index: 99993;
+    }
+
+    .roundMakeFile {
+        display: none;
+        bottom: 0px;
+    }
+
+    .roundLink a {
+        display: block;
+        position: absolute;
+        z-index: 99994;
+    }
+
+    a.makeR1 {
+        left: 150px;
+        top: 45px;
+        width: 70px;
+        height: 80px;
+    }
+
+    a.makeR2 {
+        right: 150px;
+        top: 45px;
+        width: 70px;
+        height: 80px;
+    }
+
+    a.makeR3 {
+        left: 65px;
+        top: 135px;
+        width: 70px;
+        height: 80px;
+    }
+
+    a.makeR4 {
+        right: 65px;
+        top: 135px;
+        width: 70px;
+        height: 80px;
+    }
+
+    a.makeR5 {
+        left: 65px;
+        top: 265px;
+        width: 70px;
+        height: 80px;
+    }
+
+    a.makeR6 {
+        right: 65px;
+        top: 265px;
+        width: 70px;
+        height: 80px;
+    }
+
+    a.makeR7 {
+        right: 215px;
+        top: 365px;
+        width: 70px;
+        height: 60px;
+    }
+
+    a.makeR8 {
+        right: 180px;
+        top: 160px;
+        width: 137px;
+        height: 137px;
+    }
+
+    .innerWeb {
+        bottom: 0px;
+    }
+
+    a.makeIconL {
+        float: left;
+        border-top: 0px solid #fff;
+        border-right: 0px solid #fff;
+        box-shadow: 0px 0px 0px #d6d6d5;
+        text-align: center;
+    }
+
+    .bottomMake {
+        height: 45px;
+        z-index: 99990;
+    }
+
+        .bottomMake span {
+            float: right;
+            height: 21px;
+            width: 1px;
+            background-color: #fff;
+            margin-top: 12px;
+            opacity: 0.4;
+        }
+
+    .roundMakeBox.out {
+        -webkit-animation: emfadeIn 0.3s linear backwards;
+        opacity: 0;
+    }
+
+    .roundMakeBox.in {
+        -webkit-animation: fromBack 0.3s linear backwards;
+    }
+
+    @-webkit-keyframes fromBack {
+        0% {
+            -webkit-transform: scale(0);
+            opacity: 0;
+        }
+
+        100% {
+            -webkit-transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes emfadeIn {
+        0% {
+            -webkit-transform: scale(1);
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform: scale(0);
+            opacity: 0;
+        }
+    }
+</style>
+<link type="text/css" rel="stylesheet" media="all" href="husercss/media-queries.css?v=1123">
+<div style="clear: both;">
+</div>
+<div style="height: 50px;">
+</div>
+<img id="menu_tab_0_icon" onerror="menu_button_err()" data-src="" src="/moban/xfc/img/arrow.png"
+     style="display: none;" />
+<div class="button_tab_menu" style="width: 100%; position: fixed; left: 0px; height: 45px;
+    z-index: 999;">
+    <div style="width: 100%; height: 45px; position: absolute; z-index: 1;">
+        <style>.footer_icon_0{background: url(userImage/menu1.png) no-repeat;background-size: auto 100%;background-position: 0px 0px;} .footer_icon_0.cur{background: url(http://dzd.wddcn.com/moban/xfc/img/menu1.png) no-repeat;background-size: auto 100%;background-position: -41px 0px;}</style><style>.footer_icon_1{background: url(http://dzd.wddcn.com/moban/xfc/img/menu2.png) no-repeat;background-size: auto 100%;background-position: 0px 0px;} .footer_icon_1.cur{background: url(http://dzd.wddcn.com/moban/xfc/img/menu2.png) no-repeat;background-size: auto 100%;background-position: -41px 0px;}</style><style>.footer_icon_2{background: url(http://dzd.wddcn.com/moban/xfc/img/menu3.png) no-repeat;background-size: auto 100%;background-position: 0px 0px;} .footer_icon_2.cur{background: url(http://dzd.wddcn.com/moban/xfc/img/menu3.png) no-repeat;background-size: auto 100%;background-position: -41px 0px;}</style><style>.footer_icon_3{background: url(http://dzd.wddcn.com/moban/xfc/img/menu4.png) no-repeat;background-size: auto 100%;background-position: 0px 0px;} .footer_icon_3.cur{background: url(http://dzd.wddcn.com/moban/xfc/img/menu4.png) no-repeat;background-size: auto 100%;background-position: -41px 0px;}</style><table style="width: 100%; height: 100%;"><tr><td align="center" valign="middle" style="width: 19%;"><div  onclick="footer_tab_change(0,'/vshop/index.html?sid=881301')" xh="0" src="/vshop/index.html?sid=881301" class="footer_tab_index_0 footer_icon footer_icon_0 footer_menu_type_index"></div></td><td align="center" valign="middle" style="width: 19%;"><div  onclick="footer_tab_change(1,'/vshop/class_filtrate.html?cid=0&sid=881301')" xh="1" src="/vshop/class_filtrate.html?cid=0&sid=881301" class="footer_tab_index_1 footer_icon footer_icon_1 footer_menu_type_class"></div></td><td align="center" valign="middle" style="width: 24%;"><a style="width: 100%" href="/vshop/shopowner.html?sid=881301" class="makeIconL"><div class="" style="position:absolute;width:22%;height:68px;line-height:68px;  border-radius:68px;left:39%; margin-top:-27px;"><center><div id="divuserheader" class="" style=" background:url(http://file.wddcn.com/wddwechatshop/picture/award/125/2016/3/ec3787dfa4274b5a98d721a5b3ecd94c8.jpg) no-repeat; background-size:100% 100%; width:68px;height:68px;border:0px solid #f1f1f1; border-radius:68px;margin-top:0px;box-shadow:1px 1px 1px #c0c0c0 inset;"></div></center></div>&nbsp;</a></td><td align="center" valign="middle" style="width: 19%;"><div  onclick="footer_tab_change(2,'/vshop/cart.html?sid=881301')" xh="2" src="/vshop/cart.html?sid=881301" class="footer_tab_index_2 footer_icon footer_icon_2 footer_menu_type_cart"></div></td><td align="center" valign="middle" style="width: 19%;"><div  onclick="footer_tab_change(3,'/vshop/center.html?sid=881301')" xh="3" src="/vshop/center.html?sid=881301" class="footer_tab_index_3 footer_icon footer_icon_3 footer_menu_type_vip"></div></td></tr></table>
+    </div>
+    <div style="width: 100%; height: 45px; border-top: 1px solid #e8e7e7;
+        background-color: #efefef; opacity: 1">
+    </div>
+</div>
+<!--弹出转盘 start-->
+<div onclick="HideMenu()" id="div_roundMakeFile" class="roundMakeFile">
+    <div class="roundMakebg">
+    </div>
+    <div class="roundMakeBox innerWeb">
+        <div class="roundLink">
+            <img src="userImage/makeRound.gif" class="roundM1">
+             <a href='/vshop/olist.html?sid=881301' class="makeR1"></a><a href='/vshop/helplist.html?sid=881301' class="makeR2"></a><a href='/vshop/center.html?sid=881301' class="makeR3"></a><a href='/vshop/html.html?type=weiquan&sid=881301' class="makeR4"></a><a href='/vshop/myshop.html?sid=881301' class="makeR5"></a><a onclick='KaiDian()'class="makeR6"></a><a onclick='Jifen()'class="makeR7"></a><a href="javascript:void(0)" id="logoC" class="makeR8"></a>
+        </div>
+    </div>
+</div>
+<!--弹出转盘 end-->
+<script type="text/javascript">
+    function HideMenu() {
+        // try {
+        $(".roundMakeBox").eq(0).removeClass("in").addClass("out");
+        setTimeout(function () {
+            $(".roundMakeFile").eq(0).hide();
+            setTimeout(function () { $(".roundMakeBox").eq(0).removeClass("out") }, 300)
+        }, 300)
+        // } catch (e) { }
+    }
+
+    var CurTabIndex = localStorage.CurButtonTabTypeIndex;
+
+    if (CurTabIndex != "0" && CurTabIndex != "1" && CurTabIndex != "2" && CurTabIndex != "3" && CurTabIndex != "4") {
+
+
+        CurTabIndex = 0;
+        try {
+            if (location.href.toString().indexOf("/vshop/index.html") > 0) {
+                var TabLen = 0;
+                try {
+                    TabLen = $(".button_tab_menu div .footer_icon").length();
+                } catch (e) {
+                    TabLen = $(".button_tab_menu div .footer_icon").length;
+                }
+                for (var j = 0; j < TabLen; j++) {
+                    var str = $(".button_tab_menu div .footer_icon").eq(j).attr("src");
+
+                    if (str.toString().indexOf("/vshop/index.html") >= 0) {
+                        CurTabIndex = $(".button_tab_menu div .footer_icon").eq(j).attr("xh");
+                        break;
+                    }
+
+                }
+            }
+        } catch (e) { console.info(e); }
+        localStorage.CurButtonTabTypeIndex = CurTabIndex;
+    }
+    setTimeout(function () {
+        change_button_tab();
+    }, 500)
+    setTimeout(function () {
+        change_button_tab();
+    }, 1000)
+    function change_button_tab() {
+        var url = location.href;
+        var type = CurTabIndex;
+        var TabLen = 0;
+        try {
+            TabLen = $(".button_tab_menu div").length();
+        } catch (e) {
+            TabLen = $(".button_tab_menu div").length;
+        }
+        try {
+            if (location.href.indexOf("/vshop/index.html") > 0 || location.href.indexOf("/vshop/pagetwo.html") > 0 || location.href.indexOf("/vshop/classlist.html") > 0 || location.href.indexOf("/vshop/cart.html") > 0)
+                $("#divuserheader").parent().parent().attr("style", "position:absolute;width:22%;height:68px;line-height:68px;  border-radius:68px;left:39%; margin-top:-45px;");
+        } catch (e) { }
+        for (var j = 0; j < TabLen; j++) {
+            var str = $(".button_tab_menu div").eq(j).attr("class");
+
+            if (str) {
+                if ($(".button_tab_menu div").eq(j).attr("class").indexOf("footer_tab_index_" + type) >= 0) {
+
+                    if ($(".button_tab_menu div").eq(j).attr("class").indexOf("cur") < 0) {
+
+                        $(".button_tab_menu div").eq(j).attr("class", $(".button_tab_menu div").eq(j).attr("class") + " cur");
+                    }
+                } else {
+                    $(".button_tab_menu div").eq(j).attr("class", $(".button_tab_menu div").eq(j).attr("class").replace("cur", ""));
+                }
+            }
+        }
+    }
+
+    GetCardCount()
+
+    function GetCardCount() {
+        var cart_len = 0;
+        try {
+            cart_len = $(".footer_menu_type_cart").length();
+        } catch (e) {
+            cart_len = $(".footer_menu_type_cart").length;
+        }
+        if (cart_len <= 0)
+            return;
+
+        try {
+            Ajax("/vshop/meta.html?sid=881301&&action=getmycartcount", {}, function (result) {
+
+                var html = '<div id="footer_icon_cart_count" style="width: auto; min-width: 10px; height: 10px; text-align: center;  padding: 0.2em; color: #fff; background-color: #ff0000; border-radius: 1.1em;  position: absolute; z-index: 50; margin-left: 2.3em; margin-top: 0px; line-height:10px;' + (result == "0" ? "display:none;" : "") + '"> ' + result + '</div>'
+                $(".footer_menu_type_cart").append(html);
+
+            })
+        } catch (e) {
+            M.ajax("/vshop/meta.html?sid=881301&&action=getmycartcount", "", function (data) {
+                var html = '<div id="footer_icon_cart_count" style="width: auto; min-width: 10px; height: 10px; text-align: center;  padding: 0.2em; color: #fff; background-color: #ff0000; border-radius: 1.1em;  position: absolute; z-index: 50; margin-left: 2.3em; margin-top: 0px; line-height:10px;' + (data == "0" ? "display:none;" : "") + '"> ' + data + '</div>'
+                $(".footer_menu_type_cart").eq(0).append(html);
+            });
+        }
+    }
+
+    function footer_tab_change(num, src) {
+        localStorage.CurButtonTabTypeIndex = num;
+        location.href = src;
+    }
+    function menu_button_err() {
+        var src = $("#menu_tab_0_icon").attr("data-src");
+        $(".footer_icon_0").css({ "background": "url(" + src + ") no-repeat" });
+        $(".footer_icon_0").css({ "background-size": "auto 100%" })
+        $(".footer_icon_0.cur").css({ "background-position": "-41px 0px" })
+    }
+    change_button_tab();
+    changeButtonTab();
+    // alert(localStorage.LBSCity);
+    function changeButtonTab() {
+        var NodeCity = "$templateCity";
+        var NodeCitySid = "$templateCitySid";
+        if (NodeCity.toString().indexOf("templateCity") >= 0) {
+            if (localStorage.MenuCustomCity == undefined) {
+                NodeCity = localStorage.LBSCity;
+            } else {
+                NodeCity = localStorage.MenuCustomCity;
+            }
+        }
+        if (NodeCitySid.toString().indexOf("templateCitySid") >= 0) {
+            NodeCitySid = "";
+            if (localStorage.MenuCustomCitySid == undefined) {
+
+            } else {
+                NodeCitySid = localStorage.MenuCustomCitySid;
+            }
+        }
+        localStorage.MenuCustomCity = NodeCity;
+        localStorage.MenuCustomCitySid = NodeCitySid;
+        if ((NodeCity != undefined && NodeCity != "" && "642" == "596") || location.href.toString().indexOf("sl.") > 0) {
+            try {
+                var url = $(".footer_icon_0").css("background-image").replace("url(", "").replace(")", "");
+                $("#menu_tab_0_icon").attr("data-src", url);
+                $("#menu_tab_0_icon").attr("src", "http://sl.dzd.wddcn.com/moban/xfc/img/icon_areas/" + NodeCity + ".png");
+
+                $(".footer_icon_0").css({ "background": "url(http://sl.dzd.wddcn.com/moban/xfc/img/icon_areas/" + NodeCity + ".png) no-repeat" });
+                $(".footer_icon_0").css({ "background-size": "auto 100%" })
+                $(".footer_icon_0.cur").css({ "background-position": "-41px 0px" })
+                if (NodeCitySid != "")
+                    $(".footer_icon_0").attr("onclick", "footer_tab_change(0,'/vshop/index.html?sid=" + NodeCitySid + "')");
+            } catch (e) {
+                var url = $(".footer_icon_0").eq(0).css("background-image").replace("url(", "").replace(")", "");
+                $("#menu_tab_0_icon").eq(0).attr("data-src", url);
+                $("#menu_tab_0_icon").eq(0).attr("src", "http://sl.dzd.wddcn.com/moban/xfc/img/icon_areas/" + NodeCity + ".png");
+
+                $(".footer_icon_0").eq(0).css({ "background": "url(http://sl.dzd.wddcn.com/moban/xfc/img/icon_areas/" + NodeCity + ".png) no-repeat" });
+                $(".footer_icon_0").eq(0).css({ "background-size": "auto 100%" })
+                $(".footer_icon_0.cur").eq(0).css({ "background-position": "-41px 0px" })
+                if (NodeCitySid != "")
+                    $(".footer_icon_0").eq(0).attr("onclick", "footer_tab_change(0,'/vshop/index.html?sid=" + NodeCitySid + "')");
+
+            }
+        }
+    }
+    $(".one").bind('click', function () {
+        if ($(this).children().eq(1).css("display") == "block") {
+            $(this).children().eq(1).css({ display: "none" });
+        }
+        else {
+            for (var i = 0; i < $(".one").length() ; i++)
+                $(".one").eq(i).children().eq(1).css({ display: "none" });
+            var left = ($(this).offset().left - 10);
+            if ($(this).attr("data-i") == "2") left - +10;
+            $(this).children().eq(1).css({ display: "block", left: left + "px" });
+        }
+    });
+    //客服
+    function Kefu() {
+        var mid = "642";
+        var sid = "881301";
+        location.href = "/vshop/wxkf.html?action=wxkf&mid=" + mid + "&sid=" + sid + "&wechatappid=wx72bcc05b4dd3193a";
+    }
+
+    function wyKefu() {
+        location.href = "http://wxkf.shenhua3688.com/client/chat.ashx?sid=881301&mid=642&utype=dzd&uid=17713563&ciid_siid=" + ("894033" + "_0") + "&url=" + location.href.replace(new RegExp(/(&)/g), "%26");
+    }
+    //附近门店
+    function NearStore() {
+        location.href = "/vshop/near_store_list.html?sid=881301&endAddr=&lng=&lat=";
+    }
+    //开店
+    function KaiDian() {
+        if ("1" == "1") {
+            location.href = "regshop.html?sid=881301";
+        } else {
+            alert("此店铺无开店功能");
+        }
+    }
+    function kaidian() {
+        if ("1" == "1") {
+            location.href = "regshop.html?sid=881301";
+        } else {
+            M._alert("此店铺无开店功能");
+        }
+    }
+
+    function OpenMenu() {
+        $(".roundMakeFile").eq(0).show(), $(".roundMakeBox").eq(0).addClass("in");
+    }
+    //积分商城
+    function Jifen() {
+        if ("1" == "1")
+            location.href = "/vshop/point_shop_jump.html?sid=881301";
+        else alert('积分商城尚未开通');
+    }
+
+    function getWxMemberCard() {
+        OpenMsg("<div style='height:12px;'></div>请稍后...");
+        Ajax("/vshop/index.html?sid=881301&action=getWxCardCode", {}, function (result) {
+            CloseMsg();
+            var data = eval(result);
+            for (var i = 0; i < data.length; i++) {
+                data[i].card_ext = JSON.stringify(data[i].card_ext)
+            }
+            var arr = data;
+            WeixinJSBridge.invoke('batchAddCard', {
+                "card_list": arr
+            }, function (res) { });
+        })
+    }
+   
+</script>
+  <script type="text/javascript" src="userjs/jweixin-1.1.0.js"></script>
+<script type="text/javascript">
+    var onBridgeReady = function () {
+        //如果是首页则显示右上角分享按钮，其他都隐藏
+        var CurUrl = location.href;
+        if (CurUrl.indexOf("/vshop/index.html") > 0
+                    || CurUrl.indexOf("/vshop/coupon_detail.html") > 0
+                    || CurUrl.indexOf("/vshop/sharecoupon.html") > 0
+                    || CurUrl.indexOf("/vshop/notice.html") > 0
+                    || CurUrl.indexOf("/vshop/classlist.html") > 0
+                    || CurUrl.indexOf("/vshop/manager.html") > 0
+                    || CurUrl.indexOf("/vshop/pagetwo.html") > 0
+                    || CurUrl.indexOf("/vshop/oinfo_design_img.html") > 0
+                    || CurUrl.indexOf("/vshop/my_shop_qrcode.html") > 0) {
+            WeixinJSBridge.call('showOptionMenu');
+        } else {
+            WeixinJSBridge.call('hideOptionMenu');
+        }
+        // 发送给好友
+        WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+            WeixinJSBridge.invoke('sendAppMessage', {
+                "img_url": _share_src,
+                "img_width": "640",
+                "img_height": "640",
+                "link": _link,
+                "desc": _desc,
+                "title": _title
+            }, function (res) {
+                if (res.err_msg.toString() == "send_app_msg:confirm" || res.err_msg.toString() == "send_app_msg:ok") {
+                    ShareCount();
+                }
+                _report('send_msg', res.err_msg);
+            })
+        });
+        // 分享到朋友圈
+        WeixinJSBridge.on('menu:share:timeline', function (argv) {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": _share_src,
+                "img_width": "640",
+                "img_height": "640",
+                "link": _link,
+                "desc": _desc,
+                "title": _title + _desc
+            }, function (res) {
+                if (res.err_msg.toString() == "share_timeline:ok") {
+                    ShareCount();
+                }
+                _report('timeline', res.err_msg);
+            });
+        });
+        // 分享到微博
+        WeixinJSBridge.on('menu:share:weibo', function (argv) {
+            WeixinJSBridge.invoke('shareWeibo', {
+                "content": _desc,
+                "url": _link
+            }, function (res) {
+                _report('weibo', res.err_msg);
+            });
+        });
+    };
+    var _link = "http://dzd.shenhua3688.com/vshop/index.html?sid=$sid&uid=17713563&sharefromvsid=$sharefromvsid";
+    if (M.h5Href.indexOf("pagetwo.html") > 0
+       || M.h5Href.indexOf("classlist.html") > 0
+       || M.h5Href.indexOf("brand_index.html") > 0 || M.h5Href.indexOf("my_shop_qrcode.html") > 0) {
+        _link = M.h5Href.replace(/&uid=\d+/ig, "") + "&uid=17713563";
+    }
+    var _share_src = ("" != "" ? "" : "http://web.wddcn.com/dzd/moban/xfc/img/logo3.jpg");
+    if (window.localStorage["vshop_share_img_src$sid"] == undefined) {
+        window.localStorage["vshop_share_img_src$sid"] = "";
+    }
+    if ("$ShareImg".toString().indexOf("http://") >= 0) {
+        _share_src = "$ShareImg";
+        window.localStorage["vshop_share_img_src$sid"] = _share_src;
+    } else if (window.localStorage["vshop_share_img_src$sid"].indexOf("http://") >= 0) {
+        _share_src = window.localStorage["vshop_share_img_src$sid"];
+    }
+    var _desc = ("1" == "1" ? ("" == "" ? "亲爱的，终于等到您的到来，让我们相聚在茫茫人海，神话生物加拇指营销将会是我们创造神话的平台，在这里我们都是一家人，只有想不到的，没有做不到的，真正的打造在平台消费赚钱的一站式模式，任何产品保证优良，便宜；让我们一起携手，在互联网的海洋中，撑出我们的一片天地！我相信，我们一定能行！" : "") : "亲爱的，终于等到您的到来，让我们相聚在茫茫人海，神话生物加拇指营销将会是我们创造神话的平台，在这里我们都是一家人，只有想不到的，没有做不到的，真正的打造在平台消费赚钱的一站式模式，任何产品保证优良，便宜；让我们一起携手，在互联网的海洋中，撑出我们的一片天地！我相信，我们一定能行！");
+    var _title = "神话集团神话集团";
+    if (M.h5Href.indexOf("pagetwo.html") > 0) {
+        _title = document.title;
+        _desc = "$shareDesc" == "" ? _desc : "$shareDesc";
+        _share_src = "$shareImg" == "" ? _share_src : "$shareImg";
+    }
+
+    //对分享始终为自己的店铺作处理
+  
+    if (location.href.toString().indexOf("/vshop/index.html") > 0 && "$vshop_share_ismyshop" == "1") {
+      
+        if ("$dtMemberShopInfo.vs_id" != "$sid") {
+           
+            _link = "http://dzd.shenhua3688.com/vshop/index.html?sid=$dtMemberShopInfo.vs_id&uid=17713563&sharefromvsid=$sharefromvsid";
+           
+            if ("$vshop_share_desc_noismyshop" != "1") {
+                _share_src = ("$dtMemberShopInfo.vs_share" != "" ? "$dtMemberShopInfo.vs_share" : _share_src);
+                _desc = ("1" == "1" ? ("$dtMemberShopInfo.vs_note" == "" ? "亲爱的，终于等到您的到来，让我们相聚在茫茫人海，神话生物加拇指营销将会是我们创造神话的平台，在这里我们都是一家人，只有想不到的，没有做不到的，真正的打造在平台消费赚钱的一站式模式，任何产品保证优良，便宜；让我们一起携手，在互联网的海洋中，撑出我们的一片天地！我相信，我们一定能行！" : "$dtMemberShopInfo.vs_note") : "亲爱的，终于等到您的到来，让我们相聚在茫茫人海，神话生物加拇指营销将会是我们创造神话的平台，在这里我们都是一家人，只有想不到的，没有做不到的，真正的打造在平台消费赚钱的一站式模式，任何产品保证优良，便宜；让我们一起携手，在互联网的海洋中，撑出我们的一片天地！我相信，我们一定能行！");
+                _title = "$dtMemberShopInfo.vs_name";
+
+              
+            } else if ("$drhansShareShop" == "1") {
+                _share_src = ("$drShareShop.vs_share" != "" ? "$drShareShop.vs_share" : _share_src);
+                _desc = ("1" == "1" ? ("$drShareShop.vs_note" == "" ? "亲爱的，终于等到您的到来，让我们相聚在茫茫人海，神话生物加拇指营销将会是我们创造神话的平台，在这里我们都是一家人，只有想不到的，没有做不到的，真正的打造在平台消费赚钱的一站式模式，任何产品保证优良，便宜；让我们一起携手，在互联网的海洋中，撑出我们的一片天地！我相信，我们一定能行！" : "$drShareShop.vs_note") : "亲爱的，终于等到您的到来，让我们相聚在茫茫人海，神话生物加拇指营销将会是我们创造神话的平台，在这里我们都是一家人，只有想不到的，没有做不到的，真正的打造在平台消费赚钱的一站式模式，任何产品保证优良，便宜；让我们一起携手，在互联网的海洋中，撑出我们的一片天地！我相信，我们一定能行！");
+                _title = "$drShareShop.vs_name";
+                document.title = _title;
+               
+            }
+        } else {
+            if ("$drhansShareShop" == "1") {
+                _share_src = ("$drShareShop.vs_share" != "" ? "$drShareShop.vs_share" : _share_src);
+                _desc = ("1" == "1" ? ("$drShareShop.vs_note" == "" ? "亲爱的，终于等到您的到来，让我们相聚在茫茫人海，神话生物加拇指营销将会是我们创造神话的平台，在这里我们都是一家人，只有想不到的，没有做不到的，真正的打造在平台消费赚钱的一站式模式，任何产品保证优良，便宜；让我们一起携手，在互联网的海洋中，撑出我们的一片天地！我相信，我们一定能行！" : "$drShareShop.vs_note") : "亲爱的，终于等到您的到来，让我们相聚在茫茫人海，神话生物加拇指营销将会是我们创造神话的平台，在这里我们都是一家人，只有想不到的，没有做不到的，真正的打造在平台消费赚钱的一站式模式，任何产品保证优良，便宜；让我们一起携手，在互联网的海洋中，撑出我们的一片天地！我相信，我们一定能行！");
+                _title = "$drShareShop.vs_name";
+                document.title = _title;
+               
+            }
+        }
+    } else if (("$vshop_share_desc_noismyshop" == "1" && "$drhansShareShop" == "1") ) {
+      
+        if (("$drShareShop.vs_id" != "$sid" && "$drhansShareShop" == "1") ) {
+            _link = "http://dzd.shenhua3688.com/vshop/index.html?sid=$drShareShop.vs_id&uid=17713563&sharefromvsid=$sharefromvsid";
+            _share_src = ("$drShareShop.vs_share" != "" ? "$drShareShop.vs_share" : _share_src);
+            _desc = ("1" == "1" ? ("$drShareShop.vs_note" == "" ? "亲爱的，终于等到您的到来，让我们相聚在茫茫人海，神话生物加拇指营销将会是我们创造神话的平台，在这里我们都是一家人，只有想不到的，没有做不到的，真正的打造在平台消费赚钱的一站式模式，任何产品保证优良，便宜；让我们一起携手，在互联网的海洋中，撑出我们的一片天地！我相信，我们一定能行！" : "$drShareShop.vs_note") : "亲爱的，终于等到您的到来，让我们相聚在茫茫人海，神话生物加拇指营销将会是我们创造神话的平台，在这里我们都是一家人，只有想不到的，没有做不到的，真正的打造在平台消费赚钱的一站式模式，任何产品保证优良，便宜；让我们一起携手，在互联网的海洋中，撑出我们的一片天地！我相信，我们一定能行！");
+            _title = "$drShareShop.vs_name";
+            document.title = _title;
+            
+        }
+    }
+    var shareMsgJson = '{"title":"' + _title + '","desc":"' + _desc + '","link":"' + _link + '","imgsrc":"' + _share_src + '"}';
+    M.jsonp("/vshop/weixin.html?sid=881301&url=" + M.h5Href.replace(/\&/g, "%26"), function (msg) {
+
+        if (msg != undefined) {
+            wx.config({
+                debug: localStorage.Debug == "1",
+                appId: msg.appId,
+                timestamp: msg.timestamp,
+                nonceStr: msg.nonceStr,
+                signature: msg.signature,
+                jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'scanQRCode', 'openAddress']
+            });
+            wx.ready(function () {
+                wx.onMenuShareAppMessage({
+                    title: _title,
+                    desc: _desc,
+                    link: _link,
+                    imgUrl: _share_src,
+                    success: function (res) {
+                        ShareCount();
+                    }
+                });
+                wx.onMenuShareTimeline({
+                    title: _title + _desc,
+                    link: _link,
+                    imgUrl: _share_src,
+                    success: function (res) {
+                        ShareCount();
+                    }
+                });
+            });
+            setTimeout(function () {
+                try {
+                    wxsharecallback();
+                } catch (e) { }
+            }, 500)
+        }
+    });
+
+
+    if (document.addEventListener) {
+        document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+    } else if (document.attachEvent) {
+        document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+        document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+    }
+    function appWeixinShare() {
+        if (location.href.toString().indexOf("/vshop/index.html") > 0) {
+            uexWindow.evaluateScript("main", "0", "appWeixinShare('index','" + shareMsgJson + "')")
+        }
+            
+    }
+
+    function ShareCount() {
+        var url = location.href;
+
+        if (url.indexOf("/vshop/index.html") > 0) {
+            M.jsonp("http://weixin.shenhua3688.com/getwebaward?oper=AwardShare&type=shareTimeline&user_id=$mid&openid=$openid&mid=$mid&aid=1");
+        }
+        M.jsonp("/vshop/visit.html?action=sharecount&sid=$sid&url=" + encodeURIComponent(url));
+        M.jsonp("/vshop/async.html?action=task&did=3&sid=881301");
+        M.jsonp("/vshop/async.html?action=share&did=13&sid=881301");
+    }
+</script>
+    <script>
+        if ("$action" != "wechatcouponadd") {
+            header.title("添加优惠券");
+            header.binReback('mycoupon.html?sid=881301');
+        }
+
+        var cardid = "";
+        var card_ext = "";
+        var arr = [];
+        var isadd = "false";
+        function imgerror(obj) {
+            $(obj).remove();
+        }
+        function AddWxCard(card_id) {
+            $("#imgloading").show();
+            cardid = card_id;
+            M.jsonp("coupon_add.html?action=wxcardadd&sid=881301&cardid=" + cardid + "&OpenId=$openid", function (data) {
+
+                for (var i = 0; i < data.length; i++) {
+                    data[i].card_ext = JSON.stringify(data[i].card_ext)
+                }
+                arr = data;
+                setTimeout(function () {
+                    document.getElementById("batchAddCard").click();
+                }, 1500)
+                setTimeout(function () {
+                    if (isadd == "false") {
+                        $("#imgloading").hide();
+                        $("#batchAddCard").html("添加至卡包");
+                        $("#batchAddCard").attr("class", "tmt-btn_l tmt-btn_positive");
+                        alert_n("自动添加失败,请手动点击添加!");
+                    }
+                }, 3000)
+            })
+        }
+
+        var readyFunc = function onBridgeReady() {
+            document.getElementById('batchAddCard').addEventListener('click', function (e) {
+                isadd = "true";
+                WeixinJSBridge.invoke('batchAddCard', {
+                    "card_list": arr
+                }, function (res) {
+                    confirm_n1("优惠券已添加到微信卡包(我—优惠券)", function () {
+                        location.href = "http://weixin.shenhua3688.com/Views/WeChat/WeiShop/ssCarousel.ashx?mid=642";
+                    })
+                   
+                });
+            });
+        }
+        if (typeof WeixinJSBridge === "undefined") {
+            document.addEventListener('WeixinJSBridgeReady', readyFunc, false);
+        } else {
+            readyFunc();
+        }
+        if ("$action" == "wechatcouponadd") {
+            AddWxCard("$cardid");
+        }
+        var Coupon = {
+            submit: function () {
+                $("#submit").bind("click", function () {
+                    if ($("#code").val() == "") {
+                        M._alert("请输入券码");
+                        return;
+                    }
+                    M._loading();
+                    M.jsonp(M.h5Href + "&action=submit&code=" + $("#code").val(), function (data) {
+                        M._loading(true);
+                        switch (data.state) {
+                            default:
+                                if (data.result != "") {
+                                    M._alert(data.result);
+                                }
+                                else {
+                                    M._alert("添加失败");
+                                }
+                                break;
+                            case 1:
+                                M._alert("添加成功", function () {
+                                    location.href = "mycoupon.html?sid=881301";
+                                });
+                                break;
+                        }
+                    })
+                })
+            },
+            init: function () {
+                Coupon.submit();
+            }
+        };
+
+        Coupon.init();
+
+        function close_window() {
+            WeixinJSBridge.call('closeWindow');
+        }
+        function confirm_n1(msg, cb, title) {
+            RemoveMsgShowDivObj();
+            confirm_cb = cb;
+            if (!title) {
+                title = "提示：";
+            }
+            var loadingHtml = style_html + ' <div  style="font-family: "Microsoft YaHei" !important;">' +
+        '<div id="msgtip" class="fade" style="width: 80%; position: fixed; z-index: 99999981; left: 10%; background-color: #fff;border-radius: 8px; text-align: center">' +
+            '<div style="height: 15px;">  </div>' +
+           ' <center><div style="width:90%;text-align:left;color:#888787">' + title + '</div>' +
+               ' <div style="width: 88%;">' + msg +
+               ' </div>' +
+           ' </center>' +
+            '<div style="height: 15px; border-bottom: 1px solid #f1f1f1;"> </div>' +
+           ' <div style="height: 8px;"> </div>' +
+           ' <div><center>' +
+               ' <table style="width:100%"><tr><Td align="right" style="width:50%;"><span  onclick="close_confirm_n()" style="height: 32px; width: 85%; line-height: 32px;text-align:center; color: #fff; background-color: #35D355; border-radius: 5px; overflow: hidden;margin-bottom: 0px; margin: 0 auto; display: block;">去使用</span></td>' +
+               '<td align="left"> <span  onclick="close_window()" style="height: 32px; width: 85%; line-height: 32px; text-align:center;color: #fff; background-color: #859188; border-radius: 5px; overflow: hidden;margin-bottom: 0px; margin: 0 auto; display: block;">关闭</span></td></tr></table>' +
+           ' </center></div>' +
+            '<div style="height: 8px;">' +
+           ' </div>' +
+        '</div>' +
+        '<div id="msgtipback" onclick="close_alert()"  style="display:none;width: 100%; height: 100%; position: fixed; z-index: 99999980; left: 0px; top: 0px; background-color: #000; opacity: 0.6;">' +
+       ' </div>' +
+   ' </div>';
+
+            MsgShowDivObj = DivObj(loadingHtml);
+            document.body.appendChild(MsgShowDivObj);
+
+            $("#msgtipback").fadeIn(300, function () {
+                MsgLoadState = 1;
+                $("#msgtip").addClass("in");
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,900 @@
+﻿/************************************************************************************
+
+smaller than 560
+*************************************************************************************/
+@media screen and (max-width:600px) {
+		
+  a.buyBtn{ width:350px; height:45px;line-height:45px;font-size:38px; border-radius:15px;}
+  
+  .proBox h1{ font-size:28px;}
+  .memberSure{ font-size:18px;}
+  
+  .memberSure tr td.widM1{ width:25.5%;}
+  .memberSure tr td.widM2{ width:24%;}
+  .memberDetail tr td.widM1{ width:25%;}
+ 
+  .proImg img{ width:90px; height:90px;}
+  
+  .memTitle{ font-size:20px;}
+  
+  .memPrice{ font-size:18px;}
+  
+  .memPrice span{ font-size:20px;}
+  
+  dl.searchBox dt input,dl.searchBox dd input{ height:40px; line-height:40px;}
+  
+  dl.searchBox dd input{ font-size:20px;}
+  
+  .textMem,.textFile,.selectCity select{ font-size:20px;}
+	
+  .selectCity img{ width:25px; height:19px;}
+	
+  .payBtn span{ font-size:18px; width:45%; padding:4% 1%; line-height:180%;}
+	
+  .payBtn img{ width:21px; height:21px;}
+	
+  .submitBtn{ font-size:20px; width:45%; border-radius:10px;}
+  
+  dl.proShow dd{ font-size:20px;}
+  
+  .num img{ width:150px; height:39px;}
+  
+  .proDetail h1{ font-size:36px;}
+  
+  .proDetail span{ font-size:20px;}
+  
+  .proDetail{ font-size:18px;}
+  
+  .perImg img{ width:85px; height:85px;}
+  
+  .perSonName,.personSF{ font-size:20px;}
+  
+  .aboutUs{ font-size:16px}
+  
+  a.makeFriend{ width:150px; height:38px; line-height:38px; font-size:18px;}
+  
+  dl.pingpai dt{ width:150px; height:39px;}
+  
+  dl.pingpai dd{ font-size:18px;}
+  
+  .rightPer{ font-size:18px;}
+  
+  .rightPer img{ width:130px; height:130px;}
+  
+  .rightPer .vedioCion img{ width:41px;height:41px;}
+  
+  .payBtn span em{  border:4px solid #a7a7a7;border-radius:8px; width:8px; height:8px;display:inline-block;}
+
+  .payBtn span.selected em{border:4px solid #32b53c;}
+  
+  .productDetail h1{ font-size:36px;}
+  
+  .proTip{ font-size:20px;}
+  
+  .productDetail{ font-size:20px; line-height:180%;}
+  
+  .btnToPro span.centerB a{ font-size:20px; padding:1.2% 0; width:55%;}
+  
+  .leftB img{ width:58px; height:58px;}
+  
+  .rightB img{ width:58px; height:58px;}	
+  
+  .btnToPro{ height:58px;}
+  
+  .proImgTip p.pImgTitle{ font-size:18px;}
+	
+  .proImgTip p.pImgName{ font-size:16px; color:#9b9b9b;}
+  
+  .vedioCion img{width:71px; height:71px;}	
+  .slideTip img{width:30px; height:103px;}
+  
+   /*********************20140329***********************/
+	 .proBottom{ font-size:14px;}
+	 .proBottom span img{ width:25px; height:25px;}
+	 .personFace .leftBox img{ width:250px; height:155px;}
+	 .personFace .rightBox img{ width:180px; height:77px;}
+	 .personFace .rightBox p{ font-size:16px;}
+	 
+  /********************************************/
+  .loading{ margin:0px auto 100px;}
+  
+  
+  .btnToProA1 span.centerB a{ font-size:20px; padding:1.5% 0; width:55%;}
+  .btnToProA1{ height:100px;}
+  
+/**********������*/
+  .centerB1 a{ display:inline-block;
+
+color:#000000;
+font-size:20px;
+padding:2.5% 0;
+width:59%;
+margin:0px auto;
+
+font-family:΢���ź�;
+}
+
+.index1Box{margin:0 auto; position: relative; max-width:640px; height:445px;}
+
+.index1Box1{ position:absolute; left:0%;}
+.index1Box1 img{width:100%;height:auto;}
+.index1Box1 a{ width:100%; display:block; height:auto; float:left; }
+
+.index1Box2{  position:absolute; left:50%;}
+.index1Box2 img{width:100%;height:auto;}
+.index1Box2 a{ width:100%; display:block; height:auto; float:left;}
+
+ h1.proListTitle{ font-size:24px;}
+
+.proListTip p{ font-size:16px;}
+
+dl.pricePro dt{ font-size:24px;}
+
+dl.pricePro dd,dl.pricePro dt em{ font-size:16px;}
+
+.pricePro{ font-size:16px;}
+
+.proBuyNum{ font-size:14px;}
+
+.cart img{ width:46px; height:43px;}
+
+.productShowBox h1{ font-size:24px;}
+	
+.productShowBox p{ font-size:18px;}
+
+.titlePro{ font-size:16px; height:60px; line-height:60px;border-left:8px solid #00CC00;}
+
+.rowList li{ width:35%;}
+
+.rowList li p img{ width:90px; height:90px;}
+
+.rowList li span.rowSpan1{ font-size:16px;}
+
+.rowList li span.rowSpan2{ font-size:16px;}
+
+.plNum em{ font-size:16px;}
+
+.plNum{ font-size:16px;}
+
+a.plMore{ font-size:14px;}
+
+.plList li{ font-size:14px;}
+
+.buyOtitle{ font-size:14px; height:40px; line-height:120%;}
+
+.buyOprice{ font-size:14px;}
+
+.productOtherList{ margin-bottom:15%;}
+
+.productOtherList li{ width:45%;}
+
+.productOtherList li span.proOtFont{ font-size:16px;}
+
+.productShowBox p{ line-height:170%; padding:3% 0;}
+  
+ .productList{ margin-bottom:20%;}
+ 
+ .centerB1 a.fontWhite{ font-size:24px;}
+ 
+ /********************20140609*****************/
+
+	.bottomMake{ height:68px;}
+	
+	.bottomMake img{ width:68px; height:68px;}
+	
+	.roundMakeBox{ bottom:-55px;width:440px; margin-left:-220px;}
+	
+	.roundM1{ width:440px; height:442px;}
+	
+	.faceButton #button{ margin:10px auto 50px;}
+	
+	a.makeR1{ left:125px; top:40px; width:70px; height:70px;}
+	
+	a.makeR2{ right:125px; top:40px;width:70px; height:70px;}
+	
+	a.makeR3{ left:50px; top:120px; width:70px; height:70px;}
+	
+	a.makeR4{ right:50px; top:120px;width:70px; height:70px;}
+	
+	a.makeR5{ left:55px; top:235px; width:70px; height:70px;}
+	
+	a.makeR6{ right:55px; top:235px;width:70px; height:70px;}
+	
+	a.makeR7{ right:185px; top:315px;width:70px; height:70px;}
+	
+	a.makeR8{ right:160px; top:145px;width:120px; height:120px;}
+	
+	.productList li{ border-radius:6px;}
+	
+	.proListImg span{ height:35px; line-height:35px; font-size:16px;}
+	
+	dl.pricePro{ height:52px; line-height:52px;}
+	
+	._mFontImg{ width:400px; height:279px;}
+	
+	.mUp{ width:28px; height:16px;}
+	
+	.mFontBox{ margin-bottom:0px; }
+	
+	.mListThree{ margin:5% 0 15%;}
+	
+	.mListThree ul{ height:40px; padding:10px 0px;}
+	
+	.mListThree ul li{ font-size:18px; height:40px; line-height:20px;}
+	
+	.mListThree ul li a{ width:50%; padding:0 19%;}
+	
+	.mListThree ul li em{ margin-top:12px; height:20px;}
+	
+	.magazineTip{ font-size:16px; height:48px; line-height:48px; bottom:58px;}
+	
+	.magaFile figure p.proTitle{ bottom:106px; height:48px; line-height:48px;}
+	
+	.vedioCion img{ width:61px; height:61px;}
+	
+	.wallIcon img{ width:160px; height:160px;}
+	
+/********************************************/
+  
+}
+
+@media screen and (max-width:480px){
+  
+  a.buyBtn{ width:260px; height:40px;line-height:40px;font-size:30px;border-radius:10px;}
+  
+  .proBox h1{ font-size:24px;}
+  dl.proPrice{ font-size:16px;}
+  dl.proPrice dt span{ font-size:24px;}
+  .memberSure{ font-size:16px;}
+  
+  .memberSure tr td.widM1{ width:27%;}
+  .memberSure tr td.widM2{ width:25%;}
+  .successM tr td.widM1{width:32%;}
+  .memberDetail tr td.widM1{ width:28%;}
+  
+  .proImg img{ width:70px; height:70px;}
+  
+  .memTitle{ font-size:18px;}
+  .memPrice{ font-size:16px;}
+  
+  .memPrice span{ font-size:18px;}
+  
+  dl.searchBox dt input,dl.searchBox dd input{ height:35px; line-height:35px;}
+  dl.searchBox dd input{ font-size:18px;}
+  
+  .textMem,.textFile,.selectCity select{ font-size:16px;}
+	
+  .selectCity img{ width:25px; height:19px;}
+	
+  .payBtn span{ font-size:16px; width:45%; padding:3% 0.5%;}
+	
+  .payBtn img{ width:16px; height:16px;}
+	
+  .submitBtn{ width:45%; border-radius:10px;}
+  
+  dl.proShow dd{ font-size:18px;}
+  
+  .proDetail h1{ font-size:32px;}
+  
+  .proDetail span{ font-size:18px;}
+  
+  .proDetail{ font-size:16px;}
+  
+  .porDetail p { line-height: 18px; margin-bottom: 10px;}
+  
+  .perImg img{ width:75px; height:75px;}
+  
+  .perSonName,.personSF{ font-size:18px;}
+  
+  .aboutUs{ font-size:12px}
+  
+  a.makeFriend{ width:100px; height:30px; line-height:30px; font-size:16px;}
+  
+  dl.pingpai dt{ width:130px; height:34px;}
+  
+  dl.pingpai dd{ font-size:16px;}
+  
+  .rightPer{ font-size:16px;}
+  
+  .rightPer img{ width:120px; height:120px;}
+  
+  .cion{border-width:12px;}
+  
+  .rightPer .vedioCion img{ width:30px;height:30px;}
+  
+  .payBtn span em{border:3px solid #a7a7a7;border-radius:6px; width:6px; height:6px;display:inline-block;}
+	
+  .payBtn span.selected em{border:3px solid #32b53c;}
+  
+  .firstStep p,.btnShow{ font-size:20px;}
+  .firstStep p{ line-height:160%; padding:0 4% 10%;}
+  
+  /*************************************************************/
+  
+  	dl.indexLeft dd{ font-size:14px; line-height:150%;}
+	
+	dl.indexLeft dt h1{ font-size:18px;}
+	
+	dl.indexLeft dt img{ width:145px; height:49px;}
+	
+	.tipIndex{ font-size:28px;}
+	
+	dl.indexLeft dd span.name{line-height:100%;}
+  
+    #button,#button img{ width:90px; height:90px;}
+	
+	.productDetail h1{ font-size:30px;}
+	
+	.proTip{ font-size:18px;}
+	
+	.productDetail{ font-size:18px; line-height:180%;}
+	
+	.btnToPro span.centerB a{ font-size:18px; padding:1% 0; width:55%; height:20px; line-height:20px;}
+	
+	.leftB img{ width:48px; height:48px;}
+	
+	.rightB img{ width:48px; height:48px;}	
+	
+	.btnToPro{ height:48px;}
+	
+	.proImgTip p.pImgTitle{ font-size:16px;}
+	
+	.proImgTip p.pImgName{ font-size:14px; color:#9b9b9b;}
+	
+	.proImgTip p.pImgTitle,.proImgTip p.pImgName{ line-height:140%;}
+	
+	.vedioCion img{width:51px; height:51px;}	
+	.slideTip img{width:25px; height:86px;}
+	
+	/*********************20140329***********************/
+	 .proBottom{ font-size:11px;}
+	 .proBottom span{ margin-right:0px;}
+	 .proBottom span img{ width:20px; height:20px;}
+	/********************************************/
+	
+	.loading{ margin:0px auto 90px;}
+	
+	
+	
+	/**********������*/
+	
+	  .centerB1 a{ display:inline-block;
+
+color:#000000;
+font-size:18px;
+padding:2.5% 0;
+width:59%;
+margin:0px auto;
+
+font-family:΢���ź�;
+}
+
+.index1Box{margin:0 auto; position: relative; max-width:480px; height:250px;}
+
+.index1Box1{width:38%; position:absolute; left:10%;}
+.index1Box1 img{width:100%;height:auto;}
+.index1Box1 a{ display:block;float:left; }
+
+.index1Box2{ width:38%;   position:absolute; left:52%;}
+.index1Box2 img{width:100%;height:auto;}
+.index1Box2 a{  display:block;float:left; }
+
+nav.numNav1{top:-16px;}
+
+/************************20140403*********************/
+	
+	nav.bottomNav li{ font-size:14px; width:24.7%}
+	
+	.faceButton #button, .faceButton #button img{ width:104px; height:104px;}
+	
+/*	.cionface{ margin:-8px auto 0px;} edit by XuLian*/
+	
+	.personFace .leftBox img{ width:180px; height:116px;}
+	
+	.personFace .leftBox p{ font-size:14px; top:5px; left:8px; line-height:155%;}
+	
+	.personFace .rightBox img{ width:135px; height:57px;}
+	
+	.personFace .rightBox p{ font-size:14px; top:5px; left:20px; line-height:140%;}
+	
+	dl.faceTop dt img{ width:100%; height:auto;}
+	
+	dl.faceTop dd{ font-size:24px;}
+	
+	.indexBottom{ font-size:24px;}
+ 	
+	.indexFile h1,.indexFile h2{ font-size:30px;line-height:150%;}
+	
+	.indexFile h3{ font-size:28px; line-height:150%;}
+	
+	.indexFile #button, .indexFile #button img{ width:200px; height:200px;}
+	
+	 h1.proListTitle{ font-size:20px; line-height:150%;}
+	
+	.proListTip p{font-size:14px;}
+	
+	dl.pricePro dt{ font-size:22px;}
+
+	dl.pricePro dd,dl.pricePro dt em{ font-size:14px;}
+	
+	.pricePro{ font-size:24px;}
+	
+	.proBuyNum{ font-size:14px;}
+	
+	/*.cart{bottom:3px;}*/
+	
+	.cart img{ width:31px; height:28px;}
+	
+	.productShowBox h1{ font-size:20px;line-height:150%;}
+	
+	.productShowBox p{ font-size:16px;}
+	
+	.titlePro{ font-size:14px; height:53px; line-height:53px;border-left:7px solid #00CC00;}
+	
+	.rowList li{ width:36%;}
+	
+	.rowList li p img{ width:73px; height:73px;}
+	
+	.rowList li span.rowSpan1{ font-size:14px;}
+	
+	.rowList li span.rowSpan2{ font-size:14px;}
+	
+	.plNum em{ font-size:14px;}
+	
+	.plNum{ font-size:14px;}
+	
+	a.plMore{ font-size:12px;}
+	
+	.plList li{ font-size:14px;}
+	
+	.buyOtitle{ font-size:12px; height:28px; line-height:110%;}
+	
+	.buyOprice{ font-size:12px;}
+	
+	.productOtherList{ margin-bottom:22%;}
+	
+	.productOtherList li{ width:44%;}
+	
+	.productOtherList li span.proOtFont{ font-size:14px;}
+	
+	.productShowBox p{ line-height:160%; padding:4% 0;}
+	
+	.productList{ margin-bottom:20%}
+	
+	.centerB1 a.fontWhite{ font-size:20px;}
+	
+	a.proBtnMore{ font-size:15px; width:340px; height:40px; line-height:40px;}
+	
+	a.proBtnMore img{width:15px; height:11px;margin-top:-5px;}
+	
+	/*.buyOimg img{ height:150px;}*/
+	
+	.productRow{padding-bottom:6%;}
+	
+	/****************************************************/
+	
+	/********************20140609*****************/
+
+	.bottomMake{ height:58px;}
+	
+	.bottomMake img{ width:58px; height:58px;}
+	
+	.roundMakeBox{ bottom:-35px;width:350px; margin-left:-175px;}
+	
+	.roundM1{ width:350px; height:351px;}
+	
+	.faceButton #button{ margin:10px auto 50px;}
+	
+	a.makeR1{ left:105px; top:25px; width:50px; height:60px;}
+	
+	a.makeR2{ right:105px; top:25px;width:50px; height:60px;}
+	
+	a.makeR3{ left:42px; top:95px; width:50px; height:60px;}
+	
+	a.makeR4{ right:42px; top:95px;width:50px; height:60px;}
+	
+	a.makeR5{ left:42px; top:180px; width:50px; height:60px;}
+	
+	a.makeR6{ right:42px; top:180px;width:50px; height:60px;}
+	
+	a.makeR7{ right:150px; top:250px;width:50px; height:50px;}
+	
+	a.makeR8{ right:126px; top:115px;width:97px; height:97px;}
+	
+	.productList li{ border-radius:6px;}
+	
+	.proListImg span{ height:35px; line-height:35px; font-size:16px;}
+	
+	dl.pricePro{ height:52px; line-height:52px;}
+	
+	._mFontImg{ width:400px; height:279px;}
+	
+	.mUp{ width:28px; height:16px;}
+	
+	.mFontBox{ margin-bottom:0px; }
+	
+	.mListThree{ margin:5% 0 15%;}
+	
+	.mListThree ul{ height:40px; padding:6px 0px;}
+	
+	.mListThree ul li{ font-size:16px; height:40px; line-height:20px;}
+	
+	.mListThree ul li a{ width:50%; padding:0 19%;}
+	
+	.mListThree ul li em{ margin-top:12px; height:18px;}
+	
+	.magazineTip{ font-size:14px; height:42px; line-height:42px; bottom:48px;}
+	
+	.magaFile figure p.proTitle{ bottom:90px; height:42px; line-height:42px;}
+	
+	.vedioCion img{ width:51px; height:51px;}
+	
+	.wallIcon img{ width:130px; height:130px;}
+	
+	.magaIcon img{ width:150px; height:65px;}
+	
+	.waiting .loading32{ bottom:21px;}
+	
+	/********************************************/
+	
+	/**********************20140615***********************/
+
+	.magazineTip{ bottom:51px; }
+
+	.magazineBtn img{ width:40px; height:40px; margin-top:5px;}
+
+	/****************************************************/
+
+	
+}
+
+@media screen and (max-width:380px){
+	
+	a.buyBtn{ width:200px; height:35px;line-height:35px;font-size:22px; border-radius:8px;}
+	
+	.proBox h1{ font-size:18px;}
+	
+	dl.proPrice{ font-size:13px;}
+	
+	dl.proPrice span{ font-size:16px;}
+	
+	.memberSure tr td.widM1{ width:27%;}
+	.memberSure tr td.widM2{ width:27%;}
+	.successM tr td.widM1{width:32%;}
+	.memberDetail tr td.widM1{ width:33%;}
+  
+	.proImg img{ width:50px; height:50px;}
+	
+	.memTitle{ font-size:16px;}
+	.memPrice{ font-size:14px;}
+	
+	.memPrice span{ font-size:16px;}
+	
+	dl.searchBox dt input,dl.searchBox dd input{ height:30px; line-height:30px;}
+	
+	dl.searchBox dd input{ font-size:16px;}
+	
+	.textMem,.textFile,.selectCity select{ font-size:16px;}
+	
+	.textMem{ padding:8px 0px; height:20px; line-height:20px;}
+	
+	.selectCity img{ width:20px; height:15px;}
+	
+	.payBtn span{ font-size:13px; width:43%; padding:4% 1%;}
+	
+	.payBtn img{ width:11px; height:11px;}
+	
+	.submitBtn{ width:65%; border-radius:10px;}
+	
+	dl.proShow dd{ font-size:16px;}
+	
+	.proDetail h1{ font-size:28px;}
+  
+  	.proDetail span{ font-size:18px;}
+  
+    .proDetail{ font-size:16px;}
+	
+	.perImg img{ width:55px; height:55px;}
+  
+	.perSonName,.personSF{ font-size:16px;}
+	
+	.aboutUs{ font-size:12px}
+	
+	a.makeFriend{ width:103px; height:22px; line-height:22px; font-size:12px;}
+	
+	dl.pingpai dt{ width:100px; height:26px;}
+	
+	dl.pingpai dd{ font-size:14px;}
+	
+	.rightPer{ font-size:12px;}
+	
+	.rightPer img{ width:105px; height:105px;}
+	
+	.cion{border-width:8px;}
+	
+	.rightPer .vedioCion img{ width:25px;height:25px;}
+	
+	.add_chose a{ font-size:16px; width:25px; line-height:24px;}
+	
+	.add_chose .text{ font-size:16px; width:45px; padding:2px 0px;}
+	
+	.payBtn span em{border:3px solid #a7a7a7;border-radius:6px; width:6px; height:6px;display:inline-block;}
+	
+	.payBtn span.selected em{border:3px solid #32b53c;}
+	
+	.firstStep p,.btnShow{ font-size:18px;}
+	
+	.firstStep p{ line-height:180%; padding:0 4% 10%;}
+	
+	/*****************************************************/
+	
+	dl.indexLeft dd{ font-size:12px; line-height:150%;}
+	
+	dl.indexLeft dt h1{ font-size:16px;}
+	
+	dl.indexLeft dt img{ width:135px; height:45px;}
+	
+	.tipIndex{ font-size:24px;}
+	
+	dl.indexLeft dd span.name{line-height:80%;}
+	
+	#button,#button img{ width:90px; height:90px;}
+	
+	.productDetail h1{ font-size:22px;}
+	
+	.proTip{ font-size:12px;}
+	
+	.productDetail{ font-size:14px; line-height:180%;}
+	
+	.btnToPro span.centerB a{ font-size:14px; padding:0.5% 0; width:55%; height:24px; line-height:24px;}
+	
+	.leftB img{ width:42px; height:42px;}
+	
+	.rightB img{ width:42px; height:42px;}	
+	
+	.btnToPro{ height:42px;}
+	
+	.centerB{ padding-top:3%;}
+	
+	.proImgTip p.pImgTitle{ font-size:10px;}
+	
+	.proImgTip p.pImgName{ font-size:9px; color:#9b9b9b;}
+	
+	.proImgTip p.pImgTitle,.proImgTip p.pImgName{ line-height:100%;}
+	
+	.proName{ font-size:26px; font-family:Arial, Helvetica, sans-serif;}
+	
+	.vedioCion{text-align:center;}
+	.vedioCion img{width:51px; height:51px;}	
+	.slideTip img{width:20px; height:69px;}
+	/*********************20140329***********************/
+	 .proBottom{ font-size:10px;}
+	 .proBottom span{ margin-right:0.1%;}
+	 .proBottom span img{ width:10px; height:10px; margin-bottom:2px;}
+	/********************************************/
+	
+	.loading{ margin:0px auto 80px;}
+	
+	
+	
+	/**********������*/
+  .centerB1 a{ display:inline-block;
+
+color:#000000;
+font-size:16px;
+padding:0;
+width:59%;
+margin:0px auto;
+
+font-family:΢���ź�;
+}
+
+.index1Box{margin:0 auto; position: relative; max-width:380px; height:239px;}
+
+.index1Box1{
+width:44%;
+height:auto;
+position:absolute;
+top:18px;
+left:4%;
+
+}
+.index1Box1 img{width:100%;height:auto;}
+.index1Box1 a{ width:100%; display:block; height:auto; float:left;}
+
+.index1Box2{width:44%;height:auto; 
+position:absolute;top:18px; left:51%; 
+}
+.index1Box2 img{width:100%;height:auto;}
+.index1Box2 a{ width:100%; display:block; height:auto; float:left; }
+		
+.pro_box{margin:0px;}
+.proShow{padding:0px 0px 2%;}
+.swipe-wrap1 figure a img{ width:100%;height:auto; }
+
+nav.numNav1{top:-6px;}
+
+/************************20140403*********************/
+	
+	nav.bottomNav li{ font-size:9px; width:24.7%; height:32px; line-height:32px;}
+	
+	.faceButton #button, .faceButton #button img{ width:90px; height:90px;}
+	
+/*	.cionface{ margin:-8px auto 0px;} edit by XuLian*/
+	
+	.personFace .leftBox{ top:10px;}
+	
+	.personFace .leftBox img{ width:133px; height:84px;}
+	
+	.personFace .leftBox p{ font-size:12px; top:10px; left:10px; line-height:140%;}
+	
+	.personFace .rightBox img{ width:105px; height:45px;}
+	
+	.personFace .rightBox p{ font-size:12px; top:5px; left:18px; line-height:140%;}
+	
+	dl.faceTop dt img{ width:100%; height:auto;}
+	
+	dl.faceTop dd{ font-size:16px;}
+	
+	.indexBottom{ font-size:16px;}
+  
+
+	
+	.indexFile h1,.indexFile h2{ font-size:24px;line-height:140%;}
+	
+	.indexFile h3{ font-size:24px; line-height:140%;}
+	
+	.indexFile #button, .indexFile #button img{ width:180px; height:180px;}
+	
+	h1.proListTitle{ font-size:16px; line-height:150%;}
+	
+	.proListTip p{ font-size:12px; line-height:150%;}
+	
+	dl.pricePro dt{ font-size:20px;}
+	
+	dl.pricePro dd,dl.pricePro dt em{ font-size:12px;}
+	
+	.proBuyNum{ font-size:14px;}
+	
+	.cart img{ width:23px; height:20px;}
+	
+	.productShowBox h1{ font-size:18px;}
+	
+	.productShowBox p{ font-size:14px;}
+	
+	.titlePro{ font-size:12px; height:40px; line-height:40px;border-left:5px solid #00CC00; padding-left:5%;}
+	
+	.rowList li{ width:35%;}
+	
+	.rowList li p img{ width:55px; height:55px;}
+	
+	.rowList li span.rowSpan1{ font-size:12px;}
+	
+	.rowList li span.rowSpan2{ font-size:12px;}
+	
+	.plNum em{ font-size:12px;}
+	
+	.plNum{ font-size:12px;}
+	
+	a.plMore{ font-size:10px;}
+	
+	.plList li{ font-size:12px;}
+	
+	.plList li span{font-size:10px;}
+	
+	.buyOtitle{ font-size:10px; height:20px; line-height:100%;}
+	
+	.buyOprice{ font-size:10px;}
+	
+	.productOtherList{ margin-bottom:25%;}
+	
+	.productOtherList li{ width:46%;}
+	
+	.productOtherList li span.proOtFont{ font-size:14px;}
+	
+	.productShowBox p{ line-height:150%; padding:5% 0;}
+	
+	.productList{ margin-bottom:35%;}
+	
+	.centerB1 a.fontWhite{ font-size:18px;}
+	
+	.buyOther li{width:28.5%; padding:1%; margin:1% 0.5% 2% 2.5%;}
+	
+	a.proBtnMore{ font-size:13px; width:235px; height:30px; line-height:30px;}
+	
+	a.proBtnMore img{width:12px; height:9px;margin-top:-5px;}
+	
+	/*.buyOimg img{ height:120px;}*/
+	
+	.productRow{padding-bottom:8%;}
+	
+	nav.numNav dl.position dd{ width:4px; height:4px; border-radius:4px;}
+	
+	/****************************************************/
+	
+	/********************20140609*****************/
+
+	.bottomMake{ height:42px;}
+	
+	.bottomMake img{ width:42px; height:42px;}
+	
+	.roundMakeBox{ bottom:-13px;width:290px; margin-left:-145px;}
+	
+	.roundM1{ width:290px; height:291px;}
+	/**edit by XuLian -2px-->-7px*/
+	.faceButton #button{ margin:0px auto;}
+
+	a.makeR1{ left:87px; top:25px; width:40px; height:50px;}
+	
+	a.makeR2{ right:87px; top:25px;width:40px; height:50px;}
+	
+	a.makeR3{ left:35px; top:75px; width:40px; height:50px;}
+	
+	a.makeR4{ right:35px; top:75px;width:40px; height:50px;}
+	
+	a.makeR5{ left:35px; top:152px; width:40px; height:50px;}
+	
+	a.makeR6{ right:35px; top:152px;width:40px; height:50px;}
+	
+	a.makeR7{ right:125px; top:205px;width:40px; height:50px;}
+	
+	a.makeR8{ right:105px; top:95px;width:80px; height:80px;}
+	
+	.productList li{ border-radius:5px;}
+	
+	.proListImg span{ height:30px; line-height:30px; font-size:14px;}
+	
+	dl.pricePro{ height:42px; line-height:42px;}
+	
+	.fontDetail{ font-size:14px;}
+	
+	._mFontImg{ width:290px; height:202px;}
+	
+	.mUp{ width:20px; height:12px;}
+	
+	.mFontBox{ margin-bottom:0px; }
+	
+	nav.numNavList dl.position{ height:3px;}
+	
+	nav.numNavList dl.position dd{ height:3px; border-radius:3px; width:14px;}
+	
+	.mListThree{ margin:26px 0px 42px;}
+	
+	.mListThree ul{ height:24px; padding:8px 0px;}
+	
+	.mListThree ul li{ font-size:11px; height:24px; line-height:12px;}
+	
+	.mListThree ul li a{ width:56%; padding:0 16%;}
+	
+	.mListThree ul li em{ margin-top:6px; height:14px;}
+	
+	.magazineTip{ font-size:12px; height:36px; line-height:36px; bottom:42px;}
+	
+	.magaFile figure p.proTitle{ height:36px; line-height:36px; font-size:14px; bottom:0px;}
+	
+	.vedioCion img{ width:41px; height:41px;}
+	
+	.wallIcon img{ width:100px; height:100px;}
+	
+	.magaIcon img{ width:130px; height:56px;}
+	
+	.waiting .loading32{ bottom:19px;}
+	
+	.mListTwo{ margin:3% 0 0;}
+	
+	nav.numNavList{ top:-3px;}
+	
+	/********************************************/
+	
+	
+	/**********************20140615***********************/
+
+	.magazineTip{ bottom:45px; }
+
+	.magazineBtn img{ width:33px; height:33px; margin-top:5px;}
+
+	/****************************************************/
+
+}
+
+

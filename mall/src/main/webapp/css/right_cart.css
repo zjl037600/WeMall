@@ -1,0 +1,134 @@
+a#global-cart {
+	z-index: 10;
+	display: block;
+}
+a#global-cart .right-icon-img {
+	background-size: 300px 50px;
+	background-position: -202px -4px;
+	background-image: url("../images/right_icon3.png");
+}
+a#global-cart.hide {
+	display: none;
+}
+a#global-cart.new .right-icon-img {
+	background-position: -250px -4px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
+a#global-cart .right-icon-img {
+background-position:-200px -7px;
+background-image:url("../images/right_icon3@2x.png");
+}
+a#global-cart.new .right-icon-img {
+background-position:-250px -7px;
+}
+}
+
+
+
+a#global-wish {
+	z-index: 10;
+	display: block;
+}
+a#global-wish .right-icon-img {
+	background-size: 300px 50px;
+	background-position: -2px -4px;
+	background-image: url("../images/right_icon3.png");
+}
+a#global-wish.hide {
+	display: none;
+}
+a#global-wish.new .right-icon-img {
+	background-position: -45px -7px;
+}
+a#global-wish.no-text {
+	background-size: 100px 50px;
+	background-position: 0px 0px;
+	background-image: url("../images/likes.png");
+}
+a#global-wish.no-text.new {
+	background-position: -50px 0px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
+a#global-wish .right-icon-img {
+background-position:3px -7px;
+background-image:url("../images/right_icon3@2x.png");
+}
+a#global-wish.new .right-icon-img {
+background-position:-45px -7px;
+}
+a#global-wish.no-text {
+background-image:url("../images/likes@2x.png");
+}
+}
+#right-icon {
+	height: 50px;
+	width: 50px;
+	border-radius: 26px;
+	border: 1px solid #e1e1e1;
+	position: fixed;
+	bottom: 52px;
+	right: 6px;
+	z-index: 10;
+	overflow: hidden;
+	-webkit-transition: width ease-in-out 0.3s;
+	-moz-transition: width ease-in-out 0.3s;
+	transition: width ease-in-out 0.3s;
+	background-color: white;
+	background-clip: padding-box;
+}
+#right-icon .right-icon-container {
+	position: absolute;
+	height: 50px;
+	right: 0px;
+	top: 0px;
+}
+#right-icon a {
+	float: left;
+	width: 50px;
+	height: 50px;
+}
+#right-icon .show-more-btn {
+	background-position: 1px 0px;
+	background-repeat: no-repeat;
+	background-size: 150px 50px;
+	background-image: url("../images/point2.png");
+}
+#right-icon .show-more-btn.new {
+	background-position: -99px 0px;
+}
+#right-icon .right-icon-img {
+	height: 32px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+#right-icon .right-icon-txt {
+	line-height: 18px;
+	font-size: 12px;
+	text-align: center;
+	color: #9f9f9f;
+}
+#right-icon .no-text .right-icon-txt {
+	display: none;
+}
+#right-icon .no-text .right-icon-img {
+	height: 50px;
+}
+#right-icon.no-border {
+	border: 0px none;
+	background-color: transparent;
+}
+#right-icon.show {
+	padding-left: 12px;
+}
+#right-icon.show .show-more-btn {
+	background-position: -49px 0px;
+}
+#right-icon .no-text .right-icon-img {
+	display: none;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
+#right-icon .show-more-btn {
+background-image:url("../images/point2@2x.png");
+}
+}
+

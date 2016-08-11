@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping >
+	<!--系统参数-->
+	<class entity-name="system_param" table="system_param" dynamic-update="true">
+	    <id name="id" type="string">
+				<generator class="uuid.hex"></generator>
+		</id>
+    </class>
+</hibernate-mapping>

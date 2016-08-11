@@ -1,0 +1,505 @@
+<!DOCTYPE html><html lang="en-US">    <head>        <meta charset="UTF-8"/>        <meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">        <meta name="format-detection" content="telephone=no" />                <title>分销申请</title>        <link rel="stylesheet" href="css/showcase.css" />         <link rel="stylesheet" href="css/style.css" />           <link rel="stylesheet" href="css/base.css"  />         <script src="js/static/lib-min.js"></script>        <script src="js/main.js"></script>    </head>    <body >
+
+<link rel="stylesheet" href="css/register.css" /> 
+
+<style>textarea{background: none repeat scroll 0 0 #efefef;border: medium none;border-radius: 5px;font-size: 14px;height: 40px;line-height: 20px;padding: 10px;}</style>
+
+<div data-role="container" class="container register">
+
+    <div class="body">
+
+        <header data-role="header">
+
+            
+				<img src="Images/56ad6e675bba7.jpg">
+        </header>
+
+        <section data-role="body" class="body">
+
+            <div class="register_info">
+
+			
+
+			<div class="line title" style="line-height:25px;height:80px;">
+
+					<label>本店累计消费满<span style="color:#FF7F50">98.00</span>元,才可申请成为<span style="color:#FF7F50">天佑商城</span>分销商,您已消费<span style="color:#FF7F50">0</span>元,请继续努力!</label>
+
+				</div>
+
+ 				<a class="btn" href="index.html">继续购物</a>  
+
+				
+
+				
+				                
+
+            </div>
+
+
+
+            <ul class="desc">
+
+                <li>
+
+                    <span class="icon"></span>
+
+                    <span class="title">推广赚佣金</span>
+
+                    <label>全店商品均可享受分佣，推广客户终身受益</label>
+
+                </li>
+
+                <li>
+
+                    <span class="icon red"></span>
+
+                    <span class="title">零成本投入 </span>
+
+                    <label>无需开店，无需囤货，无需投入时间管理 </label>
+
+                </li>
+
+            </ul>
+
+        </section>
+
+
+
+    </div>
+
+</div>
+
+        <script src="mobiscroll/js/mobiscroll.custom-2.5.2.min.js" type="text/javascript"></script>
+
+        <script src="mobiscroll/dev/js/mobiscroll.core-2.5.2-zh.js" type="text/javascript"></script>
+
+    
+
+        <link href="mobiscroll/dev/css/mobiscroll.core-2.5.2.css" rel="stylesheet" type="text/css" />
+
+        <link href="mobiscroll/dev/css/mobiscroll.animation-2.5.2.css" rel="stylesheet" type="text/css" />
+
+        <script src="mobiscroll/dev/js/mobiscroll.datetime-2.5.1.js" type="text/javascript"></script>
+
+        <script src="mobiscroll/dev/js/mobiscroll.datetime-2.5.1-zh.js" type="text/javascript"></script>
+
+        <!-- S 可根据自己喜好引入样式风格文件 -->
+
+        <script src="mobiscroll/dev/js/mobiscroll.android-ics-2.5.2.js" type="text/javascript"></script>
+
+        <link href="mobiscroll/dev/css/mobiscroll.android-ics-2.5.2.css" rel="stylesheet" type="text/css" />
+
+<script>
+
+                var currYear = (new Date()).getFullYear();  
+
+                var opt={};
+
+                opt.date = {preset : 'date'};
+
+                //opt.datetime = { preset : 'datetime', minDate: new Date(2012,3,10,9,22), maxDate: new Date(2014,7,30,15,44), stepMinute: 5  };
+
+                opt.datetime = {preset : 'datetime'};
+
+                opt.time = {preset : 'time'};
+
+                opt.default = {
+
+                    theme: 'android-ics light', //皮肤样式
+
+                    display: 'modal', //显示方式 
+
+                    mode: 'scroller', //日期选择模式
+
+                    lang:'zh',
+
+                    startYear:currYear - 10, //开始年份
+
+                    endYear:currYear + 10 //结束年份
+
+                };
+
+                $("#mdate").val();
+
+                $('#mdatetime').val()
+
+                $("#mdate").scroller('destroy').scroller($.extend(opt['date'], opt['default']));
+
+                $('#mdatetime').scroller('destroy').scroller($.extend(opt['datetime'],opt['default']));
+
+</script>
+
+<script>
+
+    var verifyReg = function() {
+
+        var a = $('#user_mobile').val(),
+
+                w = $('.required').val(),
+
+                b = $('#user_name').val(),
+
+                d = $('#user_password').val(),
+
+                c = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/,
+
+                m = /^[0-9a-zA-Z_]{6,32}$/,
+
+                e = !0;
+
+        return '' == a && ($.Error('手机号码不能为空！', 1000), e = !1),
+
+                '' == w && ($.Error($('.required').attr('placeholder')),e = !1),
+
+                c.test(a) || ($.Error('手机号码格式错误！', 1000), e = !1),
+
+                '' == b && ($.Error('申请人不能为空！', 1000), e = !1),
+
+                '' == d && ($.Error('密码不能为空！', 1000), e = !1),
+
+                m.test(d) || ($.Error('密码长度必须为6位以上,且不是特殊字符！', 1000), e = !1),
+
+                e
+
+         },
+
+            checkMobileExist = function(a, c, b) {
+
+                $.ajax({
+
+                    url: "/index.php?m=Shop&c=Public&a=dist_apply_mobile",
+
+                    type: "post",
+
+                    dataType: "json",
+
+                    data: {
+
+                        mobile: a,
+
+                        user_id: c
+
+                    },
+
+                    success: b
+
+                })
+
+            };
+
+    timer = null,
+
+            timer_status = 0;
+
+    $(function() {
+
+        $.countdown = function() {
+
+            if (!timer_status) {
+
+                var a = $("#user_mobile").val();
+
+                $.post("/index.php?m=Shop&c=Public&a=sendcode", {
+
+                    mobile: a,
+
+                },
+
+                        function() {
+
+                        });
+
+                var b = parseInt(60);
+
+                timer = setInterval(function() {
+
+                    b -= 1,
+
+                            timer_status = 1,
+
+                            0 == b ? (clearInterval(timer), $(".getcode").text("重新获取"), timer_status = 0) : ($(".getcode").text(b+'s'), timer_status = 1)
+
+                },
+
+                        1e3)
+
+            }
+
+        },
+
+                $('#submit').click(function() {
+
+                var f = $('#user_name').val(),
+
+                    g = $('#user_password').val(),
+
+                    i = $('#user_id').val(),
+
+                    h = $('#user_mobile').val(),
+
+                    o = $('#vcode').val(),
+
+                    n = $('#address').val();
+
+                //自定义表单内容   
+
+                var k = [];var l = [];
+
+                $(':input[name=userinfo]').each(function(i){
+
+                    k.push($(this).val());
+
+                    l.push($(this).data('name'));
+
+                });
+
+                var user_info = {
+
+                    'val':k,
+
+                    'key':l,
+
+                }
+
+                //end
+
+            return verifyReg() ? ($.post('', {
+
+                user_name: f,
+
+                user_password: g,
+
+                user_mobile: h,
+
+                user_id: i,
+
+                vcode: o,
+
+                address: n,
+
+                userinfo : JSON.stringify(user_info) 
+
+            },
+
+            function(a) {
+
+                1 == a.status ? ($.Error('申请成功！', 1000), setTimeout(skip_login,1e3))  : $.Error(a.msg, 1000)
+
+            }), !1) : void 0
+
+        }),
+
+            $("#getcode").click(function() {
+
+            var a = $("#user_mobile").val(), b = $('#user_id').val(),c = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/;
+
+            if (a == '') {
+
+                $.Error("手机号码不能为空！");
+
+                return false;
+
+            }
+
+            if(!c.test(a)){
+
+                $.Error("手机号码格式不正确！");
+
+                return false;
+
+            }
+
+            
+
+            checkMobileExist(a, b, function(a) {
+
+                if (1 == a.status) {
+
+                    $.countdown();
+
+                }
+
+                else {
+
+                    $.Error(a.msg);
+
+					setTimeout(skip_login,1e3);
+
+                }
+
+            });
+
+        });
+
+		function skip_login(){
+
+			window.location.href = "/index.php?m=Shop&c=Public&a=dist_apply&sid=11271";
+
+		}
+
+		
+
+    });
+
+   
+
+</script>
+
+﻿
+
+
+
+
+
+<style>
+        .members_bottom{font-family:"微软雅黑";font-size:12px}
+    </style>
+    
+
+
+<div class="js-navmenu shop-nav nav-menu nav-menu-1 has-menu-3">
+    <div class="nav-special-item nav-item">
+        <a href="index.html" class="home">主页</a>
+    </div>
+
+    <div class="nav-item">
+            <a class="mainmenu js-mainmenu" href="number-center.html">
+                    <i class="arrow-weixin"></i>
+                    <span class="mainmenu-txt">会员中心</span>
+                </a>
+                  
+        </div><div class="nav-item">
+            <a class="mainmenu js-mainmenu" href="goods-list.html">
+                    <i class="arrow-weixin"></i>
+                    <span class="mainmenu-txt">所有商品</span>
+                </a>
+                  
+        </div><div class="nav-item">
+            
+                <!-- 子菜单 -->
+                <a class="mainmenu js-mainmenu" href="javascript:void(0);">
+                    <i class="arrow-weixin"></i>
+                    <span class="mainmenu-txt">加入分销</span>
+                </a>
+                <div class="submenu js-submenu">
+                    <span class="arrow before-arrow"></span>
+                    <span class="arrow after-arrow"></span>
+                    <ul>
+                        
+                                <li>
+                                    <a href="sales-apply.html">分销中心</a>  
+                                    <li class="line-divide"></li>
+                                </li>
+                                <li>
+                                    <a href="sales-intr.html">分销说明</a>  
+                                    <li class="line-divide"></li>
+                                </li>
+                                <li>
+                                    <a href="sales-apply.html">立即申请</a>  
+                                    <li class="line-divide"></li>
+                                </li><li>
+                                    <a href="sales-class.html">微信分享教程</a>  
+                                </li>
+                                
+
+                    </ul>
+                </div>  
+        </div>   
+
+
+</div>
+
+<script>
+    $(function() {
+        var t = $(".js-navmenu"),
+                n = t.find(".js-nav-pop");
+        if (t.length) {
+            var e = {
+                showSubmenu: function(t) {
+                    var n = $(t.target),
+                            e = n.parents(".nav-item"),
+                            o = n.hasClass(".js-mainmenu") ? n : e.find(".js-mainmenu"),
+                            i = e.find(".js-submenu"),
+                            a = i.find(".arrow"),
+                            s = n.parents(".js-navmenu"),
+                            r = s.find(".nav-item");
+                    i.css("opacity", "0").toggle();
+                    var c = r.length,
+                            d = r.index(e),
+                            l = o.outerWidth(),
+                            u = (i.outerWidth() - o.outerWidth()) / 2,
+                            h = i.outerWidth() / 2;
+                    if (0 === i.size())
+                        $(".js-submenu:visible").hide();
+                    else {
+                        var f = i.outerWidth(),
+                                w = e.outerWidth(),
+                                p = "auto",
+                                v = "auto",
+                                m = "auto",
+                                g = "auto";
+                        0 === d ? (p = o.position().left - u, v = h - a.outerWidth() / 2) : d === c - 1 && f > w ? (m = 8, g = l / 2 - m) : (p = o.position().left - u, v = h - a.outerWidth() / 2);
+                        var b = 5;
+                        0 > p && (v = v + p + b, p = b),
+                                0 > m && (g = g + m + b, m = b),
+                                i.css({
+                                    left: p,
+                                    right: m
+                                }),
+                        a.css({
+                            left: v,
+                            right: g
+                        }),                         
+                        $(".js-submenu:visible").not(i).hide(),
+                                i.css("opacity", "1")
+                    }
+                }
+            };
+            $("body").on("click", ".js-mainmenu", function(t) {
+                e.showSubmenu(t)
+            });
+
+        }
+    });
+</script>    <!--/div-->
+        <div id="mmexport">
+        <img src="/Public/Shop/images/mmexport.png" width="100%" alt="">
+    </div>
+    <!--关注-->
+    <script>
+    </script>
+
+    <script>
+        $(function() {
+            $("#fxBtn").click(function() {
+                $("#mmexport").show();
+            });
+            $("#mmexport").click(function() {
+                $(this).hide();
+            });
+        });
+    </script>
+
+    <script type="text/javascript" src="/Public/Shop/js/swipe.js"></script>
+    <script type="text/javascript" src="/Public/Shop/js/detail.js"></script>
+
+
+    <!-- fahai: move the share code to the header -->
+
+    <script>
+        $(function(){
+            $('.js-open-follow').click(function(){
+                $('#js-follow-guide').show();
+            })
+            $('js-follow-guide').click(function(){
+                $('#js-follow-guide').show();
+            })
+            $('.guide-close').click(function(){
+                $('#js-follow-guide').hide();
+            })
+            $('#js-follow-guide').css('font-size','12px');
+        })
+    </script>
+<!-- end -->
+</body>
+</html>

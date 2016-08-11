@@ -1,0 +1,1387 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>神话集团神话集团</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <style>
+      @men{}
+      .hide{display:none;}
+      /* div{max-width:640px;}*/
+      /* -webkit- */
+      /*信息提示框（成功、警告、信息）*/
+        .tmt-result-page__icon_success { background-image: url("userImage/style-tmt.png");  background-position: -0px -0px;}
+        .tmt-result-page__icon_warn {  background-image: url("userImage/style-tmt.png");  background-position: -83px -0px;}
+        .tmt-result-page__icon_notice { background-image: url("userImage/style-tmt.png");  background-position: -0px -83px;}
+        .tmt-result-page__text { padding-top: 30px;font-size: 15px;color: #888;}
+        .tmt-result-page__icon { display: inline-block; width: 83px; height: 83px;}
+      body{padding:0;margin:0;font-family:"Microsoft YaHei"!important;font-style: normal;-webkit-user-select: none;-moz-user-select: none;background-color:#fff;font-size:16px;} .tab:active{opacity:0.8} #LoginOut:active{opacity:0.8}.top_bar{font-size:12px}.t_card{padding:8px}.hide{display:none;}
+ 
+      .t_header{ position:relative;z-index:55;}
+      .top_bar_tab{width:100%;color:#000;z-index:6;font-size:12px}
+      .top_bar_tab_back{width:100%;height:45px;position:absolute;z-index:5;color:#fff;margin-top:-45px;font-size:14px;background-color:#000;opacity:.4}
+      .top_bar_tab .tab{width:33.3%;float:left;height:100%;text-align:center; background-color:#FDF8F8;} .top_bar_tab .tab span{color:Red;font-size:14px;} .top_bar_tab .tab div{font-size:14px;margin-top:8px;}
+      .t_header_div{position:absolute;text-align:center;margin-left:2%;font-size:18px;margin-top:24px}
+      .t_header_back{width:70px;height:70px;background-color:#fff;opacity:.5;border-radius:70px}.nickname{margin-top:3px}
+      .t_header img{width:68px;height:68px;border-radius:68px;position:absolute;z-index:55;margin-left:-33.5px;margin-top:1px}
+      .t_header{position:absolute;margin-left: 34px;}
+      .top_bar .nickdiv{ position:absolute;margin-top:32px;margin-left:23%;z-index:99;font-size:16px;}
+      .top_bar .message_center { position:absolute;right:18px;margin-top:35px;}
+      .top_bar .tuiguang_qrcode{position:absolute;right:9px;margin-top:70px;}
+      .top_bar_tab{width:100%;color:#fff;z-index:6;margin-top:-38px;font-size:12px}.top_bar_tab_back{width:100%;height:45px;position:absolute;z-index:5;color:#fff;margin-top:-45px;font-size:14px;background-color:#000;opacity:.4}.top_bar_tab .tab{width:33.3%;float:left;text-align:center}.top_bar_tab .tab div{font-size:14px}
+      .notice_bar{height:35px;line-height:35px;background-color:#fff;font-size:14px;overflow:hidden;}
+      .order_bar{width:100%;height:90px; line-height:35px;border-bottom:1px solid #EAE7E7;}
+      .order_bar .tab{width:20%;height:30px;float:left;text-align:center;margin-top:8px;}
+      .order_bar .tab img{width:35%;}
+      .order_bar .tab em{font-style: normal;font-size:12px;width:auto;min-width:1.1em;height:1.1em;line-height:1.3em;text-align:center;padding:2px;color:#fff;background-color:red;border-radius:1.1em;margin-top:-3px;margin-left:-6px;position:absolute;}
+      .order_bar .tab em.opacity{opacity:0;}
+      .order_bar .tab em.in{-webkit-animation: fromBack 0.5s linear backwards, emfadeIn 0.5s linear backwards;} @-webkit-keyframes emfadeIn{0%{opacity:0}100%{opacity:1}}@-webkit-keyframes fromBack{0%{-webkit-transform:scale(0);opacity:0}100%{-webkit-transform:scale(1);opacity:1}}
+      .order_bar .tab:nth-child(2) em{-webkit-animation-delay:.1s;animation-delay:.1s}.order_bar .tab:nth-child(3) em{-webkit-animation-delay:.3s;animation-delay:.3s}.order_bar .tab:nth-child(4) em{-webkit-animation-delay:.5s;animation-delay:.5s}
+      .order_bar .tab div{width:100%;height:25px;line-height:25px;font-size:14px;text-align:center;color:#6F6E6E;}
+      .tool_col_bar{height:85px;border-bottom:1px solid #EAE7E7;}
+      .tool_col_bar .tab{width:33%;height:100%;float:left;text-align:center;font-size:15px;}
+      .tool_col_bar .tab.rightline{border-right:1px solid #ECEBEB;}
+      .tool_col_bar .tab img{width:35%;margin-top:8px;}
+      .tool_col_bar .tab div{margin-top:8px;color:#6F6E6E;}
+      .message_center .wd {color: Red;font-style: normal;margin-left: 20px;position: absolute;margin-top: -7px;}
+      .icon{width:30px;height:30px;float:left;margin-top:8px;margin-left:15px; }
+      .icon_store{width:20px;height:20px;float:left;margin-top:13px;margin-left:15px; }
+      .icon_store.storeaddr{background:url(userImage/VIPAddr.png) center center no-repeat;background-size:100% 100%;}
+      .icon_store.storephone{background:url(userImage/VIPtel.png) center center no-repeat;background-size:100% 100%;}
+      .icon_store.storehome{background:url(userImage/ico_home@2x.png) center center no-repeat;background-size:100% 100%;}
+      ul, li {list-style-type: none;}
+      ul{display: block;  list-style-type: disc;   -webkit-margin-before: 0em;  -webkit-margin-after: 0em;   -webkit-margin-start: 0px;   -webkit-margin-end: 0px;  -webkit-padding-start: 0px;}
+      li {display: list-item;   text-align: -webkit-match-parent;}
+      .tool_row_bar ul li{height:45px;border-bottom:1px solid #ECEBEB;}
+      .tool_row_bar ul li.last_li{border-bottom:1px solid #d5d5d5;}
+      .tool_row_bar ul li span{ position:absolute;font-size:16px; margin-top:12px;margin-left:10px;}
+      .tool_store_bar{border-top:1px solid #d5d5d5;}
+      .tool_store_bar ul li span{ position:absolute;font-size:16px; margin-top:12px;margin-left:10px;}
+      .tool_store_bar ul li{height:45px;border-bottom:1px solid #ECEBEB;}
+      .tool_store_bar ul li.last_li{border-bottom:1px solid #d5d5d5;}
+      .icon_right{width:12px;height:20px;position:absolute;right:8px;margin-top:15px;background:url(http://web.wddcn.com/dzd/moban/xfc/img/member/arrow.png) center center no-repeat;background-size:100%;}
+      a { color: #000; text-decoration: none;}
+      .top_bar_tab a{color:#000;}
+      .shenglue{ position: relative;  -webkit-box-flex: 1; box-flex: 1; text-overflow: ellipsis;  overflow: hidden;  white-space: nowrap; outline: 0 !important;}
+      .fun_area_bottom .tab{width:94%;margin-top:12px;background-color:#FBF7F7;border:1px solid #E8E4E4;height:35px; line-height:35px;border-radius:3px;}
+      .fengeline{height: 18px; border-bottom: 1px solid #d5d5d5;}
+      #LoginOut{width:95%;margin-top:12px;background-color:#F93930;border:1px solid #F93930;height:35px;color:#fff; line-height:35px;border-radius:3px; text-align:center;}
+      @media(min-width:641px)  { .wai_line{display:none;}.tool_col_bar,.order_bar,.tool_row_bar,.tool_store_bar,.fengeline,.fun_area  {max-width: 640px;margin: auto;}.tool_col_bar .tab img { width: 22%;margin-top: 8px;}.order_bar .tab img { width: 18%;}.icon_right { position: static;float: right;}#LoginOut{max-width:640px;margin:auto;}}
+      .fun_area li{width:49.5%;float:left;height:50px;border-top:1px solid #f1f1f1;}
+      .fun_area .ico{width: 30px;  position:absolute;margin-top:0px;margin-left:-38px;}
+      .fun_area .title{font-size: 16px; color: #5F5D5D;width:100px;margin:0px;}
+      .fun_area .titlenull{font-size: 16px; color: #5F5D5D;width:100px;margin:0px;padding-top:5px;}
+      .fun_area .stip{font-size: 12px; color: #c5c5c5;width:100px;margin:0px;}
+      .fun_area li{border-right: 1px solid #f1f1f1; border-top: 1px solid #f1f1f1;height:55px;}
+      .fun_area .div{margin-left: 35%; margin-top: 13px;}
+      .center_type .tab{width: 50%; height: 45px; float: left;  text-align: center;line-height: 45px; color: #fff;}
+      .center_type .tab.t1{background-color: #82B9EC;}  .center_type .tab.t2{background-color: #82B9EC;}
+      .center_type .tab.cur{background-color:  #0B73D6;} 
+      .center_type .tab span{ position:absolute;  width: 0;height: 0;  border-left: 8px solid transparent;   border-right: 8px solid transparent;  border-bottom: 8px solid #FDF8F8;margin-left:-43px;margin-top:37px;opacity:0;}
+      .center_type .tab.cur span{opacity:1;} .center_type .ico{width: 40px; position: absolute;margin-top: 14px;}
+      .shop_order_bar{width:100%;height:60px; line-height:50px;border-top:1px solid #f5f5f5;border-bottom:1px solid #f5f5f5;}
+      .shop_order_bar .tab{width:33%;height:46px;float:left;text-align:center;margin-top:5px;}
+      .shop_order_bar .tab .t_num{color:#ee5b6b}
+      .shop_order_bar .tab.rightline{border-right:1px dashed #FBBFC5;}
+      .shop_order_bar .tab.rightline:last-child{border-right:0px dashed #FBBFC5;}
+      .shop_order_bar .tab em{font-style: normal;font-size:12px;width:auto;min-width:1.1em;height:1.1em;line-height:1.3em;text-align:center;padding:2px;color:#fff;background-color:red;border-radius:1.1em;margin-top:-3px;margin-left:-6px;position:absolute;}
+      .shop_order_bar .tab div{width:100%;height:25px;line-height:25px;font-size:14px;text-align:center;}
+      .my_income_price{width:100%;height:60px;font-size:14px;}
+      .my_income_price .tab{width:50%;height:100%;float:left; text-align:center;}
+      .my_income_price .tab.no1{background-color:#e7fbfb;}  .my_income_price .tab.no2{background-color:#fff1f2;}
+      .my_income_price .lbl_name{margin-top:3px;margin-left:5px;text-align:left;color:#6F6E6E;}
+      .my_income_price .lbl_name .arrow{ width:5px;height:9px; position:absolute;margin-top:-14px;margin-left:72px;background:url(http://web.wddcn.com/dzd/moban/xfc/img/shop/arr.png)   no-repeat; background-size:100%; }
+      .my_income_price .tab.no2 .lbl_name .arrow{margin-left:58px;}
+      .my_income_price .price{font-size:18px;color:#e64c4e;margin-top:5px;}
+      .ul_funarea li{ width:24.5%;height:65px;line-height:30px;float:left;border-right:1px solid #f1f1f1;border-bottom:1px solid #f1f1f1;text-align:center;font-size:12px; }
+      .ul_funarea li img{margin-top:5px;} .ul_funarea .ico{width: 30px;height:30px;margin-top:8px;margin-left:35%;}
+      .ul_funarea .wdrw_1_0{background:url(userImage/a4.png) no-repeat; background-size:100%;}
+      .ul_funarea .syph_2_0{background:url(userImage/a1.png) no-repeat; background-size:100%;}
+      .ul_funarea .qd_2_1{background:url(userImage/a2.png) no-repeat; background-size:100%;margin-left:37%;}
+      .ul_funarea .dpfx_2_2{background:url(userImage/a6.png) no-repeat; background-size:100%;}
+      .ul_funarea .ddgl_2_4{background:url(userImage/a12.png) no-repeat; background-size:100%;}
+      .ul_funarea .yxtg_2_5{background:url(userImage/a7.png) no-repeat; background-size:100%;}
+      .ul_funarea .spgl_2_6{background:url(userImage/a5.png) no-repeat; background-size:100%;}
+      .ul_funarea .tgewm_2_7{background:url(userImage/a10.png) no-repeat; background-size:100%;}
+      .ul_funarea .dpsz_2_8{background:url(userImage/a9.png) no-repeat; background-size:100%;}
+      .ul_funarea .gddp_2_10{background:url(userImage/a8.png) no-repeat; background-size:100%;}
+      .ul_funarea .bzzx_2_11{background:url(userImage/a11.png) no-repeat; background-size:100%;}
+      .ul_funarea .hyzx_2_11{background:url(userImage/a16.png) no-repeat; background-size:100%;}
+       .ul_funarea .dpsz_2_12{background:url(userImage/a19.png) no-repeat; background-size:100%;}
+       .ul_funarea .yhzl_2_13{background:url(userImage/a9.png) no-repeat; background-size:100%;}
+     .button_bar{width: 100%; height: 45px; line-height: 45px; text-align: center; border-bottom: 1px solid #f1f1f1;}
+     .tab_line{left:12%;width: 25%; height: 2px; background-color: red; position: absolute; margin-top: 43px;-webkit-transition:left 0.3s ease;transition:left 0.3s ease} .tab_line.left{left:12%;}.tab_line.right{left:62%;}
+     .jb_header {margin-top:23px;} .jb_header img{width:85px;height:85px;border-radius:85px;}
+     #a_btn_bg{width:95px;-webkit-transition:width 0.3s ease;transition:width 0.3s ease}
+     .viptype{color:#c5c5c5;font-size:12px;border:1px solid #c5c5c5;} .cur .viptype{color:#FF243C;font-size:12px;border:1px solid #FF243C;}
+       .shine_white{ border-radius:70px; -webkit-animation-name: shineWhite;   -webkit-animation-duration: 3s;  -webkit-animation-iteration-count: infinite;   }  
+      @-webkit-keyframes  shineWhite {  from { -webkit-box-shadow: 0 0 8px #bbb; }  50% { -webkit-box-shadow: 0 0 16px #ffffff; }  to { -webkit-box-shadow: 0 0 8px #bbb; }  }  
+    </style>
+    <script src="userjs/jquery-1.9.1.min.js?v=1"></script>
+        <script src="userjs/sjb_script.js?v=13"></script>
+    <style type="text/css">
+         @men{} .main{width:58%;margin:0 auto}.item1{height:150px;position:relative;padding:0px;text-align:center;-webkit-transition:top 1.2s linear;transition:top 1.2s linear}.item1 .kodai{position:absolute;bottom:0;cursor:pointer}.item1 .kodai .full{display:block}.item1 .kodai .empty{display:none}.item1 .clipped-box{display:none;position:absolute;bottom:40px;left:50%;height:100%;width:100%}.item1 .clipped-box img{position:absolute;top:auto;left:0;bottom:0;-webkit-transition:-webkit-transform 1.4s ease-in,background .3s ease-in;transition:transform 1.4s ease-in}
+    </style>
+    </head>
+<body style="">
+    <div id="vip_card_explain" onclick="hideCardExplain()" style="width: 100%; height: 100%;
+        position: fixed; left: 0px; top: 0px; background-color: #fff; z-index: 99999999;
+        font-size: 14px; display: none;">
+        <div style="margin-left: 20px; margin-top: 15px; font-size: 18px;">
+            会员卡说明:</div>
+        <div style="padding: 20px; padding-top: 5px; height: 85%; overflow: auto;">
+        </div>
+    </div>
+   
+        <div id="jingbi" class="jingbi" style="width: 100%; height: 100%; position: fixed;
+        z-index: 100; background-color: #000; opacity: 0.8; display: none;">
+    </div>
+    <div class="jingbi" onclick="closeJinbi()" style="width: 100%; height: 100%; position: fixed;
+        z-index: 102; display: none;">
+    </div>
+    <div class="jingbi jinbisale" style="width: 100%; margin-top: 10%; text-align: center;
+        position: fixed; z-index: 101; font-size: 50px; color: #FFBF00; display: none;">
+        <img src="http://web.wddcn.com/dzd/moban/xfc/img/crown_copper.png" style="position: absolute; width: 18%;
+           left: 41.2%; margin-top: -13px;" />
+        <div class="jb_header">
+                         <img src="Images/56a9e1b49ed80.jpg" />
+                     </div>
+        <div style="font-size: 25px;">
+            收益</div>
+        <div id="tip_my_income_price" style="margin-top: 0px; font-size: 65px;">
+            0.00</div>
+    </div>
+    <div class="main jingbi" style="position: fixed; bottom: 1%; left: 21%; z-index: 101;
+        display: none;">
+        <div class="item1">
+            <div class="kodai">
+            </div>
+            <div class="clipped-box">
+            </div>
+        </div>
+        <p id="html">
+        </p>
+    </div>
+        <div id="vip_card_barcode" onclick="hideCardExplain()" style="width: 100%; height: 100%;
+        position: fixed; left: 0px; top: 0px; background-color: #fff; z-index: 99999999;
+        font-size: 14px; display: none;">
+        <table style="width: 100%; height: 100%;">
+            <tr>
+                <td align="center" valign="middle">
+                    <img src="/vshop/qrcode.html?sid=881301&action=genBarcode&con=sh000017713563" style="width: 90%;"/>
+                    <div style="height: 200px;">
+                    </div>
+                    <center>
+                        <img src="userImage/btn_close_model.png" style="width: 80px; opacity: 0.1;" />
+                    </center>
+                </td>
+            </tr>
+        </table>
+    </div>
+ 
+    <div class="top_bar_background" style="width: 100%; height: 160px; background:url(userImage/new_member_bg.jpg) no-repeat; background-size:100% 100%;">
+    </div>
+    <div class="top_bar" style="width: 100%; position: absolute; top: 0px; left: 0px;
+        color: #fff;">
+        <div style="float: right; margin-top: 5px; margin-right: 16px; color: #A9A6A6;">
+            <span id="span_shop_code" style="display: none;">店铺编号:</span> <span
+                id="span_vip_code"  style="display: none;text-align:right;"><span onclick="showCardBarcode()">卡号:sh000000001</span> <div onclick="ShopPoint()">积分商城</div></span></div>
+        <div class="t_header_div shine_white" onclick="gotoEditPhoto()">
+            <div class="t_header " >
+                                 <img src="Images/56a9e1b49ed80.jpg"/>
+    
+                             </div>
+            <div class="t_header_back">
+            </div>
+            <script type="text/javascript">
+                function gotoEditPhoto() {
+                   // window.location.href = "cutting.html?sid=881301&ref=" + escape(window.location.href);
+                }
+            </script>
+        </div>
+        <div class="nickdiv">
+            <div class="nickname shenglue" style="width: 13em; color: #fff;">
+                &nbsp;&nbsp; <span id="lbl_my_name">好好好</span><span id="lbl_vmname" style="font-size: 12px; color: #c5c5c5;
+                    display: none;">&nbsp;&nbsp;普通会员</span><span id="lbl_vlname" style="font-size: 12px; color: #c5c5c5;
+                    display: none;">&nbsp;&nbsp;</span></div>
+            <div style="height: 5px;">
+            </div>
+            <div id="a_btn_bg" style="width: 95px; height: 20px; background-color: #1ca0e0; opacity: 0.9;
+                border-radius: 20px; margin-left: 10px;">
+                &nbsp;
+            </div>
+            <div id="a_toindex"  style="font-size: 12px; position: absolute;
+                margin-top: -18px; margin-left: 20px; display: none;">
+                <a href="/vshop/index.html?sid=881301" style="color: #fff;">查看我的店铺</a>
+            </div>
+            <div id="a_sign" onclick="sign()" style="font-size: 12px; position: absolute;
+                margin-top: -18px; margin-left: 20px; display: none;">
+                <a href="#" style="color: #fff;"><span class="qd_2_1"></span><div>签&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;到</div></a>
+            </div>
+        </div>
+        <div id="message_center" class="message_center">
+            <a href="/vshop/noticelist.html?sid=881301"><em class="wd hide">●</em>
+                <img src="userImage/mes.png" style="width: 22px;" /></a>
+        </div>
+        <div class="tuiguang_qrcode hide">
+            <a href="/vshop/my_shop_qrcode.html?sid=881301">
+                <img src="userImage/tui.png" style="width: 40px;" /></a>
+        </div>
+    </div>
+ 
+    <div class="center_type" style="    position: absolute;  width: 100%;  opacity: 0.8; margin-top: -45px;">
+        <img src="userImage/lian.png" style="width: 5px; position: absolute;
+            margin-top: -5px; left: 24%;" />
+        <img src="userImage/lian.png" style="width: 5px; position: absolute;
+            margin-top: -5px; left: 76%;" />
+        <div class="tab t1" data-type="mai">
+            <div class="viptype" style="width:38px;height:16px; line-height:16px; position:absolute;    margin-top: 14px; margin-left: 35%; background-color:#fff; border-radius:10px; text-align:center;">店铺</div>
+            我是创客&nbsp;
+            <!-- <img src="userImage/b1.png" class="ico" />-->
+        </div>
+        <div class="tab t2" data-type="buy">
+           <div class="viptype" style="width:38px;height:16px; line-height:16px; position:absolute;margin-top: 14px; margin-left: 35%; background-color:#fff; border-radius:10px; text-align:center;">会员</div>
+         我是买家&nbsp;
+              
+            <!--<img src="userImage/b2.png" class="ico" />-->
+        </div>
+        <div class="tab_line">
+        </div>
+    </div>
+    <div style="height:39px;width:100%;"></div>
+    <div class="tabtype tabtype_shop" style="width: 100%; margin-top: -39px; display: none">
+                <center>
+            <i id="result_ico" class="tmt-result-page__icon tmt-result-page__icon_notice" style="margin-top: 50px;">
+            </i>
+            <div class="tmt-result-page__text">
+                您还未申请开店</div>
+            <div id="dv_result" style="margin-top: 35px; font-size: 16px;">
+                <div style="width: 200px; height: 32px; line-height: 32px; background-color: #389eff;
+                    border-radius: 5px; text-align: center; color: #fff;" onclick="location.href='/vshop/regshop.html?sid=881301'">
+                    立即申请</div>
+            </div>
+        </center>
+            </div>
+    <div class="tabtype tabtype_center" style="width: 100%; display: none;">
+        <div class="top_bar_tab" style="height: 55px; line-height: 20px;">
+            <div class="tab">
+                <a href="user_consumer_detail.html">
+                    <div>
+                        消费总额</div>
+                    <span> 0.00  </span>
+                </a>
+            </div>
+            <div class="tab">
+                                <a href="user_inter_log.html">
+                                    <div>
+                        我的积分</div>
+                    <span id="lbl_my_inter">0.00</span></a>
+            </div>
+            <div class="tab">
+                <a href="user_mycoupon.html">
+                    <div>
+                        优惠券</div>
+                    <span>0</span> </a>
+            </div>
+        </div>
+        <div style="height: 8px;">
+        </div>
+        <div class="order_bar">
+            <img src="userImage/wai_line.png" class="wai_line" style="width: 100%; position: absolute; margin-top: -20px;
+                left: 0px;" />
+                  <a href="user_olist.html">
+                <div style="width:100%; border-bottom:1px solid #f1f1f1;">
+                &nbsp;&nbsp;&nbsp;&nbsp;我的订单<div style="float:right;color:#9A9595; font-size:12px;">查看全部订单&nbsp;>&nbsp;&nbsp;&nbsp;</div>
+                </div>
+                </a>
+            <div class="tab">
+                <a href="user_olist.html">
+                    <img src="userImage/a1.png" /><em id="lbl_order_dfk" class="tip_num opacity"
+                        data-num="0">0</em>
+                    <div>
+                        待付款
+                    </div>
+                </a>
+            </div>
+            <div class="tab">
+                <a href="user_olist.html">
+                    <img src="userImage/a6.png" /><em id="lbl_order_dfh" class="tip_num opacity"
+                        data-num="0">0</em>
+                    <div>
+                        待发货
+                    </div>
+                </a>
+            </div>
+            <div class="tab">
+                <a href="user_olist.html">
+                    <img src="userImage/a2.png" /><em id="lbl_order_dsh" class="tip_num opacity"
+                        data-num="0">0</em>
+                    <div>
+                        待收货
+                    </div>
+                </a>
+            </div>
+            <div class="tab">
+                <a href="user_olist.html">
+                    <img src="userImage/a5.png" /><em id="lbl_order_shz" class="tip_num opacity"
+                        data-num="0">0</em>
+                    <div>
+                        售后中
+                    </div>
+                </a>
+            </div>
+              <div class="tab">
+                <a href="user_cart.html">
+                    <img src="userImage/a3.png" /><em id="lbl_cart_count" class="tip_num opacity"
+                        data-num="0">0</em>
+                    <div>
+                        购物车
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div style="height: 10px; background-color: #FDF8F8;">
+        </div>
+       
+                         <div style="width: 100%; height: 30px;">
+            <a href="index.html">
+                <center>
+                   
+                    <div style="color: #5F5D5D; margin-top: 15px;">
+                        &nbsp;购物入口
+                    </div>
+                                         <img src="userImage/icon_wddlogo.png" style="width: 30px; margin-top: -25px;
+                        position: absolute; left: 30%;" />
+                                    </center>
+            </a>
+            </div>
+                   
+        <div style="height: 10px; background-color: #FDF8F8;">
+        </div>
+        <div style="width: 100%;">
+            <ul class="fun_area">
+                <li onclick="goto('user_profile.html')">
+                    <div class="div">
+                        <img src="userImage/c1.png" class="ico" />
+                        <div style="text-align: left;">
+                            <div class="title">
+                                我的资料</div>
+                            <div class="stip">
+                                更改个人资料</div>
+                        </div>
+                    </div>
+                </li>
+                <li onclick="goto('user_foot_print.html')">
+                    <div class="div">
+                        <img src="userImage/c9.png" class="ico" />
+                        <div style="text-align: left;">
+                            <div class="titlenull">
+                                我的足迹
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--<li onclick="goto('/vshop/userbinding.html?sid=881301')">
+                    <div class="div">
+                        <img src="userImage/c6.png" class="ico" />
+                        <div style="text-align: left;">
+                            <div class="title">
+                                账号绑定</div>
+                            <div class="stip">
+                                微信登录绑定</div>
+                        </div>
+                    </div>
+                </li>-->
+                <li onclick="goto('user_favorate.html')">
+                    <div class="div">
+                        <img src="userImage/c8.png" class="ico" />
+                        <div style="text-align: left;">
+                            <div class="titlenull">
+                                我的收藏</div>
+                        </div>
+                    </div>
+                </li>
+                <li onclick="goto('user_pwd.html')">
+                    <div class="div">
+                        <img src="userImage/c4.png" class="ico" />
+                        <div style="text-align: left;">
+                            <div class="titlenull">
+                                修改密码</div>
+                            <div class="stip">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--<li onclick="goto('/vshop/myshop.html?sid=881301')">
+                    <div class="div">
+                        <img src="userImage/c5.png" class="ico" />
+                        <div style="text-align: left;">
+                            <div class="titlenull">
+                                我的店铺</div>
+                        </div>
+                    </div>
+                </li>-->      
+
+                <li onclick="goto('user_addr.html')">
+                    <div class="div">
+                        <img src="userImage/c3.png" class="ico" />
+                        <div style="text-align: left;">
+                            <div class="title">
+                                收货地址
+                            </div>
+                            <div class="stip">
+                                修改收货地址
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                 <li onclick="goto('user_comment.html')">
+                    <div class="div">
+                        <img src="userImage/c10.png" class="ico" />
+                        <div style="text-align: left;">
+                            <div class="titlenull">
+                                我的评价</div>
+                        </div>
+                    </div>
+                </li>
+                <!--
+                 <li onclick="gotoNearStore()">
+                    <div class="div">
+                        <img src="userImage/c7.png" class="ico" />
+                        <div style="text-align: left;">
+                            <div class="titlenull">
+                                附近门店
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                   <li onclick="goto('/vshop/cutpricelist.html?sid=881301')">
+                    <div class="div">
+                        <img src="userImage/a6.png" class="ico" style="margin-top:5px;" />
+                        <div style="text-align: left;">
+                            <div class="titlenull">
+                                活动订单
+                                    <div class="stip">砍价拼团秒杀夺宝</div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                -->
+            </ul>
+        </div>
+        <div style="clear: both; height: 15px; background-color: #FBF8F8;">
+        </div>
+        <div class="tool_store_bar hide">
+            <div style="height: 35px; line-height: 35px; background-color: #FDF8F8;">
+                <a id="store_title" href="javascript:gotoNearStore()">&nbsp;&nbsp;所属门店信息</a>&nbsp;&nbsp;<a href="javascript:doPosition();" title="定位"style="float:right;font-family:@华文彩云;font-size:12px;font-weight:bold;"><img src="/moban/xfc/img/icon_dw.jpg" alt="点击定位" class="icon" style="width:20px;height:20px;"  />点击定位&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
+            <ul>
+                <li onclick="toStoreInfo()">
+                    <div class="icon_store storehome" style="margin-top: 12px;">
+                    </div>
+                    <div class="icon_right">
+                    </div>
+                    <span id="div_store_name"></span> </li>
+                <li onclick="toDh()">
+                    <div class="icon_store storeaddr">
+                    </div>
+                    <div class="icon_right">
+                    </div>
+                    <span id="div_store_addr" class="shenglue" style="width: 15em;"></span>
+                </li>
+                <li>
+                    <div class="icon_store storephone">
+                    </div>
+                    <div class="icon_right">
+                    </div>
+                    <span id="div_store_phone"><a href="tel:">
+                        &nbsp;</a></span> </li>
+            </ul>
+            <div style="height: 15px;">
+            </div>
+        </div>
+        
+        <div id="div_area_change" style="display:none;font-size:14px;">
+        <div style="height:5px;"></div>
+        <center>当前地区：<span id="lbl_city">总部</span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="near_node_shop_list.html?sid=881301&openid=$openid&ref=/vshop/index.html?sid=881301" style="color:#0316F5;">切换地区</a></center>
+        </div>
+        
+        <center>
+            <div class="LoginOut" id="LoginOut" onclick="LoginOut()">
+                退出登录</div>
+        </center>
+        <div style="height: 15px;">
+        </div>
+    </div>
+    <img id="img_share" src="" style="width: 80%; position: fixed; top: 0px; right: 0px;
+        z-index: 99999991; display: none;" />
+</body>
+<script src="userjs/countUp.min.js?v=1"></script>
+<script src="userjs/textscroll.js?v=13"></script>
+<script src="userjs/manager.js?v=17"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=vI53Lfnts9X9nYMg76eCgSEm"></script>
+<script src="userjs/fastclick.js?v=11"></script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <div id="footer_icon_kefu" onclick="chatCountKefu()" style="position: fixed; z-index: 200;
+        right: 20px; bottom: 120px; display: none;">
+        <div id="footer_icon_kefu_count" style="width: auto; min-width: 10px; height: 10px;
+            text-align: center; padding: 0.2em; color: #fff; background-color: #ff0000; border-radius: 1.1em;
+            position: absolute; z-index: 50; margin-left: 1.9em; margin-top: -5px; line-height: 10px;
+            display: block;">
+            0
+        </div>
+        <img src="userImage/icon_message.png" style="width: 32px;" />
+    </div>
+</body>
+<script>
+    var wxkf_wdcount = 0;
+    var WxkfUserCiid = "894033";
+    var WxkfUserSiid = "0";
+    var WxkfGroupIds = "$KserverGroupids";
+   
+    if ("$autoRef" == "1") {
+        chatCountKefu();
+    }
+    LoadWxkfCount()
+   
+
+    function LoadWxkfCount() {
+        Ajax("/vshop/meta.html?sid=881301&action=chatcount&ciid=" + WxkfUserCiid + "&siid=" + WxkfUserSiid + "&r=" + Math.floor(Math.random() * 1000 + 1), {}, function (result) {
+            //alert(result);
+            var msg = eval(result);
+            $("#footer_icon_kefu_count").html(msg.wdcount);
+            if (msg.new_kefu == "1") {
+                if ($("#span_icon_kefu").length > 0) {
+                    $("#span_icon_kefu").show();
+                }
+            }
+            if (parseInt(msg.wdcount) > 0) {
+                wxkf_wdcount = parseInt(msg.wdcount);
+                var url = location.href;
+                if ($("#span_icon_kefu").length > 0) {
+                    $("#span_icon_kefu .kf_wd_count").html(msg.wdcount)
+                    $("#span_icon_kefu .kf_wd_count").show();
+                } else {
+                    $("#footer_icon_kefu").show();
+                }
+            }
+        })
+    }
+    function chatCountKefu() {
+        var storeid = "0" == "1" ? "0" : "0";
+        location.href = "http://wxkf.shenhua3688.com/client/chat.ashx?sid=881301&vs_id=881301&mid=642&utype=dzd&uid=17713563&ciid_siid=" + ("894033" + "_0") + "&wdcount=" + wxkf_wdcount + "&groupids=" + WxkfGroupIds + "&storeid=" + storeid + "&supplierid=0&url=" + location.href.replace("&uid=", "&u=").replace(new RegExp(/(&)/g), "%26");
+    }
+   
+</script>
+</html>
+ <script type="text/javascript" src="userjs/jweixin-1.1.0.js"></script>
+<script type="text/javascript">
+    var onBridgeReady = function () {
+        //如果是首页则显示右上角分享按钮，其他都隐藏
+        var CurUrl = location.href;
+        if (CurUrl.indexOf("/vshop/index.html") > 0
+                    || CurUrl.indexOf("/vshop/coupon_detail.html") > 0
+                    || CurUrl.indexOf("/vshop/sharecoupon.html") > 0
+                    || CurUrl.indexOf("/vshop/notice.html") > 0
+                    || CurUrl.indexOf("/vshop/classlist.html") > 0
+                    || CurUrl.indexOf("/vshop/manager.html") > 0
+                    || CurUrl.indexOf("/vshop/pagetwo.html") > 0
+                    || CurUrl.indexOf("/vshop/oinfo_design_img.html") > 0
+                    || CurUrl.indexOf("/vshop/my_shop_qrcode.html") > 0) {
+            WeixinJSBridge.call('showOptionMenu');
+        } else {
+            WeixinJSBridge.call('hideOptionMenu');
+        }
+        // 发送给好友
+        WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+            WeixinJSBridge.invoke('sendAppMessage', {
+                "img_url": _share_src,
+                "img_width": "640",
+                "img_height": "640",
+                "link": _link,
+                "desc": _desc,
+                "title": _title
+            }, function (res) {
+                if (res.err_msg.toString() == "send_app_msg:confirm" || res.err_msg.toString() == "send_app_msg:ok") {
+                    ShareCount();
+                }
+                _report('send_msg', res.err_msg);
+            })
+        });
+        // 分享到朋友圈
+        WeixinJSBridge.on('menu:share:timeline', function (argv) {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": _share_src,
+                "img_width": "640",
+                "img_height": "640",
+                "link": _link,
+                "desc": _desc,
+                "title": _title + _desc
+            }, function (res) {
+                if (res.err_msg.toString() == "share_timeline:ok") {
+                    ShareCount();
+                }
+                _report('timeline', res.err_msg);
+            });
+        });
+        // 分享到微博
+        WeixinJSBridge.on('menu:share:weibo', function (argv) {
+            WeixinJSBridge.invoke('shareWeibo', {
+                "content": _desc,
+                "url": _link
+            }, function (res) {
+                _report('weibo', res.err_msg);
+            });
+        });
+    };
+    var _link = "http://dzd.shenhua3688.com/vshop/index.html?sid=881301&uid=17713563&sharefromvsid=$sharefromvsid";
+    if (M.h5Href.indexOf("pagetwo.html") > 0
+       || M.h5Href.indexOf("classlist.html") > 0
+       || M.h5Href.indexOf("brand_index.html") > 0 || M.h5Href.indexOf("my_shop_qrcode.html") > 0) {
+        _link = M.h5Href.replace(/&uid=\d+/ig, "") + "&uid=17713563";
+    }
+    var _share_src = ("" != "" ? "" : "http://web.wddcn.com/dzd/moban/xfc/img/logo3.jpg");
+    if (window.localStorage["vshop_share_img_src881301"] == undefined) {
+        window.localStorage["vshop_share_img_src881301"] = "";
+    }
+    if ("$ShareImg".toString().indexOf("http://") >= 0) {
+        _share_src = "$ShareImg";
+        window.localStorage["vshop_share_img_src881301"] = _share_src;
+    } else if (window.localStorage["vshop_share_img_src881301"].indexOf("http://") >= 0) {
+        _share_src = window.localStorage["vshop_share_img_src881301"];
+    }
+    var _desc = ("1" == "1" ? ("" == "" ? "亲爱的，终于等到您的到来，让我们相聚在茫茫人海，神话生物加拇指营销将会是我们创造神话的平台，在这里我们都是一家人，只有想不到的，没有做不到的，真正的打造在平台消费赚钱的一站式模式，任何产品保证优良，便宜；让我们一起携手，在互联网的海洋中，撑出我们的一片天地！我相信，我们一定能行！" : "") : "亲爱的，终于等到您的到来，让我们相聚在茫茫人海，神话生物加拇指营销将会是我们创造神话的平台，在这里我们都是一家人，只有想不到的，没有做不到的，真正的打造在平台消费赚钱的一站式模式，任何产品保证优良，便宜；让我们一起携手，在互联网的海洋中，撑出我们的一片天地！我相信，我们一定能行！");
+    var _title = "神话集团神话集团";
+    if (M.h5Href.indexOf("pagetwo.html") > 0) {
+        _title = document.title;
+        _desc = "$shareDesc" == "" ? _desc : "$shareDesc";
+        _share_src = "$shareImg" == "" ? _share_src : "$shareImg";
+    }
+
+    //对分享始终为自己的店铺作处理
+  
+    if (location.href.toString().indexOf("/vshop/index.html") > 0 && "$vshop_share_ismyshop" == "1") {
+      
+        if ("$dtMemberShopInfo.vs_id" != "881301") {
+           
+            _link = "http://dzd.shenhua3688.com/vshop/index.html?sid=$dtMemberShopInfo.vs_id&uid=17713563&sharefromvsid=$sharefromvsid";
+           
+            if ("$vshop_share_desc_noismyshop" != "1") {
+                _share_src = ("$dtMemberShopInfo.vs_share" != "" ? "$dtMemberShopInfo.vs_share" : _share_src);
+                _desc = ("1" == "1" ? ("$dtMemberShopInfo.vs_note" == "" ? "亲爱的，终于等到您的到来，让我们相聚在茫茫人海，神话生物加拇指营销将会是我们创造神话的平台，在这里我们都是一家人，只有想不到的，没有做不到的，真正的打造在平台消费赚钱的一站式模式，任何产品保证优良，便宜；让我们一起携手，在互联网的海洋中，撑出我们的一片天地！我相信，我们一定能行！" : "$dtMemberShopInfo.vs_note") : "亲爱的，终于等到您的到来，让我们相聚在茫茫人海，神话生物加拇指营销将会是我们创造神话的平台，在这里我们都是一家人，只有想不到的，没有做不到的，真正的打造在平台消费赚钱的一站式模式，任何产品保证优良，便宜；让我们一起携手，在互联网的海洋中，撑出我们的一片天地！我相信，我们一定能行！");
+                _title = "$dtMemberShopInfo.vs_name";
+
+              
+            } else if ("$drhansShareShop" == "1") {
+                _share_src = ("$drShareShop.vs_share" != "" ? "$drShareShop.vs_share" : _share_src);
+                _desc = ("1" == "1" ? ("$drShareShop.vs_note" == "" ? "亲爱的，终于等到您的到来，让我们相聚在茫茫人海，神话生物加拇指营销将会是我们创造神话的平台，在这里我们都是一家人，只有想不到的，没有做不到的，真正的打造在平台消费赚钱的一站式模式，任何产品保证优良，便宜；让我们一起携手，在互联网的海洋中，撑出我们的一片天地！我相信，我们一定能行！" : "$drShareShop.vs_note") : "亲爱的，终于等到您的到来，让我们相聚在茫茫人海，神话生物加拇指营销将会是我们创造神话的平台，在这里我们都是一家人，只有想不到的，没有做不到的，真正的打造在平台消费赚钱的一站式模式，任何产品保证优良，便宜；让我们一起携手，在互联网的海洋中，撑出我们的一片天地！我相信，我们一定能行！");
+                _title = "$drShareShop.vs_name";
+                document.title = _title;
+               
+            }
+        } else {
+            if ("$drhansShareShop" == "1") {
+                _share_src = ("$drShareShop.vs_share" != "" ? "$drShareShop.vs_share" : _share_src);
+                _desc = ("1" == "1" ? ("$drShareShop.vs_note" == "" ? "亲爱的，终于等到您的到来，让我们相聚在茫茫人海，神话生物加拇指营销将会是我们创造神话的平台，在这里我们都是一家人，只有想不到的，没有做不到的，真正的打造在平台消费赚钱的一站式模式，任何产品保证优良，便宜；让我们一起携手，在互联网的海洋中，撑出我们的一片天地！我相信，我们一定能行！" : "$drShareShop.vs_note") : "亲爱的，终于等到您的到来，让我们相聚在茫茫人海，神话生物加拇指营销将会是我们创造神话的平台，在这里我们都是一家人，只有想不到的，没有做不到的，真正的打造在平台消费赚钱的一站式模式，任何产品保证优良，便宜；让我们一起携手，在互联网的海洋中，撑出我们的一片天地！我相信，我们一定能行！");
+                _title = "$drShareShop.vs_name";
+                document.title = _title;
+               
+            }
+        }
+    } else if (("$vshop_share_desc_noismyshop" == "1" && "$drhansShareShop" == "1") ) {
+      
+        if (("$drShareShop.vs_id" != "881301" && "$drhansShareShop" == "1") ) {
+            _link = "http://dzd.shenhua3688.com/vshop/index.html?sid=$drShareShop.vs_id&uid=17713563&sharefromvsid=$sharefromvsid";
+            _share_src = ("$drShareShop.vs_share" != "" ? "$drShareShop.vs_share" : _share_src);
+            _desc = ("1" == "1" ? ("$drShareShop.vs_note" == "" ? "亲爱的，终于等到您的到来，让我们相聚在茫茫人海，神话生物加拇指营销将会是我们创造神话的平台，在这里我们都是一家人，只有想不到的，没有做不到的，真正的打造在平台消费赚钱的一站式模式，任何产品保证优良，便宜；让我们一起携手，在互联网的海洋中，撑出我们的一片天地！我相信，我们一定能行！" : "$drShareShop.vs_note") : "亲爱的，终于等到您的到来，让我们相聚在茫茫人海，神话生物加拇指营销将会是我们创造神话的平台，在这里我们都是一家人，只有想不到的，没有做不到的，真正的打造在平台消费赚钱的一站式模式，任何产品保证优良，便宜；让我们一起携手，在互联网的海洋中，撑出我们的一片天地！我相信，我们一定能行！");
+            _title = "$drShareShop.vs_name";
+            document.title = _title;
+            
+        }
+    }
+    var shareMsgJson = '{"title":"' + _title + '","desc":"' + _desc + '","link":"' + _link + '","imgsrc":"' + _share_src + '"}';
+    M.jsonp("/vshop/weixin.html?sid=881301&url=" + M.h5Href.replace(/\&/g, "%26"), function (msg) {
+
+        if (msg != undefined) {
+            wx.config({
+                debug: localStorage.Debug == "1",
+                appId: msg.appId,
+                timestamp: msg.timestamp,
+                nonceStr: msg.nonceStr,
+                signature: msg.signature,
+                jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'scanQRCode', 'openAddress']
+            });
+            wx.ready(function () {
+                wx.onMenuShareAppMessage({
+                    title: _title,
+                    desc: _desc,
+                    link: _link,
+                    imgUrl: _share_src,
+                    success: function (res) {
+                        ShareCount();
+                    }
+                });
+                wx.onMenuShareTimeline({
+                    title: _title + _desc,
+                    link: _link,
+                    imgUrl: _share_src,
+                    success: function (res) {
+                        ShareCount();
+                    }
+                });
+            });
+            setTimeout(function () {
+                try {
+                    wxsharecallback();
+                } catch (e) { }
+            }, 500)
+        }
+    });
+
+
+    if (document.addEventListener) {
+        document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+    } else if (document.attachEvent) {
+        document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+        document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+    }
+    function appWeixinShare() {
+        if (location.href.toString().indexOf("/vshop/index.html") > 0) {
+            uexWindow.evaluateScript("main", "0", "appWeixinShare('index','" + shareMsgJson + "')")
+        }
+            
+    }
+
+    function ShareCount() {
+        var url = location.href;
+
+        if (url.indexOf("/vshop/index.html") > 0) {
+            M.jsonp("http://weixin.shenhua3688.com/getwebaward?oper=AwardShare&type=shareTimeline&user_id=642&openid=$openid&mid=642&aid=1");
+        }
+        M.jsonp("/vshop/visit.html?action=sharecount&sid=881301&url=" + encodeURIComponent(url));
+        M.jsonp("/vshop/async.html?action=task&did=3&sid=881301");
+        M.jsonp("/vshop/async.html?action=share&did=13&sid=881301");
+    }
+</script>
+<script >
+
+    var sid = "881301";
+    new FastClick(document.body);
+    var StoreAddress = "";
+    var StoreLat = "";
+    var StoreLng = "";
+    var StoreNotice = "";
+    var StoreId = "";
+    if (("642" == "596" || location.href.toString().indexOf("sl.")>=0))
+    document.getElementById("div_area_change").style.display = "block";
+var Manager = {
+    pay: "0",
+    Pay: function () {
+      
+        if (Manager.pay == "1" || Manager.pay == "2") {
+            confirm_n("您的店铺尚未支付，是否前往支付?", function () {
+                location.href = "shoppay.html?type=shop&sid=881301&action=" + (Manager.pay == "1" ? "html" : "newpay");
+            })
+        }else{
+           //#region 检测是否满足开店条件
+            Ajax("/vshop/index.html?sid=881301&OpenId=&action=CheckShopAuthority", {}, function (result) {
+                console.info(result);
+            });
+            //#endregion
+        }
+    },
+    Init: function () {
+        Manager.Pay();
+    }
+};
+
+    
+    var tabtype = "center";
+    if (sessionStorage.center_shop_type && sessionStorage.center_shop_type != undefined) {
+        tabtype = sessionStorage.center_shop_type;
+    }
+    if (tabtype == "center") {
+        $(".tab_line").addClass("right");
+        $(".tab.t2").addClass("cur");
+        $(".tabtype_center").fadeIn();
+        $("#span_vip_code").show()
+        $("#a_sign").show()
+        $("#a_btn_bg").css({ "width": "70px" });
+        $("#message_center").hide();
+        $("#lbl_vmname").show();
+        $("#lbl_vlname").hide();
+        
+    } else {
+        $(".tab_line").addClass("left");
+        $(".tab.t1").addClass("cur");
+        $(".tabtype_shop").fadeIn();
+        $("#span_shop_code").show()
+
+        $("#a_toindex").show()
+        $("#a_btn_bg").css({ "width": "95px" });
+        $("#message_center").show();
+        $("#lbl_vmname").hide();
+          $("#lbl_vlname").show();
+        Manager.Init();
+        ShowMenu();
+    }
+    sessionStorage.center_shop_type = tabtype;
+    //#region TAB点击事件
+    $(".center_type .tab").click(function () {
+        var type = $(this).attr("data-type");
+        if (type == "buy") {
+            $(".tab_line").removeClass("left").addClass("right")
+            $(".tabtype_shop").hide();
+            $(".tabtype_center").fadeIn();
+            $(".tab.t1").removeClass("cur");
+            $(".tab.t2").addClass("cur");
+
+            $("#span_shop_code").hide()
+            $("#a_toindex").hide()
+            $("#span_vip_code").show()
+            $("#a_sign").show()
+            sessionStorage.center_shop_type = "center";
+            $("#a_btn_bg").css({ "width": "70px" });
+            $("#message_center").hide();
+            $("#lbl_vmname").show();
+            $("#lbl_vlname").hide();
+        } else {
+            $(".tab_line").removeClass("right").addClass("left")
+            $(".tabtype_center").hide();
+            $(".tabtype_shop").fadeIn();
+            $(".tab.t2").removeClass("cur");
+            $(".tab.t1").addClass("cur");
+
+            $("#span_vip_code").hide()
+            $("#a_sign").hide()
+            $("#span_shop_code").show()
+            $("#a_toindex").show()
+            sessionStorage.center_shop_type = "shop";
+            $("#a_btn_bg").css({ "width": "95px" });
+            $("#message_center").show();
+            $("#lbl_vmname").hide();
+              $("#lbl_vlname").show();
+            Manager.Init();
+            ShowMenu();
+        }
+    })
+    //#endregion
+
+    //#region 会员中心
+
+
+
+    if (parseInt("0") > 0)
+        $(".qd_2_1").next("div").html("我的签到");
+    getCouponCount();
+    if (StoreNotice != "") {
+        $(".store_notice").show();
+    }
+    if ($("#div_store_name").text().length > 0) {
+        $(".tool_store_bar").show();
+    }
+    var no_show_menu = "";
+    if (no_show_menu != "") {
+        var no_show_menuids = no_show_menu.split(',');
+        for (var i = 0; i < no_show_menuids.length; i++) {
+            if (no_show_menuids[i] != "") {
+            try{
+                document.getElementById("div_" + no_show_menuids[i]).style.display = "none";
+                }catch(e){}
+            }
+        }
+            try{
+        if (document.getElementById("div_nearstore").style.display == "none" && document.getElementById("div_myshop").style.display == "none") {
+            document.getElementById("nearstore_myshop").style.display = "none";
+        }
+          }catch(e){}
+    }
+    var slng = "";
+    var slat = "";
+    if ("" != "" && "$isnewshop" == "1") {
+        setTimeout(function () {
+            $("#modelback").fadeIn();
+            setTimeout(function () {
+                document.getElementById("img_isnewshop").style.display = "block";
+            }, 200);
+        }, 800)
+    }
+    if ("" != "") {
+        $("#footer_store_info").show();
+    }
+    function hideCardExplain() {
+        $("#vip_card_explain").fadeOut();
+        $("#vip_card_barcode").fadeOut();
+
+    }
+    function showCardExplain() {
+        $("#vip_card_explain").fadeIn(500);
+    }
+    function showCardBarcode() {
+        $("#vip_card_barcode").fadeIn(500);
+    }
+    function toDh() {
+        location.href = "/vshop/shop_navigation.html?sid=881301&endAddr=" + StoreAddress + "&lng=" + StoreLng + "&lat=" + StoreLat;
+    }
+    function toStoreInfo() {
+        location.href = "/vshop/store_info.html?sid=881301&store_id=" + StoreId + "&endAddr=" + StoreAddress + "&lng=" + StoreLng + "&lat=" + StoreLat;
+
+    }
+    function goto(url) {
+        if (url.indexOf("sid") < 0 && url.indexOf(".fjnx.")<0) {
+            url = formatSid(url);
+        }
+        location.href = url;
+    }
+    function gotoNearStore() {
+        location.href = "/vshop/near_store_list.html?sid=881301&endAddr=" + StoreAddress + "&lng=" + slng + "&lat=" + slat;
+    }
+    var geolocation = new BMap.Geolocation();
+    function doPosition() {
+        OpenMsg("正在获取您的位置...");
+        geolocation.getCurrentPosition(function (r) {
+            if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+                slng = r.point.lng;
+                slat = r.point.lat;
+                Ajax("/vshop/center.html?sid=881301&action=getStoreInfo&rlng=" + slng + "&rlat=" + slat, {}, function (result) {
+                    CloseMsg();
+                    var Json = eval(result);
+                    if (Json.length > 0) {
+                        $(".tool_store_bar").show();
+                        $("#store_title").html("&nbsp;&nbsp;最近门店信息");
+                        $("#div_store_name").html(Json[0].store_name);
+                        $("#div_store_addr").html(Json[0].store_address);
+                        $("#div_store_notice").html(Json[0].store_vn_title);
+                        if (Json[0].store_vn_title != "") {
+                            $(".store_notice").show();
+                        } else {
+                            $(".store_notice").hide();
+                        }
+                        $("#div_store_phone").html('<a href="tel:' + Json[0].store_phone + '">' + Json[0].store_phone + '</a>');
+                        $("#footer_store_info").show();
+                        StoreAddress = Json[0].store_address;
+                        StoreLat = Json[0].store_lat;
+                        StoreLng = Json[0].store_lng;
+                        StoreId = Json[0].store_id;
+                        if ("0" == "0") {
+                            $("#near_more").show();
+                        }
+                        if (Json[0].store_vn_title.toString().trim() != "") {
+                            try {
+                                ScrollText($('#divnotice'), 40, 200, "<span style='color:#000;'>消息通知:" + Json[0].store_vn_title + "</span>", 'left', 1, 25); //滚动字幕
+                                setTimeout(function () {
+                                    $("#notice_bar").show();
+                                    $(".tpl-11-11-notice").show();
+                                }, 500)
+                            } catch (e) { }
+                        }
+                    } else {
+                        OpenMsg("没有最近门店信息",1500);
+                    }
+                })
+            }
+            else {
+                CloseMsg();
+                alert_n("定位失败,请重试!");
+            }
+        }, { enableHighAccuracy: true })        
+    }
+
+
+
+
+    function noauthmsg() {
+        alert("对不起,您的店铺未审核通过!");
+    }
+
+    function getCouponCount() {
+        Ajax("/vshop/center_shop.html?sid=881301&action=getCouponCount", {}, function (result) {
+            var Json = eval("(" + result + ")");
+            $("#lbl_coupon_count").html(Json.couponcount);
+            $("#lbl_my_inter").html(Json.inter.toString() == "" ? "0" : Json.inter);
+            $("#lbl_my_name").html(Json.mi_name.toString());
+            $("#lbl_vmname").html("&nbsp;&nbsp;"+Json.vm_name.toString());
+            
+            $("#lbl_order_dfk").attr("data-num", Json.order_dfk)
+            $("#lbl_order_dfk").html(Json.order_dfk)
+            $("#lbl_order_dsh").attr("data-num", Json.order_dsh)
+            $("#lbl_order_dsh").html(Json.order_dsh)
+            $("#lbl_cart_count").attr("data-num", Json.cart_count)
+            $("#lbl_cart_count").html(Json.cart_count)
+            $("#lbl_order_shz").attr("data-num", Json.order_shz)
+            $("#lbl_order_shz").html(Json.order_shz)
+            $("#lbl_order_dfh").attr("data-num", Json.order_dfh)
+            $("#lbl_order_dfh").html(Json.order_dfh)
+            $(".tip_num").each(function () {
+                var num = parseInt($(this).attr("data-num") == "" ? "0" : $(this).attr("data-num"));
+                if (num > 0)
+                    $(this).removeClass("opacity").addClass("in");
+                //$(this).removeClass("hide");
+            })
+        });
+    }
+    LoadPage();
+    function LoadPage() { setTimeout(function () { document.getElementById("img_share").src = "http://web.wddcn.com/dzd/moban/custom/img/guide.png"; }, 1500) }
+    function closeNewShopImg() { document.getElementById("img_isnewshop").style.display = "none"; setTimeout(function () { $("#modelback").fadeOut(); }, 200); }
+    function toIndex() { location.href = "/vshop/index.html?sid=881301"; }
+    function LoginOut() { if (confirm("确定退出登录吗?")) { location.href = "center.html?sid=881301&action=LoginOut"; } }
+    $(function () {
+        try {
+            ScrollText($('#divnotice'), 40, 200, "消息通知:" + $('#divnotice').html(), 'left', 1, 25); //滚动字幕
+            setTimeout(function () {
+                if ($('#divnotice').text().toString().trim() != "消息通知:") {
+                    $("#divnotice").show();
+                    $(".tpl-11-11-notice").show();
+                } else {
+                    $(".tpl-11-11-notice").hide();
+                }
+            }, 500)
+        } catch (e) { }
+    })
+    function openWxCard(){
+       
+        Ajax("/vshop/index.html?sid=881301&action=getWxCardCode",{},function(result){
+           
+            var data=eval(result);
+            for (var i = 0; i < data.length; i++) {
+                data[i].card_ext = JSON.stringify(data[i].card_ext)
+            }
+            var arr = data;
+            WeixinJSBridge.invoke('batchAddCard', {
+                "card_list": arr
+            }, function (res) {  });
+        })
+    }
+
+    function ShopPoint() { if ("1" == "1") location.href = "/vshop/point_shop_jump.html?sid=881301"; else alert('积分商城尚未开通'); }
+    var M = { h5Href: location.href }
+    //#endregion
+
+    //#region 店铺后台
+
+    var show_jinbi_anmin = "true";
+    var options = { useEasing: true, useGrouping: true, separator: ',', decimal: '.', prefix: '￥', suffix: '' };
+
+    TotalCount();
+    //#region 店铺菜单
+    function ShowMenu() {
+        var menugroupclassin = "syph_2_0,qd_2_1,ddgl_2_4,wdrw_1_0,spgl_2_6,yxtg_2_5,dpfx_2_2,gddp_2_10,dpsz_2_8,bzzx_2_11,tgewm_2_7,hyzx_2_11,yhzl_2_13,";
+        var json = [];
+        var menu_group1_html = '';
+        var menu_group2_html = '';
+        var menu_group3_html = '';
+        var menu_group4_html = '';
+        var state = ""; //店铺状态异常，限制我是买家中除了我的收益之外的功能
+        for (var i = 0; i < json.length; i++) {
+            var JsonData = json[i].children;
+            var menu_i = 0;
+            for (var j = 0; j < JsonData.length; j++) {
+                var url=formatSid(JsonData[j].murl);
+                switch (json[i].gid) {
+                    case 1:
+                        if ("642"=="642"&&JsonData[j].mname=="分销商")
+                            menu_group1_html += '<div class="tab rightline"><a ' + (state == "1" ? 'href="' + formatSid(JsonData[j].murl) + '" onclick="' + JsonData[j].murl : (state == "2" ? 'href="javascript:alert(\'店铺被禁用\');"' : 'href="javascript:alert(\'店铺待审核\');"')) + '"><div class="t_num ' + JsonData[j].mcode + '">0</div><div>代理商</div></a></div>';
+                       
+                            else
+                        menu_group1_html += '<div class="tab rightline"><a ' + (state == "1" ? 'href="' + formatSid(JsonData[j].murl) + '" onclick="' + JsonData[j].murl : (state == "2" ? 'href="javascript:alert(\'店铺被禁用\');"' : 'href="javascript:alert(\'店铺待审核\');"')) + '"><div class="t_num ' + JsonData[j].mcode + '">0</div><div>' + JsonData[j].mname + '</div></a></div>';
+                        break;
+                    case 2:
+                    case 3:
+                        if (JsonData[j].mname != "会员中心") { 
+                       if (JsonData[j].mname=="我的收益" && "1"=="1"){
+                        $("#my_income_price_area").show();
+                             $("#icon_jinbi").show();
+                       }
+                       
+                        if (menugroupclassin.toString().indexOf(JsonData[j].mcode) >= 0) {
+                            menu_i++;
+                            //  menu_group2_html += '<a href="' + formatSid(JsonData[j].murl) + '" onclick="' + JsonData[j].murl + '"><div class="tab ' + JsonData[j].mcode + '"><span class="name">' + JsonData[j].mname + '<em class="wd hide">●</em></span></div></a>';
+                            if (menu_i == 1) {
+                                menu_group2_html += '';
+                            }
+
+                            if (JsonData[j].murl=="" || JsonData[j].murl=="#"){
+                             //   url="/vshop/manage_sub_menu.html?sid=881301&menu_id="+JsonData[j].mid;
+                            }
+                          //  menu_group2_html += '<li><a ' + (state == "1" ? 'href="' + formatSid(JsonData[j].murl) + '" onclick="' + JsonData[j].murl : (state == "2" ? 'href="javascript:alert(\'店铺被禁用\');"' : 'href="javascript:alert(\'店铺待审核\');"')) + '"><div src="/moban/xfc/img/shop3/a1.png" class="ico ' + JsonData[j].mcode + '"></div><div>' + JsonData[j].mname + '</div></a></li>';
+                            if (JsonData[j].mname=="推广二维码" && "642"=="642"){
+                                menu_group2_html += '<li><a ' + (state == "1" ? 'href="/vshop/qrcode.html?sid=881301" onclick="' + JsonData[j].murl : (state == "2" ? 'href="javascript:alert(\'店铺被禁用\');"' : 'href="javascript:alert(\'店铺待审核\');"')) + '"><div src="/moban/xfc/img/shop3/a1.png" class="ico ' + JsonData[j].mcode + '"></div><div>' + JsonData[j].mname + '</div></a></li>';
+
+                            }else
+                            menu_group2_html += '<li><a ' + (state == "1" ? 'href="' + url+ '" onclick="' + JsonData[j].murl : (state == "2" ? 'href="javascript:alert(\'店铺被禁用\');"' : 'href="javascript:alert(\'店铺待审核\');"')) + '"><div src="/moban/xfc/img/shop3/a1.png" class="ico ' + JsonData[j].mcode + '"></div><div>' + JsonData[j].mname + '</div></a></li>';
+
+                        }
+                    }
+                        break;
+                    default:
+                        if (JsonData[j].mname=="商户拓展"){
+                            if ("642"=="688" ||"642"=="6" ||"642"=="602" || location.href.indexOf("tmlvip.com")>=0 ||location.href.indexOf("sl.")>=0 ){
+                                menu_group4_html += ' <a ' + (state == "1" ? 'href="' + formatSid(JsonData[j].murl) + '" onclick="' + JsonData[j].murl : (state == "2" ? 'href="javascript:alert(\'店铺被禁用\');"' : 'href="javascript:alert(\'店铺待审核\');"')) + '" class="' + JsonData[j].mcode + '"><div class="button_bar">' + JsonData[j].mname + '</div></a>';
+                       
+                            }
+
+                        }else
+                        menu_group4_html += ' <a ' + (state == "1" ? 'href="' + formatSid(JsonData[j].murl) + '" onclick="' + JsonData[j].murl : (state == "2" ? 'href="javascript:alert(\'店铺被禁用\');"' : 'href="javascript:alert(\'店铺待审核\');"')) + '" class="' + JsonData[j].mcode + '"><div class="button_bar">' + JsonData[j].mname + '</div></a>';
+                        break;
+                }
+            }
+        }
+                $("#menu_group1").html(menu_group1_html);
+        $("#menu_group2").html(menu_group2_html);
+        $("#menu_group4").html(menu_group4_html);
+        $(".dcldd_0_0").html("0"); //待处理订单
+        $(".fxs_0_1").html(("" == "1" ? "0" : "0")); //分销商
+        $(".fxt_0_2").html("1"); //粉丝团
+
+        if ("0" != "0") {
+            var href = "$AddrAgentqx" == "true" ? "$AddrAgentLink" : "javascript:alert(\'您没有权限$AddrAgentName\n申请条件:$AddrAgentMsg\')";
+            if (state == "2") { href = "javascript:alert('店铺被禁用');"; } else if (state != "1") { href = "javascript:alert('店铺待审核');"; }
+            $(".sqdl_4_0").attr("href", href)
+            $(".sqdl_4_0").children().html("$AddrAgentName")
+        }
+        var agentHref = "#";
+        if ("" == "1")
+            agentHref = "slist.html?sid=881301";
+        else if ("" == "")
+            agentHref = "agent.html?sid=881301";
+        else if ("$agentPay" == "1")
+            agentHref = "shoppay.html?sid=881301&type=agent&action=html"
+        else if ("" == "2")
+            agentHref = "javascript:if(confirm('已被解除分销权，是否再次申请?')){location.href = 'agent.html?sid=881301';}"
+        else
+            agentHref = "javascript:alert(\'代理已提交，请等待审核!\')"
+        if (state == "1") {
+            $(".fxs_0_1").parent().attr("href", agentHref);
+            $(".wdrw_1_0").parent().attr("href", "http://wxjf.shenhua3688.com/m/manage_t.html?sid=881301");
+            $(".qd_2_1").parent().attr("href", "javascript:sign();");
+        } else if (state == "2") {
+            $(".fxs_0_1").parent().attr("href", "javascript:alert('店铺被禁用');");
+            $(".wdrw_1_0").parent().attr("href", "javascript:alert('店铺被禁用');");
+            $(".qd_2_1").parent().attr("href", "javascript:alert('店铺被禁用');");
+        }else {
+            $(".fxs_0_1").parent().attr("href", "javascript:alert('店铺待审核');");
+            $(".wdrw_1_0").parent().attr("href", "javascript:alert('店铺待审核');");
+            $(".qd_2_1").parent().attr("href", "javascript:alert('店铺待审核');");
+        }
+        if ("$bank" == "1" || "$info" == "1")
+            $(".dpsz_2_8").children().children(".wd").show();
+        if ("1" != "0")
+            $(".yxtg_2_5").children().children(".wd").show();
+        if ("0" == "1")
+            $(".ddgl_2_4").children().children(".wd").show();
+        if ("0" == "1")
+            $(".message_center").children().children(".wd").show(); //消息中心
+        if ("1" != "1")
+            $(".sjrz_5_0").hide();
+        if ("0" == "0")
+            $(".sqdl_4_0").hide();
+        if (parseInt("0") > 0)
+            $(".qd_2_1").next("div").html("我的签到");
+
+
+    }
+
+    //#endregion
+    function formatSid(url) {
+        if (url == "#")
+            return url;
+        if (url.indexOf("javascript") >= 0) {
+            return url;
+        }
+        if (url.indexOf("?") > 0) {
+            return url + "&sid=" + sid
+        } else {
+            return url + "?sid=" + sid
+        }
+    }
+    function isnull(val) {
+        if (val == "") {
+            return "0";
+        } else {
+            return val;
+        }
+    }
+
+
+    //#region 统计
+    function TotalCount() {
+    
+      
+        var my_income_price_total = 0.00;
+        var my_income_price = (parseFloat(isnull("$Commission1")) + parseFloat(isnull("$supplier_comm")) + parseFloat(isnull("$Commission2")) + parseFloat(isnull("$Commission3")) + parseFloat(isnull("$reward")) + parseFloat(isnull("$member_start_comm"))).toFixed(2);
+
+        my_income_price_total = my_income_price;
+        try{
+            if (show_jinbi_anmin == "true" && (window.localStorage["shop_commission881301"] == undefined || parseFloat(window.localStorage["shop_commission881301"]) < my_income_price_total)) {
+                if (parseFloat("") > 0)
+                    my_income_price = parseFloat("");
+            }
+         }catch(e){
+            ttalert("1"+e.toString());
+        }
+
+          try{
+        PriceCountUp = new CountUp("my_income_price", 0, parseFloat(my_income_price), 2, 0.8, options); //收益
+        PriceCountUp.start();
+         }catch(e){
+            ttalert("2"+e.toString());
+        }
+         try{
+        if (show_jinbi_anmin == "true" && (window.localStorage["shop_commission881301"] == undefined || parseFloat(window.localStorage["shop_commission881301"]) < my_income_price_total)) { window.localStorage["shop_commission881301"] = my_income_price_total; ShowJinbi(); }
+          }catch(e){
+            ttalert("3"+e.toString());
+        }
+          try{
+        Ajax("/vshop/manager.html?sid=881301&action=saveshopbehavior&type=commission&data=" + parseFloat(my_income_price_total), {}, function (result) { console.info("behavior" + result); });
+        Ajax("/vshop/manager.html?sid=881301&action=generatevshopparent", {}, function (result) { console.info("generatevshopparent" + result); });
+         }catch(e){
+            ttalert("4"+e.toString());
+        }
+       
+    }
+    //#endregion
+    function ttalert(msg){
+        if ("642"=="642" && "0"=="1"){
+            alert("手机兼容异常:"+msg);
+        }
+    }
+    //#region 金币操作
+
+    function ShowAllJinbi() {
+        if (show_jinbi_anmin == "true") {
+            var my_income_price = (parseFloat(isnull("$Commission1")) + parseFloat(isnull("$supplier_comm")) + parseFloat(isnull("$Commission2")) + parseFloat(isnull("$Commission3")) + parseFloat(isnull("$reward")) + parseFloat(isnull("$member_start_comm"))).toFixed(2);
+            if (my_income_price > 0) {
+                $(".jingbi").fadeIn();
+                setTimeout(function () {
+                    if ("881301"!="701804" && "881301"!="702093" && "881301"!="743749"){
+                        $('.item1 div.kodai').click();
+                    }
+                    var options1 = { useEasing: true, useGrouping: true, separator: ',', decimal: '.', prefix: '+', suffix: '' };
+
+                    var PriceCountUp1 = new CountUp("tip_my_income_price", 0, my_income_price, 2, 2, options1); //收益
+                    PriceCountUp1.start();
+
+                }, 800)
+            }
+        }
+        else {
+            location.href = '/vshop/new_commission.html?sid=881301'
+        }
+    }
+
+
+    function ShowJinbi() {
+        var my_income_price = (parseFloat(isnull("$Commission1")) + parseFloat(isnull("$supplier_comm")) + parseFloat(isnull("$Commission2")) + parseFloat(isnull("$Commission3")) + parseFloat(isnull("$reward")) + parseFloat(isnull("$member_start_comm"))).toFixed(2);
+        var price = parseFloat(my_income_price) - parseFloat(isnull(""));
+        if (price > 0) {
+            $(".jingbi").fadeIn();
+            setTimeout(function () {
+                $('.item1 div.kodai').click();
+                var options1 = { useEasing: true, useGrouping: true, separator: ',', decimal: '.', prefix: '+', suffix: '' };
+
+                var PriceCountUp1 = new CountUp("tip_my_income_price", 0, price, 2, 2, options1); //收益
+                PriceCountUp1.start();
+                setTimeout(function () {
+                    closeJinbi();
+                }, 5000)
+            }, 800)
+        }
+    }
+    function closeJinbi() {
+
+        $(".jingbi").fadeOut(300, function () {
+            setTimeout(function () {
+                var my_income_price = (parseFloat(isnull("$Commission1")) + parseFloat(isnull("$supplier_comm")) + parseFloat(isnull("$Commission2")) + parseFloat(isnull("$Commission3")) + parseFloat(isnull("$reward")) + parseFloat(isnull("$member_start_comm"))).toFixed(2);
+                var options1 = { useEasing: true, useGrouping: true, separator: ',', decimal: '.', prefix: '￥', suffix: '' };
+                var PriceCountUp1 = new CountUp("my_income_price", parseFloat($("#my_income_price").text().replace(/,/g, "").replace("￥", "")), my_income_price, 2, 0.8, options1); //收益
+                PriceCountUp1.start();
+            }, 1000)
+        });
+
+    }
+    //#endregion
+    function closeNewShopImg() {
+        document.getElementById("img_isnewshop").style.display = "none";
+        setTimeout(function () {
+            $("#modelback").fadeOut();
+        }, 200);
+
+    }
+    function closemodelback() {
+        $("#modelback").fadeOut();
+    }
+    function formatSid(url) {
+        if (url == "#")
+            return url;
+        if (url.indexOf("javascript") >= 0) {
+            return url;
+        }
+        if (url.indexOf("?") > 0) {
+            return url + "&sid=" + sid
+        } else {
+            return url + "?sid=" + sid
+        }
+    }
+    function isnull(val) {
+        if (val == "") {
+            return "0";
+        } else {
+            return val;
+        }
+    }
+    //店铺周期付费
+    setTimeout(function () {
+        var sp = 0;
+        if ("0" != "1" && "0" != "2") {
+            if ("1" == "1") {
+                Ajax("/vshop/manager.html?sid=881301&action=supplier_pay", {}, function (msg) {
+                    if (msg == "true") {
+                        sp = 1;
+                        confirm_n("您申请的商家入驻尚未付款，是否去付款", function () {
+                            location.href = "supplier_pay.html?sid=881301"
+                        });
+                    }
+                })
+            }
+            if ("0" == "1") {
+                if (sp == 0)
+                    Ajax("/vshop/manager.html?sid=881301&action=ziying_pay", {}, function (msg) {
+                        if (msg == "true") {
+                            confirm_n("您申请的自营商品尚未付款，是否去付款", function () {
+                                location.href = "zy_pay.html?sid=881301"
+                            });
+                        }
+                    })
+            }
+        }
+        Ajax("/vshop/manager.html?sid=881301&action=shoppayrenew", {}, function (result) {
+            var data = eval("(" + result + ")");
+            if (data.state == 1) {
+                confirm_n(data.prompt, function () {
+                    location.href = "shoppay.html?sid=881301&type=shop&action=html&order=" + data.order
+                });
+            }
+        })
+
+                Ajax("async.html?sid=881301&action=shopexpire", {}, function () { })
+        Ajax("async.html?sid=881301&action=autotake", {}, function () { })
+        Ajax("async.html?sid=881301&action=orderPayState", {}, function () { })
+        if ("$OrderAutoCancel" == "") Ajax("async.html?sid=642&action=orderAutoCancel", {}, function () { })
+    }, 500);
+
+    if ("0" == "1") {
+        confirm_n("您的账户尚未绑定微信，是否绑定？", function () {
+            goto('/vshop/userbinding.html?sid=881301&ref=center_shop.html?sid=881301');
+        });
+    }
+    //#endregion
+</script>
+</html>

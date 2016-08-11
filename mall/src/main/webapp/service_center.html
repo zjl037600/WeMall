@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>农牧商城</title>
+    <link rel="shortcut icon" href="templates/images/favicon.png">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="templates/bootstrap/assets/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="templates/bootstrap/font-awesome/font-awesome.min.css">
+    <link rel="apple-touch-icon-precomposed" href="templates/images/apple-touch-icon-precomposed.png">
+    <link rel="stylesheet/less" type="text/css" href="templates/css/main.less">
+    <script src="templates/bootstrap/assets/jquery.min.js"></script>
+    <script src="templates/js/jquery.queryloader2.min.js"></script>
+	<script src="templates/js/jquery.infinitescroll.min.js"></script>
+    <script src="templates/js/loading.js"></script>
+	<script src="templates/bootstrap/assets/bootstrap.min.js"></script>
+	<script src="templates/bootstrap/less/less.min.js"></script> 
+    <!--[if lt IE 9]>
+      <script src="templates/js/html5shiv.min.js"></script>
+      <script src="templates/js/respond.min.js"></script>
+    <![endif]-->
+</script>
+</head><body style="background:#f8f8f8">
+<div class="main">
+  <header class="header-bg">
+		<div class="header-top">
+        	<div class="col-md-1 col-sm-1 col-lg-1 col-xs-2"><a href="javascript:history.back();"><i class="icon icon-angle-left only"></i></a></div>
+            <div class="col-md-10 col-sm-10 col-lg-10 col-xs-8">
+                <p><strong>客服中心</strong></p>
+            </div>
+            <div class="col-md-1 col-sm-1 col-lg-1 col-xs-2"><a href="#"><i></i><span></span></a></div>
+        </div>
+  </header>
+</div>
+
+<div class="viewport">
+	<div class="floor full-floor">
+    	<div class="contact">
+        <div class="title-wrap">
+            <h2 class="title">农牧商城</h2>
+        </div>
+        <hr/>
+              <p><strong class="col-md-1 col-sm-1 col-lg-1 col-xs-2"><i class="icon icon-phone"></i>电话:</strong><font class="col-md-11 col-sm-11 col-lg-11 col-xs-10">13988447568，13887707916</font></p>            <p><strong class="col-md-1 col-sm-1 col-lg-1 col-xs-2"><i class="icon icon-envelope"></i>邮箱:</strong><font class="col-md-11 col-sm-11 col-lg-11 col-xs-10">939218093@qq.com</font></p>            <p><strong class="col-md-1 col-sm-1 col-lg-1 col-xs-2"><i class="icon icon-qq"></i>QQ:</strong><font class="col-md-11 col-sm-11 col-lg-11 col-xs-10">400-0699-880,13988447568</font></p>            
+<p><strong class="col-md-1 col-sm-1 col-lg-1 col-xs-2"><i class="icon icon-map-pin"></i>地址:</strong><font class="col-md-11 col-sm-11 col-lg-11 col-xs-10">宁海路南端江川瑞特动保品经营服务部</font></p>        </div>
+	</div>
+</div>
+<div class="main">
+  <div class="footer-fixed"></div>
+</div>
+<div class="main">
+  <footer class="footer">
+    <ul>
+      <li><a href="/mobile/"><span><i class="icon icon-home"></i></span><span>首页</span></a></li>
+      <li><a href="/mobile/category.php"><span><i class="icon icon-list-ul"></i></span><span>分类</span></a></li>
+      <li><a href="/mobile/brands.php"><span><i class="icon icon-dot-circle-o"></i></span><span>品牌馆</span></a></li>
+      <li><a href="/mobile/cart.php"><span><i class="icon icon-shopping-cart"></i></span><span>购物车</span></a></li>
+      <li><a href="/mobile/user.php?act=user_center"><span><i class="icon icon-user"></i></span><span>我的</span></a></li>
+    </ul>
+  </footer>
+</div>
+<script language="javascript">
+
+ $(document).ready(function(){
+
+             var nowHref=window.document.location.pathname;              
+
+                   $(".footer ul li a").each(
+
+                   function(){                        
+
+                       var  nowA = $(this).attr("href");
+
+                         if($(this).hasClass("one")){
+
+                                   $(this).removeClass("current");
+
+                               }
+
+                               if(nowHref==nowA){ /*当前路径与访问路径相等添加样式*/
+
+                                   $(this).addClass("current");
+
+                               }else{
+
+								   if(nowHref == "/mobile/user.php"){
+
+								  $(".footer ul li").last().children("a").addClass("current");
+
+								   }
+
+								 }
+
+                       }
+
+    
+
+                   );
+
+		              
+
+    
+
+     })
+
+
+
+</script>
+</body></html>

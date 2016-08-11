@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping >
+	<!--商品信息-->
+	<class entity-name="commodity" table="commodity" dynamic-update="true">
+	    <id name="id" type="string">
+				<generator class="uuid.hex"></generator>
+		</id>
+        <!-- 商品ID -->
+        <property name="commodity_ID" type="string" />
+        <!-- 商品名称 -->
+        <property name="commodity_Name" type="string" />
+        <!-- 商品成本价 -->
+        <property name="commodity_Cost" type="string" />
+        <!-- 商品销售价 -->
+        <property name="commodity_Price" type="string" />
+        <!-- 商品类别 -->
+        <property name="commodity_Type" type="string" />
+        <!-- 商品产地 -->
+        <property name="commodity_Origin" type="string" />
+        <!-- 商品二维码 -->
+        <property name="commodity_QR_Code" type="string" />
+        <!-- 商品货架号-->
+        <property name="commodity_Shelf_Number" type="string" />
+        <!-- 商品图片ID-->
+        <property name="commodity_Image_ID" type="string" />
+        <!-- 商品介绍-->
+        <property name="commodity_Desciption" type="string" />
+    </class>
+</hibernate-mapping>

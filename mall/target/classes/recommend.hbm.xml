@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping >
+	<!--推荐信息-->
+	<class entity-name="recommend" table="recommend" dynamic-update="true">
+	    <id name="id" type="string">
+				<generator class="uuid.hex"></generator>
+		</id>
+        <!-- 会员ID -->
+        <property name="vip_ID" type="string" />
+        <!-- 订单ID -->
+        <property name="order_form_ID" type="string" />
+        <!-- 推荐类型 -->
+        <property name="recommend_Type" type="string" />
+        <!-- 推荐系数 -->
+        <property name="recommend_Coefficient" type="string" />
+        <!-- 推荐费 -->
+        <property name="recommend_Money" type="string" />
+    </class>
+</hibernate-mapping>

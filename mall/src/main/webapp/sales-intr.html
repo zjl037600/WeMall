@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+    <head>
+
+        <meta charset="UTF-8"/>
+
+        <meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <meta name="format-detection" content="telephone=no" />
+
+        
+        <title>分销说明</title>
+
+        <link rel="stylesheet" href="css/showcase.css" /> 
+
+        <link rel="stylesheet" href="css/style.css" />   
+
+        <link rel="stylesheet" href="css/base.css"  /> 
+
+        <script src="js/static/lib-min.js"></script>
+
+        <script src="js/main.js"></script>
+
+    </head>
+
+    <body >
+
+<div class="membersbox pad50">   
+
+    <section class="fx-sum-get">
+
+      <section class="fx-money clearfix"><section class="fx-money-title"><section class="line"></section><h2>分销赚钱</h2></section><section class="fx-depict"><p>• 即日起「蕈补仿」开始招募第一批分销商，低门槛，无需代理费，只需在本店消费满98元即可成为我们的一级分销商！玩玩微信，轻松赚钱！</p><p>• 成为分销商后请复制分销文字链接并在微信朋友圈发布或点现在分销按钮分享到微信朋友圈；</p><p>• 从您的分销链接注册成为会员，对方将成为您的下级会员；</p><p>• 您的下级会员任何时候购买产品，您都可以获取相应的提成；</p><p>• 您的下级会员的下级会员购买产品，您又可以获取相应的提成。</p></section><section class="fx-marks"><p>* 说明：</p><p>分享之后会带有独有PID编码，您的好友访问之后，系统会自动检测统计，此会员一旦注册成为会员，您将成为他的上级会员。</p><p>计算佣金时，优惠部分不计处佣金中，也不包含运费，只计算实际支付金额减去运费后的费用。</p><p>佣金达到50元即可在：分销中心申请提现，最低提现金额不得少于50元！</p></section></section>
+    </section>
+
+
+
+
+
+<style>
+        .members_bottom{font-family:"微软雅黑";font-size:12px}
+    </style>
+    
+
+
+
+
+<div class="js-navmenu shop-nav nav-menu nav-menu-1 has-menu-3">
+
+    <div class="nav-special-item nav-item">
+
+        <a href="index.html" class="home">主页</a>
+
+    </div>
+
+
+
+    <div class="nav-item">
+
+            <a class="mainmenu js-mainmenu" href="number-center.html">
+
+                    <i class="arrow-weixin"></i>
+
+                    <span class="mainmenu-txt">会员中心</span>
+
+                </a>
+
+                  
+
+        </div><div class="nav-item">
+
+            <a class="mainmenu js-mainmenu" href="goods-list.html">
+
+                    <i class="arrow-weixin"></i>
+
+                    <span class="mainmenu-txt">所有商品</span>
+
+                </a>
+
+                  
+
+        </div><div class="nav-item">
+
+            
+                <!-- 子菜单 -->
+
+                <a class="mainmenu js-mainmenu" href="javascript:void(0);">
+
+                    <i class="arrow-weixin"></i>
+
+                    <span class="mainmenu-txt">加入分销</span>
+
+                </a>
+
+                <div class="submenu js-submenu">
+
+                    <span class="arrow before-arrow"></span>
+
+                    <span class="arrow after-arrow"></span>
+
+                    <ul>
+
+                        
+                                <li>
+
+                                    <a href="sales-apply.html">分销中心</a>  
+
+                                    <li class="line-divide"></li>
+
+                                </li>
+                                <li>
+
+                                    <a href="sales-intr.html">分销说明</a>  
+
+                                    <li class="line-divide"></li>
+
+                                </li>
+                                <li>
+
+                                    <a href="sales-apply.html">立即申请</a>  
+
+                                    <li class="line-divide"></li>
+
+                                </li><li>
+
+                                    <a href="sales-class.html">微信分享教程</a>  
+
+                                </li>
+
+                                
+
+
+                    </ul>
+
+                </div>  
+
+        </div>   
+
+
+
+
+
+</div>
+
+
+
+<script>
+
+    $(function() {
+
+        var t = $(".js-navmenu"),
+
+                n = t.find(".js-nav-pop");
+
+        if (t.length) {
+
+            var e = {
+
+                showSubmenu: function(t) {
+
+                    var n = $(t.target),
+
+                            e = n.parents(".nav-item"),
+
+                            o = n.hasClass(".js-mainmenu") ? n : e.find(".js-mainmenu"),
+
+                            i = e.find(".js-submenu"),
+
+                            a = i.find(".arrow"),
+
+                            s = n.parents(".js-navmenu"),
+
+                            r = s.find(".nav-item");
+
+                    i.css("opacity", "0").toggle();
+
+                    var c = r.length,
+
+                            d = r.index(e),
+
+                            l = o.outerWidth(),
+
+                            u = (i.outerWidth() - o.outerWidth()) / 2,
+
+                            h = i.outerWidth() / 2;
+
+                    if (0 === i.size())
+
+                        $(".js-submenu:visible").hide();
+
+                    else {
+
+                        var f = i.outerWidth(),
+
+                                w = e.outerWidth(),
+
+                                p = "auto",
+
+                                v = "auto",
+
+                                m = "auto",
+
+                                g = "auto";
+
+                        0 === d ? (p = o.position().left - u, v = h - a.outerWidth() / 2) : d === c - 1 && f > w ? (m = 8, g = l / 2 - m) : (p = o.position().left - u, v = h - a.outerWidth() / 2);
+
+                        var b = 5;
+
+                        0 > p && (v = v + p + b, p = b),
+
+                                0 > m && (g = g + m + b, m = b),
+
+                                i.css({
+
+                                    left: p,
+
+                                    right: m
+
+                                }),
+
+                        a.css({
+
+                            left: v,
+
+                            right: g
+
+                        }),                         
+
+                        $(".js-submenu:visible").not(i).hide(),
+
+                                i.css("opacity", "1")
+
+                    }
+
+                }
+
+            };
+
+            $("body").on("click", ".js-mainmenu", function(t) {
+
+                e.showSubmenu(t)
+
+            });
+
+
+
+        }
+
+    });
+
+</script>    <!--/div-->
+        <div id="mmexport">
+        <img src="/Public/Shop/images/mmexport.png" width="100%" alt="">
+    </div>
+    <!--关注-->
+    <script>
+    </script>
+
+    <script>
+        $(function() {
+            $("#fxBtn").click(function() {
+                $("#mmexport").show();
+            });
+            $("#mmexport").click(function() {
+                $(this).hide();
+            });
+        });
+    </script>
+
+    <script type="text/javascript" src="/Public/Shop/js/swipe.js"></script>
+    <script type="text/javascript" src="/Public/Shop/js/detail.js"></script>
+
+
+    <!-- fahai: move the share code to the header -->
+
+    <script>
+        $(function(){
+            $('.js-open-follow').click(function(){
+                $('#js-follow-guide').show();
+            })
+            $('js-follow-guide').click(function(){
+                $('#js-follow-guide').show();
+            })
+            $('.guide-close').click(function(){
+                $('#js-follow-guide').hide();
+            })
+            $('#js-follow-guide').css('font-size','12px');
+        })
+    </script>
+<!-- end -->
+</body>
+</html>

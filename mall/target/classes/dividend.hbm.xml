@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping >
+	<!--分红信息-->
+	<class entity-name="dividend" table="dividend" dynamic-update="true">
+	    <id name="id" type="string">
+				<generator class="uuid.hex"></generator>
+		</id>
+        <!-- 会员ID -->
+        <property name="vip_ID" type="string" />
+        <!-- 分红日期 -->
+        <property name="dividend_Date" type="string" />
+        <!-- 分红金额 -->
+        <property name="dividend_Money" type="string" />
+    </class>
+</hibernate-mapping>

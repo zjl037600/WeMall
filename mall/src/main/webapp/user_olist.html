@@ -1,0 +1,641 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>神话集团神话集团</title><meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    name="viewport" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta name="format-detection" content="telephone=no" />
+<link rel="shortcut icon" href="userImage/Ico.ico" type="image/x-icon">
+<script src="userjs/common.js?v=20140925" type="text/javascript"></script>
+<script src="userjs/base_H5.js?v=20160130"></script>
+<script>
+    var Global = {
+        payDomain:"pay.shenhua3688.com",
+        conUrl: "http://web.wddcn.com/dzd",
+        huobidanwei: "￥",
+        closeLastVisitBar: function () {
+            document.getElementById("tip_bar").innerHTML = "";
+        },
+        LastVisit: function () {
+            var date = Date.parse(new Date());
+            if (typeof (sessionStorage.FirstVisit) == "undefined"
+                                                    && typeof (window.localStorage["LastVisitUrl881301"]) != "undefined"
+                                                    && window.localStorage["LastVisitUrl881301"] != ""
+                                        && window.localStorage["LastVisitUrl881301"] != location.href
+                                        && parseInt(date) < parseInt(window.localStorage["LastVisitTime881301"]) + 3600000) {
+
+                var str = ' <div style="width: 100%; height: 35px; line-height: 35px; position: fixed; bottom: 63px;z-index: 999999; background-color: #5d646c; color: #fff; font-size: 14px;">' +
+                            '<div onclick="Global.closeLastVisitBar()" style="float: left; text-align: center; width: 12%; height: 100%;"><img src="/moban/xfc/img/icon_close.png" style="width: 20px; margin-top: 6px;" /></div>' +
+                            '<a href="' + window.localStorage["LastVisitUrl881301"] + '" style="color:#fff;"><div style="float: left; width: 68%; height: 100%;">您可以回到上一次访问的页面</div>' +
+                            '<div style="float: left; width: 20%; height: 100%; text-align: center; vertical-align: middle;background-color: #fd5001; font-size: 16px;">Go</div></div></a>';
+                setTimeout(function () {
+                    document.getElementById("tip_bar").innerHTML = str;
+                    setTimeout(function () {
+                        Global.closeLastVisitBar();
+                    }, 10000)
+                }, 1500)
+
+            }
+
+            sessionStorage.FirstVisit = "0";
+            window.localStorage["LastVisitUrl881301"] = location.href;
+            window.localStorage["LastVisitTime881301"] = date;
+            window.localStorage["LastVisitTitle881301"] = document.title;
+        },
+        Init: function () {
+            Global.LastVisit();
+        }
+    };
+
+    Global.Init();
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?60bc21fba153655fcb1ba6fef3c0351b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    <link rel="stylesheet" type="text/css" href="usercss/base.css" />
+    <link rel="stylesheet" type="text/css" href="usercss/index.css" />
+    <link rel="stylesheet" type="text/css" href="usercss/olist.css" />
+    <script src="userjs/olist.js"></script>
+    <script>
+        if (""!=""){
+            sessionStorage.platformType == ""
+        }
+    </script>
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        name="viewport">
+    <meta name="format-detection" content="telephone=no">
+</head>
+<style>@mem{} html, body {  font-size:12px; margin:0px;  font-family: "Microsoft YaHei" ! important; }  .hide{display:none;}
+.v_header{width:100%;height:45px;} .v_header .vv_header{width:100%;height:45px;line-height:45px; text-align:center;color:#fff;font-size:18px; background-color:#19993d;}.v_header .vv_header.fixed{ position:fixed;z-index:999999999;top:0px;} 
+.vv_header .topbar_back{  position:absolute;left:0px;width:55px;line-height:45px;} .vv_header .topbar_back .icon_back{width:14px;height:20px;margin-top: 14px; background:url(/moban/custom/img/button_back.png) no-repeat; background-size:100%;;} .top_menu_back{position:absolute;z-index:2;right:0px;width:85px;line-height:45px;}  .top_menu_back_back{position:absolute;z-index:1;right:0px;width:85px;line-height:45px;background-color: #000;opacity: 0.1;}  .v_header_right_menu a{color:#fff;}
+</style>
+<body>
+    <div id="v_header" class="v_header" style="display:none;">
+        <div class="vv_header">
+            <a id="v_header_reback" href="javascript:history.go(-1);">
+                <div class="topbar_back">
+                <center>
+                <div class="icon_back"></div>
+                   </center></div>
+            </a>
+            <div class="top_menu_back_back hide">
+                &nbsp;
+            </div>
+            <div class="v_header_right_menu">
+                <div class="top_menu_back">
+                </div>
+            </div>
+            <span class="v_header_title"></span>
+        </div>
+    </div>
+</body>
+<script>
+    var header = {
+        title: function (title) {
+            $(".v_header .v_header_title").eq(0).html(title);
+            if ("" == "wddAppDzd") {
+                sessionStorage.platformType = ""
+            }
+            if (sessionStorage.platformType) {
+                if (sessionStorage.platformType == "wddAppDzd") {
+                    $(".v_header .vv_header").eq(0).addClass("fixed");
+                } else {
+                    document.getElementById("v_header").style.display = "block";
+                }
+            } else {
+                document.getElementById("v_header").style.display="block";
+            }
+        },
+        fixed: function () {
+            $(".v_header .vv_header").eq(0).addClass("fixed");
+        },
+        closefixed: function () {
+            $(".v_header .vv_header").eq(0).removeClass("fixed");
+        },
+        rightMenu: function (html, hide) {
+            if (html != '' && hide == null)
+                $(".v_header .top_menu_back_back").eq(0).removeClass("hide");
+            $(".v_header .v_header_right_menu").eq(0).html(html);
+        },
+        binReback: function (url) {
+            if (url != "")
+                $(".v_header #v_header_reback").eq(0).attr("href", url);
+        },
+        rebackhide: function () {
+            $(".v_header #v_header_reback").eq(0).hide();
+        }
+    }
+</script>
+</html>
+    <div class="fn_tab qb_flex mod_mb15" id="tab-list">
+        <div class="flex_box current " onclick="document.location.href='user_olist.html?sid=881301&zt=1'">
+            待付款<span class="mod_color_strong">0</span></div>
+        <div class="flex_box  " onclick="document.location.href='user_olist.html?sid=881301&zt=2'">
+            待发货<span class="mod_color_strong">0</span></div>
+            <div class="flex_box  " onclick="document.location.href='user_olist.html?sid=881301&zt=3'">
+            待收货<span class="mod_color_strong">0</span></div>
+         <div class="flex_box  " onclick="document.location.href='user_olist.html?sid=881301&zt=5'">
+            售后中<span class="mod_color_strong">0</span></div> 
+            <div class="flex_box  " onclick="document.location.href='user_olist.html?sid=881301&zt=4'">
+            已结束<span class="mod_color_strong" id="state4">0</span></div>
+             
+    </div>
+    <div id="itemList">
+    </div>
+    <div id="footer">
+    </div>
+    <script type="text/javascript" src="userjs/jweixin-1.1.0.js"></script>
+<script type="text/javascript">
+    var onBridgeReady = function () {
+        //如果是首页则显示右上角分享按钮，其他都隐藏
+        var CurUrl = location.href;
+        if (CurUrl.indexOf("/vshop/index.html") > 0
+                    || CurUrl.indexOf("/vshop/coupon_detail.html") > 0
+                    || CurUrl.indexOf("/vshop/sharecoupon.html") > 0
+                    || CurUrl.indexOf("/vshop/notice.html") > 0
+                    || CurUrl.indexOf("/vshop/classlist.html") > 0
+                    || CurUrl.indexOf("/vshop/manager.html") > 0
+                    || CurUrl.indexOf("/vshop/pagetwo.html") > 0
+                    || CurUrl.indexOf("/vshop/oinfo_design_img.html") > 0
+                    || CurUrl.indexOf("/vshop/my_shop_qrcode.html") > 0) {
+            WeixinJSBridge.call('showOptionMenu');
+        } else {
+            WeixinJSBridge.call('hideOptionMenu');
+        }
+        // 发送给好友
+        WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+            WeixinJSBridge.invoke('sendAppMessage', {
+                "img_url": _share_src,
+                "img_width": "640",
+                "img_height": "640",
+                "link": _link,
+                "desc": _desc,
+                "title": _title
+            }, function (res) {
+                if (res.err_msg.toString() == "send_app_msg:confirm" || res.err_msg.toString() == "send_app_msg:ok") {
+                    ShareCount();
+                }
+                _report('send_msg', res.err_msg);
+            })
+        });
+        // 分享到朋友圈
+        WeixinJSBridge.on('menu:share:timeline', function (argv) {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": _share_src,
+                "img_width": "640",
+                "img_height": "640",
+                "link": _link,
+                "desc": _desc,
+                "title": _title + _desc
+            }, function (res) {
+                if (res.err_msg.toString() == "share_timeline:ok") {
+                    ShareCount();
+                }
+                _report('timeline', res.err_msg);
+            });
+        });
+        // 分享到微博
+        WeixinJSBridge.on('menu:share:weibo', function (argv) {
+            WeixinJSBridge.invoke('shareWeibo', {
+                "content": _desc,
+                "url": _link
+            }, function (res) {
+                _report('weibo', res.err_msg);
+            });
+        });
+    };
+    var _link = "http://dzd.shenhua3688.com/vshop/index.html?sid=881301&uid=17713563&sharefromvsid=$sharefromvsid";
+    if (M.h5Href.indexOf("pagetwo.html") > 0
+       || M.h5Href.indexOf("classlist.html") > 0
+       || M.h5Href.indexOf("brand_index.html") > 0 || M.h5Href.indexOf("my_shop_qrcode.html") > 0) {
+        _link = M.h5Href.replace(/&uid=\d+/ig, "") + "&uid=17713563";
+    }
+    var _share_src = ("" != "" ? "" : "http://web.wddcn.com/dzd/moban/xfc/img/logo3.jpg");
+    if (window.localStorage["vshop_share_img_src881301"] == undefined) {
+        window.localStorage["vshop_share_img_src881301"] = "";
+    }
+    if ("$ShareImg".toString().indexOf("http://") >= 0) {
+        _share_src = "$ShareImg";
+        window.localStorage["vshop_share_img_src881301"] = _share_src;
+    } else if (window.localStorage["vshop_share_img_src881301"].indexOf("http://") >= 0) {
+        _share_src = window.localStorage["vshop_share_img_src881301"];
+    }
+    var _desc = ("1" == "1" ? ("" == "" ? "亲爱的，终于等到您的到来，让我们相聚在茫茫人海，神话生物加拇指营销将会是我们创造神话的平台，在这里我们都是一家人，只有想不到的，没有做不到的，真正的打造在平台消费赚钱的一站式模式，任何产品保证优良，便宜；让我们一起携手，在互联网的海洋中，撑出我们的一片天地！我相信，我们一定能行！" : "") : "亲爱的，终于等到您的到来，让我们相聚在茫茫人海，神话生物加拇指营销将会是我们创造神话的平台，在这里我们都是一家人，只有想不到的，没有做不到的，真正的打造在平台消费赚钱的一站式模式，任何产品保证优良，便宜；让我们一起携手，在互联网的海洋中，撑出我们的一片天地！我相信，我们一定能行！");
+    var _title = "神话集团神话集团";
+    if (M.h5Href.indexOf("pagetwo.html") > 0) {
+        _title = document.title;
+        _desc = "$shareDesc" == "" ? _desc : "$shareDesc";
+        _share_src = "$shareImg" == "" ? _share_src : "$shareImg";
+    }
+
+    //对分享始终为自己的店铺作处理
+  
+    if (location.href.toString().indexOf("/vshop/index.html") > 0 && "$vshop_share_ismyshop" == "1") {
+      
+        if ("$dtMemberShopInfo.vs_id" != "881301") {
+           
+            _link = "http://dzd.shenhua3688.com/vshop/index.html?sid=$dtMemberShopInfo.vs_id&uid=17713563&sharefromvsid=$sharefromvsid";
+           
+            if ("$vshop_share_desc_noismyshop" != "1") {
+                _share_src = ("$dtMemberShopInfo.vs_share" != "" ? "$dtMemberShopInfo.vs_share" : _share_src);
+                _desc = ("1" == "1" ? ("$dtMemberShopInfo.vs_note" == "" ? "亲爱的，终于等到您的到来，让我们相聚在茫茫人海，神话生物加拇指营销将会是我们创造神话的平台，在这里我们都是一家人，只有想不到的，没有做不到的，真正的打造在平台消费赚钱的一站式模式，任何产品保证优良，便宜；让我们一起携手，在互联网的海洋中，撑出我们的一片天地！我相信，我们一定能行！" : "$dtMemberShopInfo.vs_note") : "亲爱的，终于等到您的到来，让我们相聚在茫茫人海，神话生物加拇指营销将会是我们创造神话的平台，在这里我们都是一家人，只有想不到的，没有做不到的，真正的打造在平台消费赚钱的一站式模式，任何产品保证优良，便宜；让我们一起携手，在互联网的海洋中，撑出我们的一片天地！我相信，我们一定能行！");
+                _title = "$dtMemberShopInfo.vs_name";
+
+              
+            } else if ("$drhansShareShop" == "1") {
+                _share_src = ("$drShareShop.vs_share" != "" ? "$drShareShop.vs_share" : _share_src);
+                _desc = ("1" == "1" ? ("$drShareShop.vs_note" == "" ? "亲爱的，终于等到您的到来，让我们相聚在茫茫人海，神话生物加拇指营销将会是我们创造神话的平台，在这里我们都是一家人，只有想不到的，没有做不到的，真正的打造在平台消费赚钱的一站式模式，任何产品保证优良，便宜；让我们一起携手，在互联网的海洋中，撑出我们的一片天地！我相信，我们一定能行！" : "$drShareShop.vs_note") : "亲爱的，终于等到您的到来，让我们相聚在茫茫人海，神话生物加拇指营销将会是我们创造神话的平台，在这里我们都是一家人，只有想不到的，没有做不到的，真正的打造在平台消费赚钱的一站式模式，任何产品保证优良，便宜；让我们一起携手，在互联网的海洋中，撑出我们的一片天地！我相信，我们一定能行！");
+                _title = "$drShareShop.vs_name";
+                document.title = _title;
+               
+            }
+        } else {
+            if ("$drhansShareShop" == "1") {
+                _share_src = ("$drShareShop.vs_share" != "" ? "$drShareShop.vs_share" : _share_src);
+                _desc = ("1" == "1" ? ("$drShareShop.vs_note" == "" ? "亲爱的，终于等到您的到来，让我们相聚在茫茫人海，神话生物加拇指营销将会是我们创造神话的平台，在这里我们都是一家人，只有想不到的，没有做不到的，真正的打造在平台消费赚钱的一站式模式，任何产品保证优良，便宜；让我们一起携手，在互联网的海洋中，撑出我们的一片天地！我相信，我们一定能行！" : "$drShareShop.vs_note") : "亲爱的，终于等到您的到来，让我们相聚在茫茫人海，神话生物加拇指营销将会是我们创造神话的平台，在这里我们都是一家人，只有想不到的，没有做不到的，真正的打造在平台消费赚钱的一站式模式，任何产品保证优良，便宜；让我们一起携手，在互联网的海洋中，撑出我们的一片天地！我相信，我们一定能行！");
+                _title = "$drShareShop.vs_name";
+                document.title = _title;
+               
+            }
+        }
+    } else if (("$vshop_share_desc_noismyshop" == "1" && "$drhansShareShop" == "1") ) {
+      
+        if (("$drShareShop.vs_id" != "881301" && "$drhansShareShop" == "1") ) {
+            _link = "http://dzd.shenhua3688.com/vshop/index.html?sid=$drShareShop.vs_id&uid=17713563&sharefromvsid=$sharefromvsid";
+            _share_src = ("$drShareShop.vs_share" != "" ? "$drShareShop.vs_share" : _share_src);
+            _desc = ("1" == "1" ? ("$drShareShop.vs_note" == "" ? "亲爱的，终于等到您的到来，让我们相聚在茫茫人海，神话生物加拇指营销将会是我们创造神话的平台，在这里我们都是一家人，只有想不到的，没有做不到的，真正的打造在平台消费赚钱的一站式模式，任何产品保证优良，便宜；让我们一起携手，在互联网的海洋中，撑出我们的一片天地！我相信，我们一定能行！" : "$drShareShop.vs_note") : "亲爱的，终于等到您的到来，让我们相聚在茫茫人海，神话生物加拇指营销将会是我们创造神话的平台，在这里我们都是一家人，只有想不到的，没有做不到的，真正的打造在平台消费赚钱的一站式模式，任何产品保证优良，便宜；让我们一起携手，在互联网的海洋中，撑出我们的一片天地！我相信，我们一定能行！");
+            _title = "$drShareShop.vs_name";
+            document.title = _title;
+            
+        }
+    }
+    var shareMsgJson = '{"title":"' + _title + '","desc":"' + _desc + '","link":"' + _link + '","imgsrc":"' + _share_src + '"}';
+    M.jsonp("/vshop/weixin.html?sid=881301&url=" + M.h5Href.replace(/\&/g, "%26"), function (msg) {
+
+        if (msg != undefined) {
+            wx.config({
+                debug: localStorage.Debug == "1",
+                appId: msg.appId,
+                timestamp: msg.timestamp,
+                nonceStr: msg.nonceStr,
+                signature: msg.signature,
+                jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'scanQRCode', 'openAddress']
+            });
+            wx.ready(function () {
+                wx.onMenuShareAppMessage({
+                    title: _title,
+                    desc: _desc,
+                    link: _link,
+                    imgUrl: _share_src,
+                    success: function (res) {
+                        ShareCount();
+                    }
+                });
+                wx.onMenuShareTimeline({
+                    title: _title + _desc,
+                    link: _link,
+                    imgUrl: _share_src,
+                    success: function (res) {
+                        ShareCount();
+                    }
+                });
+            });
+            setTimeout(function () {
+                try {
+                    wxsharecallback();
+                } catch (e) { }
+            }, 500)
+        }
+    });
+
+
+    if (document.addEventListener) {
+        document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+    } else if (document.attachEvent) {
+        document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+        document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+    }
+    function appWeixinShare() {
+        if (location.href.toString().indexOf("/vshop/index.html") > 0) {
+            uexWindow.evaluateScript("main", "0", "appWeixinShare('index','" + shareMsgJson + "')")
+        }
+            
+    }
+
+    function ShareCount() {
+        var url = location.href;
+
+        if (url.indexOf("/vshop/index.html") > 0) {
+            M.jsonp("http://weixin.shenhua3688.com/getwebaward?oper=AwardShare&type=shareTimeline&user_id=$mid&openid=$openid&mid=$mid&aid=1");
+        }
+        M.jsonp("/vshop/visit.html?action=sharecount&sid=881301&url=" + encodeURIComponent(url));
+        M.jsonp("/vshop/async.html?action=task&did=3&sid=881301");
+        M.jsonp("/vshop/async.html?action=share&did=13&sid=881301");
+    }
+</script>
+    <script src="userjs/base_H5.js"></script>   
+    <script>
+        header.title("订单管理");
+
+        header.rightMenu('<a href="user_sales_olist.html"><div class="top_menu_back">活动订单</div></a>');
+        var Olist = {
+            payType: [{"pw_id":"718","pw_name":"支付","pw_pid":"wx72bcc05b4dd3193a","pw_key":"AB214514292121451429212145142921","pw_secretkey":"1309752101","pw_mname":"神话生物","pw_sort":"6","mid":"642","pt_id":"11","pw_ptname":"微信支付V3","pw_partnerId":"","pw_partnerKey":"","pw_status":"1","pw_op_user_id":"1309752101","pw_op_user_pwd":"","pw_pfx_path":"/payment/weixin/paycer/20160316172821_3250.p12","pw_pfx_pwd":"1309752101","pw_test":"0","pw_counter_fee":"0.60","pw_type":"wxshop","pw_sub_mch_id":"","pw_mid":"6"},{"pw_id":"721","pw_name":"现金支付","pw_pid":"","pw_key":"","pw_secretkey":"","pw_mname":"","pw_sort":"5","mid":"642","pt_id":"15","pw_ptname":"现金支付","pw_partnerId":"","pw_partnerKey":"","pw_status":"1","pw_op_user_id":"","pw_op_user_pwd":"","pw_pfx_path":"","pw_pfx_pwd":"","pw_test":"0","pw_counter_fee":"0.00","pw_type":"wxshop","pw_sub_mch_id":"","pw_mid":"0"},{"pw_id":"728","pw_name":"佣金支付","pw_pid":"","pw_key":"","pw_secretkey":"","pw_mname":"","pw_sort":"4","mid":"642","pt_id":"19","pw_ptname":"佣金支付","pw_partnerId":"","pw_partnerKey":"","pw_status":"1","pw_op_user_id":"","pw_op_user_pwd":"","pw_pfx_path":"","pw_pfx_pwd":"","pw_test":"0","pw_counter_fee":"0.00","pw_type":"wxshop","pw_sub_mch_id":"","pw_mid":"0"},{"pw_id":"737","pw_name":"银联支付","pw_pid":"417350553992169","pw_key":"/payment/WapUpowp/paycer/20160405115130_8503.pfx","pw_secretkey":"","pw_mname":"广东神话生物工程有限公司","pw_sort":"3","mid":"642","pt_id":"12","pw_ptname":"银联支付V3","pw_partnerId":"","pw_partnerKey":"","pw_status":"1","pw_op_user_id":"","pw_op_user_pwd":"","pw_pfx_path":"","pw_pfx_pwd":"000000","pw_test":"0","pw_counter_fee":"0.80","pw_type":"wxshop","pw_sub_mch_id":"","pw_mid":"0"},{"pw_id":"868","pw_name":"微信支付","pw_pid":"756132000002","pw_key":"2fbf0e66f2c2b225c451c4d4","pw_secretkey":"","pw_mname":"神话生物","pw_sort":"1","mid":"642","pt_id":"23","pw_ptname":"威富通","pw_partnerId":"","pw_partnerKey":"","pw_status":"1","pw_op_user_id":"756132000002","pw_op_user_pwd":"","pw_pfx_path":"","pw_pfx_pwd":"","pw_test":"0","pw_counter_fee":"0.00","pw_type":"wxshop","pw_sub_mch_id":"","pw_mid":"0"}],
+            pageNum: 1,
+            pageSize: 10,
+            scroll_handle: true,
+            scrolling: false,
+            hasRow: true,
+            hd_back: function () {
+                if (document.referrer.indexOf("center") > 0) {
+                    localStorage.olist_back = "";
+                    $("#hd_back").attr("href", "center.html?sid=881301");
+                }
+                else if (document.referrer.indexOf("cart") || localStorage.olist_back.indexOf("cart")) {
+                    localStorage.olist_back = "cart.html?sid=881301";
+                    $("#hd_back").attr("href", localStorage.olist_back);
+                } else {
+                    $("#hd_back").attr("href", "center.html?sid=881301");
+                }
+            },
+            getList: function () {
+                if (Olist.scroll_handle && Olist.hasRow && !Olist.scrolling) {
+                    Olist.scrolling = true;
+                    Olist.scroll_handle = false;
+                    M.jsonp(M.h5Href + "&action=list&page=" + Olist.pageNum + "&size=" + Olist.pageSize, function (data) {
+                        if (Olist.pageNum == 1 && data.length == 0)
+                            $("#itemList").append('<div class="mod_color_weak mod_nocontent qb_fs_s" style="height: 200px;"><p>没有订单</p><p><a href="/vshop/index.html?sid=881301">返回首页</a></p></div>');
+                        if (data.length == 0) Olist.hasRow = false;
+                        else {
+                            for (var i in data) {
+                                var otype = data[i].order_type, otpn = '', infoUrl = '/vshop/oinfo.html?sid=881301&pay=' + data[i].PayOrder;
+                                if (otype == 'zy') {
+                                    otpn = ' <span style="color:#ff0000">[自营]</span>';
+                                    infoUrl = '/vshop/zy_center_orderinfo.html?sid=881301&pay=' + data[i].PayOrder + "&from=" + escape(window.location.href);
+                                }
+                                var html = ' <div class="mod_cell qb_mb15" id="order'+data[i].PayOrder+'">' +
+                                        '<div class="mod_celltitle">' +
+                                        '<h3 class="qb_fl">订单号：' + data[i].PayOrder + otpn + '</h3>' +
+                                        '<i class="qb_fr qb_icon icon_arrow_right" style="margin-top:-9px;margin-right:18px;"><img src="http://web.wddcn.com/dzd/moban/custom/img/gqrcode.png" onclick="ShowGoodsQrcode(\'' + data[i].PayOrder + '\')" style="width:30px;">&nbsp;&nbsp;</i>' +
+                                                                                '</div>';
+                                if ("1" != "3") {
+                                    for (var j in data[i].Children) {
+                                        html += '<a href="' + infoUrl + '">' +
+                                        '<div class="mod_slider">' +
+                                        '<div class="slider_cnt">' +
+                                        '<ul>' +
+                                        '<li class="single qb_mb10 qb_bfc bfc_f">' +
+                                        '<img width="80" height="80" class="bfc_f" src="' + data[i].Children[j].gi_imgs.replace("300x300", "80x80") + '">' +
+                                        '<div class="bfc_c ">' +
+                                        '<p>' + data[i].Children[j].gi_title + '</p>' +
+                                        '</div>' +
+                                        '</li>' +
+                                        '</ul>' +
+                                        '</div>' +
+                                        '</div>' +
+                                        '</a>';
+                                    }
+                                    if (",0,2,".indexOf(",1,") >= 0 && data[i].store_name != "") {
+                                        html += '<div class="qb_flex qb_mb10 ">' +
+                                        '服务门店:' + data[i].store_name +
+                                        '</div>';
+                                    }
+                                    switch ("1") {
+                                        case "1":
+                                            html += '<div class="qb_flex qb_mb10 ">' + '<select data-pay="' + data[i].PayOrder + '" class="mod_btn btn_block btn_strong flex_box paytype" " ><option value="0">去付款</option>';
+                                            for (var p in data[i].payway) {
+                                                if (data[i].payway[p].pt_id == "8" && M.isWeixinPay() != 1) continue;
+                                                html += '<option value="' + data[i].payway[p].pw_id + '_' + data[i].payway[p].pt_id + '_' + data[i].payway[p].pay_for + '">' + data[i].payway[p].pw_name + '</option>';
+                                            }
+                                            html += '</select>' + '<a class="mod_btn btn_block btn_em flex_box view_log"  onclick="CancelOrder(\'' + data[i].PayOrder + '\',\'' + otype + '\')">取消订单</a>' + '</div>';
+                                            break;
+                                        case "2":
+                                            if (data[i].Pt == "2") {
+                                                html += '<div class="qb_flex qb_mb10 ">' + '<a class="mod_btn btn_block btn_em flex_box view_log"  onclick="CancelOrder(\'' + data[i].PayOrder + '\')">取消订单</a>' + '</div>';
+                                            }
+                                            break;
+                                        case "3":
+                                            if (data[i].Pt != "2") {
+                                                html += '<div class="qb_flex qb_mb10">' + '<a class="mod_btn btn_block btn_em flex_box view_log"  onclick="Take(\'' + data[i].PayOrder + '\',\'' + data[i].Refund + '\')">确认收货</a>' + '</div>';
+                                            }
+                                            break;
+                                        case "4":
+                                            if (data[i].State == "确认收货" && otype != 'zy') {
+                                                
+                                                html += '<div class="qb_flex qb_mb10">' + (data[i].vo_is_comment == "1" ? "<a style='color:#c0c0c0;' onclick='window.location.href = \"mycomment.html?sid=881301\"'>已评价</a>" : '<a class="mod_btn btn_block btn_em flex_box view_log"  onclick="Comment(\'' + data[i].PayOrder + '\')">立即评价</a>') + '</div>';
+                                            }
+                                            break;
+                                    }
+                                    html += '<div class="mod_cell_hr"></div>' +
+                                        '<div class="qb_clearfix qb_fs_s qb_mb10 mod_color_weak">' +
+                                        '<div class="qb_fl">' +
+                                        data[i].State +(data[i].votype=='cstore'?'&nbsp;[线下订单]':'')+
+                                        '</div>' +
+                                        '<div class="qb_fr">总价:<span class="mod_color_strong">￥' + data[i].Total + '</span></div>' +
+                                        '</div>';
+                                } else {
+
+                                    if (otype == 'zy') {
+                                        for (var j in data[i].Children) {
+                                            html += '<a href="' + infoUrl + '">' + '<div class="mod_slider">' + '<div class="slider_cnt">' + '<ul>' + '<li class="single qb_mb10 qb_bfc bfc_f">' + '<img width="80" height="80" class="bfc_f" src="' + data[i].Children[j].gi_imgs.replace("300x300", "80x80") + '">' + '<div class="bfc_c ">' + '<p>' + data[i].Children[j].gi_title + '</p>' + '</div>' + '</li>' + '</ul>' + '</div>' + '</div>' + '</a>';
+                                        }
+
+                                        if ("1" == 3) {
+                                            html += '<div class="qb_flex qb_mb10">'
+                                            + '<a class="mod_btn btn_block btn_em flex_box view_log"  onclick="Take(\'' + data[i].PayOrder + '\',\'' + data[i].Refund + '\',\'' + otype + '\')">确认收货</a>'
+                                            + (data[i].order_delay == "0" && "0" != "0" ? '<a id="delay' + data[i].PayOrder + '" class="mod_btn btn_block btn_strong flex_box view_log" onclick="Delay(\'' + data[i].PayOrder + '\',\'0\',\'' + otype + '\')">延长收货</a>' : '')
+                                            + '</div>';
+                                        }
+                                    }
+
+
+                                    for (var j in data[i].Split) {
+                                        var Split = data[i].Split[j].Children
+                                        if (data[i].Split.length > 1)
+                                            html += '<div class="mod_celltitle" style="font-size:10px">子单编号：' + data[i].Split[j].no + '</div>';
+                                        for (var k in Split) {
+                                            html += '<a href="/vshop/oinfo.html?sid=881301&pay=' + data[i].PayOrder + '">' +
+                                            '<div class="mod_slider">' +
+                                            '<div class="slider_cnt">' +
+                                            '<ul>' +
+                                            '<li class="single qb_mb10 qb_bfc bfc_f">' +
+                                            '<img width="80" height="80" class="bfc_f" src="' + Split[k].gi_imgs.replace("300x300", "80x80") + '">' +
+                                            '<div class="bfc_c ">' +
+                                            '<p>' + Split[k].gi_title + '</p>' +
+                                            '</div>' +
+                                            '</li>' +
+                                            '</ul>' +
+                                            '</div>' +
+                                            '</div>' +
+                                            '</a>';
+                                        }
+
+                                        if (data[i].Pt != "2") {
+                                            if (data[i].Split[j].vr_success == "1") {
+                                                html += '<div class="qb_flex qb_mb10">' +
+                                            '<a class="mod_btn btn_block btn_strong flex_box view_log"  href="/vshop/order_wuliu.html?sid=881301&pay=' + data[i].PayOrder + '">查看物流</a></div>';
+                                                html += '<div class="qb_clearfix qb_fs_s qb_mb10 mod_color_weak">' +
+                                                    '<div class="qb_fl">退款成功' +
+                                                    '</div>' +
+                                                    '</div><div class="mod_cell_hr"></div>';
+                                            }
+                                            else if (data[i].Split[j].deliverdate == "") {
+                                                html += '<div class="qb_flex qb_mb10">' +
+                                            '<a class="mod_btn btn_block btn_strong flex_box view_log"  href="/vshop/order_wuliu.html?sid=881301&pay=' + data[i].PayOrder + '">查看物流</a></div>';
+
+                                                html += '<div class="qb_clearfix qb_fs_s qb_mb10 mod_color_weak">' +
+                                                    '<div class="qb_fl">待发货' +
+                                                    '</div>' +
+                                                    '</div><div class="mod_cell_hr"></div>';
+                                            }
+                                            else if (data[i].Split[j].takedate == "")
+                                                html += '<div class="qb_flex qb_mb10">' +
+                                            '<a class="mod_btn btn_block btn_strong flex_box view_log"  href="/vshop/order_wuliu.html?sid=881301&pay=' + data[i].PayOrder + '">查看物流</a><a class="mod_btn btn_block btn_em flex_box view_log"  onclick="Take(\'' + data[i].Split[j].no + '\',\'' + data[i].Refund + '\')">确认收货</a>' +
+                                            (data[i].Split[j].os_delay == "0" && "0" != "0" ? '<a id="delay' + data[i].Split[j].no + '" class="mod_btn btn_block btn_strong flex_box view_log"  onclick="Delay(\'' + data[i].Split[j].no + '\',\'' + data[i].Refund + '\')">延长收货</a>' : '') +
+                                            '</div>';
+                                            else {
+                                                html += '<div class="qb_flex qb_mb10">' +
+                                            '<a class="mod_btn btn_block btn_strong flex_box view_log"  href="/vshop/order_wuliu.html?sid=881301&pay=' + data[i].PayOrder + '">查看物流</a></div>';
+
+                                                html += '<div class="qb_clearfix qb_fs_s qb_mb10 mod_color_weak">' +
+                                                    '<div class="qb_fl">已收货' +
+                                                    '</div>' +
+                                                    '</div><div class="mod_cell_hr"></div>';
+                                            }
+                                        }
+                                    }
+
+                                    if (",0,2,".indexOf(",1,") >= 0 && data[i].store_name != "") {
+                                        html += '<div class="qb_flex qb_mb10 ">' +
+                                        '服务门店:' + data[i].store_name +
+                                        '</div>';
+                                    }
+                                    if (data[i].vo_state == "4") { 
+                                        
+                                    }
+                                    html += '<div class="mod_cell_hr"></div>' +
+                                        '<div class="qb_clearfix qb_fs_s qb_mb10 mod_color_weak">' +
+                                        '<div class="qb_fl">' +
+                                        '</div>' +
+                                        '<div class="qb_fr">总价:<span class="mod_color_strong">￥' + data[i].Total + '</span></div>' +
+                                        '</div>';
+                                }
+
+                                html += '</div>';
+                                $("#itemList").append(html);
+                            }
+                            Olist.pay();
+                        }
+                        Olist.pageNum++;
+                        Olist.scrolling = false;
+                    })
+                }
+            },
+            pay: function () {
+                $(".paytype").bind('change', function () {
+                    var target = $(this);
+                    if (target.val() != "0")
+                        location.href = 'pay.html?sid=881301&pay=' + target.attr("data-pay") + "&type=" + target.val().split('_')[0] + "&pt=" + target.val().split('_')[1] + "&payfor=" + target.val().split('_')[2];
+                });
+            },
+            bindScroll: function () {
+                $(window).bind("scroll", function () {
+                    if (document.body.scrollTop + window.screen.height + 300 >= $("#footer").offset().top) {
+                        Olist.scroll_handle = true;
+                        Olist.getList();
+                    }
+                });
+            },
+            init: function () {
+                Olist.bindScroll();
+                Olist.getList();
+                Olist.hd_back();
+            }
+        };
+        Olist.init();
+
+        function ShowGoodsQrcode(pay) {          
+                var imgQrocde = [];
+                var regx = new RegExp("&", "g");
+                var EncodeUrl = "http://" + window.location.host + "/vshop/index.html?sid=881301&pay="+pay;
+                var imgsrc = "http://" + window.location.host + "/vshop/qrcode.html?action=genqrcode&sid=881301&content=" + encodeURI(EncodeUrl.replace(regx, "^26"));
+                imgQrocde.push(imgsrc);
+                
+                WeixinJSBridge.invoke("imagePreview", {
+                    current: imgsrc,
+                    urls: imgQrocde
+                })
+         }
+
+
+        function Comment(pay) {
+            if (pay.indexOf("-") > 0) {
+                pay = pay.substr(0, pay.indexOf('-'))
+            }
+            location.href = "ocomment.html?sid=881301&o_no=" + pay;
+        }
+        function Take(pay, refund,type) {
+            M._confirm(refund == "1" ? "已有商品正在退款中，确认收货将取消已有的退款申请，是否继续收货" : "确定收货吗?", ["取消", ""], ["确定", ""], function () {
+                M.jsonp(M.h5Href + "&action=take&pay=" + pay + "&type=" + type, function (data) {
+                    switch (data.state) {
+                        case 0:
+                            M._alert("确认收货失败");
+                            break;
+                        case 1:
+                            M._alert("确认收货成功", function () {
+                                Comment(pay);
+                            });
+                            break;
+                        case 2:
+                            M._alert("确认收货成功", function () {
+                                location.reload()
+                            });
+                            break;
+                    }
+                })
+            });
+        }
+        function CancelOrder(pay, type) {
+            M._confirm("确定取消订单吗?", ["取消", ""], ["确定", ""], function () {
+                M._loading();
+                M.jsonp(M.h5Href + "&action=cancel&pay=" + pay + "&type=" + type, function (data) {
+                    M._loading(true);
+                    switch (data.state) {
+                        case 0:
+                            M._alert("取消失败");
+                            break;
+                        case 1:
+                            M._alert("取消成功", function () { location.reload(); });
+                    }
+                })
+            });
+        }
+        function Delay(pay, refund, type) {
+            M._confirm("订单将在原时间上增加0天后自动确认收货，确认延长收货时间？", ["取消", ""], ["确定", ""], function () {
+                M.jsonp(M.h5Href + "&action=delay&pay=" + pay + "&type=" + type, function (data) {
+                    if (data == 0) {
+                        M._alert("延长失败");
+                    } else {
+                        $("#delay" + pay).remove();
+                        M._alert("延长成功");
+                    }
+                })
+            });
+        }
+    </script>
+</body>
+</html>

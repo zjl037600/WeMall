@@ -1,0 +1,230 @@
+@CHARSET "UTF-8";
+
+html {
+    background: none repeat scroll 0 0 #efeff4;
+}
+*:not(.js-show-more-btn){
+    box-sizing: border-box;
+}
+.register header img {
+    width: 100%;
+}
+.register section {
+    padding: 12px 12px 0;
+}
+.register_tips {
+    background: none repeat scroll 0 0 #fff;
+    border-radius: 5px 5px 0 0;
+    display: none;
+    padding-left: 10px;
+    width: 100%;
+}
+.register_tips > a {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #d3d7db;
+    border-image: none;
+    border-style: solid;
+    border-width: 0 0 1px;
+    color: #434a54;
+    display: block;
+    font-size: 13px;
+    line-height: 20px;
+    padding: 15px 10px 15px 0;
+}
+.register_tips > .table {
+    display: table;
+    padding-left: 5px;
+    position: relative;
+    text-align: left;
+    width: 100%;
+}
+.register_tips > .table > div {
+    display: table-cell;
+    vertical-align: middle;
+}
+.register_tips > .table:before {
+    content: "*";
+    left: 0;
+    position: absolute;
+    top: 16px;
+}
+.register_tips > a:first-child {
+    font-size: 14px;
+    font-weight: bold;
+}
+.register_tips > a .step {
+    color: #f44456;
+}
+.register_tips > a .adron {
+    color: #f44456;
+    padding-left: 5px;
+    width: 55px;
+}
+.register_tips > a .adron.sure {
+    background: url("../images/sure.png") no-repeat scroll center center / 20px auto rgba(0, 0, 0, 0);
+    width: 20px;
+}
+.register_tips > a .adron > span {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #f44456 #f44456 -moz-use-text-color -moz-use-text-color;
+    border-image: none;
+    border-style: solid solid none none;
+    border-width: 1px 1px medium medium;
+    display: block;
+    float: right;
+    height: 8px;
+    margin-top: 6px;
+    width: 8px;
+}
+.btn {
+    background: none repeat scroll 0 0 #ff2c4a;
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    line-height: 38px;
+    text-align: center;
+}
+.btn.gray {
+    background: none repeat scroll 0 0 #a6a6a6;
+    color: #fff;
+    font-size: 14px;
+    line-height: 40px;
+    margin-left: -10px;
+    padding: 0;
+}
+.register_info {
+    background: none repeat scroll 0 0 #fff;
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+}
+.register_info .line {
+    font-size: 14px;
+    height: 50px;
+    padding: 0 10px;
+    position: relative;
+}
+.register_info .line.title {
+	padding-top:15px;
+	line-height:20px;
+}
+.register_info .line input,textarea {
+    background: none repeat scroll 0 0 #efefef;
+    border: medium none;
+    border-radius: 5px;
+    font-size: 14px;
+    height: 40px;
+    line-height: 20px;
+    padding: 10px;
+    width: 100%;
+}
+.register_info .line select {
+    background: none repeat scroll 0 0 #55bbff;
+    border: medium none;
+    border-radius: 5px;
+    font-size: 14px;
+    height: 40px;
+    line-height: 20px;
+    padding: 10px;
+    width: 100%;
+}
+.register_info .line.code input {
+    padding-right: 100px;
+}
+.register_info .line.code .getcode {
+    background: none repeat scroll 0 0 #fff;
+    border-radius: 5px;
+    color: #333333;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    right: 15px;
+    text-align: center;
+    top: 5px;
+    width: 90px;
+	cursor:pointer;
+}
+.register .desc {
+    background: none repeat scroll 0 0 #fff;
+    border-radius: 0 0 5px 5px;
+    list-style: outside none none;
+    margin-top: 15px;
+    overflow: hidden;
+    padding: 0 10px;
+    width: 100%;
+}
+.register .desc li {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #d3d7db;
+    border-image: none;
+    border-style: solid;
+    border-width: 0 0 1px;
+    float: left;
+    min-height: 80px;
+    padding: 11px 0 11px 76px;
+    position: relative;
+    width: 100%;
+}
+.register .desc li:last-child {
+    border: 0 none;
+}
+.register .desc li .icon {
+    background: url("../images/icon.png") no-repeat scroll 9px -3px / 32px auto #f4bb13;
+    border-radius: 50%;
+    height: 50px;
+    left: 8px;
+    position: absolute;
+    top: 15px;
+    width: 50px;
+}
+.register .desc li .icon.red {
+    background: url("../images/icon.png") no-repeat scroll 9px -88px / 32px auto #f26f3f;
+}
+.register .desc li .icon.blue {
+    background: url("../images/icon.png") no-repeat scroll 11px -173px / 32px auto #2e6dcc;
+}
+.register .desc li .icon.green {
+    background: url("../images/icon.png") no-repeat scroll 0px -20px / 50px auto;
+}
+.register .desc li span {
+    display: block;
+}
+.register .desc li span.title {
+    font-size: 15px;
+    font-weight: bold;
+    padding-bottom: 6px;
+}
+.register .desc li label {
+    color: #666666;
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+}
+.error[data-widget="widget_alert"] div.widget_wrap > div.widget_body {
+    color: #ff2c4a;
+}
+.error[data-widget="widget_alert"] div.widget_wrap > div.widget_footer > ul > li > button {
+    color: #ff2c4a;
+}
+a:hover{
+	color:white;
+}
+
+#right-icon .show-more-btn{
+	background-position: 2px -1px  !important;
+}
+
+.bottom_custom{
+	height:90px;
+}
+.js-right-icon.icon-hide.show{
+	width:170px !important;
+}
