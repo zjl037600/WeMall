@@ -475,7 +475,7 @@ var B = function (DOM) {
 }
 
 var M = {
-    baseUrl: "/vshop/1/H5",
+    baseUrl: "/restful",
     h5Href: location.href.indexOf('#') >= 0 ? location.href.substr(0, location.href.indexOf('#')) : location.href,
     h5Vshop: "http://" + location.host + "/vshop",
     version: 201402141327,
@@ -502,8 +502,8 @@ var M = {
     jsonp: function (href, _callback, _err) {
         var date_start = new Date(); /*局部*/
         var _t = date_start.getTime() + "_" + Math.random().toString().substr(2); /*后缀防重复*/
-        var a = "jsonpcallback_" + _t; /*全局 避免重复*/
-        var b = "interval_" + _t; /*全局 避免重复 循环处理*/
+        /*var a = "jsonpcallback_" + _t; 全局 避免重复*/
+        /*var b = "interval_" + _t; /*全局 避免重复 循环处理
         window[a] = function (json) {
             window[a] = undefined;
             _callback && _callback(json);
@@ -512,16 +512,18 @@ var M = {
             if (new Date() - date_start > 8000) {
                 clearInterval(window[b]);
                 _err && _err();
-                //console.log("-------------------" + href + "网络不给力，一会再试试吧");
+                console.log("-------------------" + href + "网络不给力，一会再试试吧");
             }
         }, 100);
-        M.loadScript(href + (href.indexOf("?") == -1 ? "?callback=" : "&callback=") + a, function () {
-            /*
+        */
+        /*M.loadScript(href + (href.indexOf("?") == -1 ? "?callback=" : "&callback=") + a, function () {
+            
             如果地址不对 不会触发onload事件 也就不考虑了
             如果地址对 并且 已经加载了 那就是已经返回值了
-            */
+            
             clearInterval(window[b]);
         });
+        */
     },
     ajax: function (url, data, callback, error_callback, method, async) {
         var request = new XMLHttpRequest();
