@@ -1,0 +1,18 @@
+body {
+    text-align: center;
+	
+	padding: 24px;
+	margin:0;
+	color:black;
+    background-color: #edf0f4;
+	font-family:helvetic, arial, sans-serif;
+    font-size:12px;
+	font-weight:bold;
+    /*display: none;*/
+}
+.myinput {
+	
+	padding: 0px;
+	margin:0;
+    /*display: none;*/
+}
