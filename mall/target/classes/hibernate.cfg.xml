@@ -26,8 +26,6 @@
 		
 		<!-- 会员信息 -->
         <mapping resource="vip_file.hbm.xml" />
-        <!-- 会员信息 -->
-        <mapping resource="vip_file_one.hbm.xml" />
         <!-- 商品信息 -->
         <mapping resource="commodity.hbm.xml" />
         <!-- 订单信息 -->
