@@ -9,8 +9,9 @@
 <meta content="black" name="apple-mobile-web-app-status-bar-style" />
 <meta name="format-detection" content="telephone=no" />
 <link rel="shortcut icon" href="userImage/Ico.ico" type="image/x-icon">
-<script src="userjs/common.js?v=20140925" type="text/javascript"></script>
+<script src="userjs/customerprofile.js"></script>
 <script src="userjs/base_H5.js?v=20160130"></script>
+<script src="userjs/jquery-1.9.1.min.js?v=1"></script>
 <script>
     var Global = {
         payDomain:"pay.shenhua3688.com",
@@ -65,7 +66,7 @@ var _hmt = _hmt || [];
     <link rel="stylesheet" type="text/css" href="usercss/base.css" />
     <link rel="stylesheet" type="text/css" href="usercss/cart.css" />
 </head>
-<body>
+<body onload="userprofileload();">
 <!DOCTYPE html>
 <html>
 <head>
@@ -80,7 +81,7 @@ var _hmt = _hmt || [];
 .v_header{width:100%;height:45px;} .v_header .vv_header{width:100%;height:45px;line-height:45px; text-align:center;color:#fff;font-size:18px; background-color:#19993d;}.v_header .vv_header.fixed{ position:fixed;z-index:999999999;top:0px;} 
 .vv_header .topbar_back{  position:absolute;left:0px;width:55px;line-height:45px;} .vv_header .topbar_back .icon_back{width:14px;height:20px;margin-top: 14px; background:url(/moban/custom/img/button_back.png) no-repeat; background-size:100%;;} .top_menu_back{position:absolute;z-index:2;right:0px;width:85px;line-height:45px;}  .top_menu_back_back{position:absolute;z-index:1;right:0px;width:85px;line-height:45px;background-color: #000;opacity: 0.1;}  .v_header_right_menu a{color:#fff;}
 </style>
-<body>
+<body >
     <div id="v_header" class="v_header" style="display:none;">
         <div class="vv_header">
             <a id="v_header_reback" href="javascript:history.go(-1);">
@@ -172,60 +173,27 @@ var _hmt = _hmt || [];
     function gotoEditPhoto() {window.location.replace("cutting.html?sid=881301&ref=" + escape(window.location.href)); }
 </script>
 <ul>
-<li><label>昵称</label>好好好</li>
-<li><label>真实姓名</label></li>
-<li><label>性别</label>保密</li>
-<li><label>生日</label></li>
+<li><label >昵称</label><span id = "nikename">zhangzhangzhang</span></li>
+<li><label id = "name">真实姓名</label><span id = "realname">zhangzhangzhang</span></li>
+<li><label id = "sex">性别</label><span id = "sex">男</span></li>
+<li><label id = "birthday">生日</label><span id = "birthday">1980年12月5日</span></li>
 </ul>
 </div>
 <div class="mybox">
 <ul>
-<li><label>联系方式</label></li>
-<li><label>微信</label></li>
-<li><label>QQ</label></li>
-<li><label>邮箱</label></li>
-<li><label>职业</label></li>
-<li><label>地区</label>  </li>
+<li><label id = "phone">联系方式</label><span id = "phone">13445365465</span></li>
+<li><label id = "wechatid">微信</label><span id = "wechatid">ewtrt566767</span></li>
+<li><label id = "qqid">QQ</label><span id = "qqid">4353466</span></li>
+<li><label id = "email">邮箱</label><span id = "email">2323@qq.com</span></li>
+<li><label id = "job">职业</label><span id = "job">teacher</span></li>
+<li><label id = "place">地区</label><span id = "place">上海浦东新区惠南镇公园新村4栋604</span></li>
 </ul>
-       </div>
+</div>
 <style>
 .usertags span{padding: 3px 5px; text-align: center; line-height: 20px; display: inline-block; background: #D6D2D2;margin-right: 5px;overflow: hidden;}
 </style>
-<div class="mybox">
-<ul>
-<li><label>手机绑定</label>123456789</li>
-<li><label>微信绑定</label>o4111111111xqKxRsg</li>
-<li><label>关注公众号</label>已关注</li>
-<li><label>注册时间</label>2016/6/20 7:28:49</li>
-<li><label>所属店铺</label>神话集团神话集团 【sh00243793】</li>
-<li><label>所属门店</label></li>
-<li><label>我的标签</label></li>
 
-
-
-
-</ul>
-</div>
-
-
-    <div class="mybox">
-<ul><li style="height:50px;line-height:25px;">
-    <a href="user_weixinbinding.html">
-        <center>                   
-            <div class="title">
-                                账号绑定</div>
-                            <div class="stip">
-                                微信登录绑定</div>
-                <img src="userImage/c6.png" style="width: 30px; margin-top:-40px;
-                position: absolute; left: 30%;" />
-        </center>
-    </a>
-    </li>
-    </ul>
-</div>
     
-   <div id="LoginOut" onclick="LoginOut()" style="border-radius:6px;  background:#F54140; color:#fff;display:block; padding:12px; text-align:center; margin:30px 10px 10px 10px; font-size:1.8em">
-            退出登录</div>
 <script type="text/javascript">
     header.title("个人信息");
 

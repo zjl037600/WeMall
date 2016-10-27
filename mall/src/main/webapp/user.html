@@ -120,23 +120,14 @@
        .shine_white{ border-radius:70px; -webkit-animation-name: shineWhite;   -webkit-animation-duration: 3s;  -webkit-animation-iteration-count: infinite;   }  
       @-webkit-keyframes  shineWhite {  from { -webkit-box-shadow: 0 0 8px #bbb; }  50% { -webkit-box-shadow: 0 0 16px #ffffff; }  to { -webkit-box-shadow: 0 0 8px #bbb; }  }  
     </style>
-    <script src="userjs/jquery-1.9.1.min.js?v=1"></script>
-        <script src="userjs/sjb_script.js?v=13"></script>
+
     <style type="text/css">
          @men{} .main{width:58%;margin:0 auto}.item1{height:150px;position:relative;padding:0px;text-align:center;-webkit-transition:top 1.2s linear;transition:top 1.2s linear}.item1 .kodai{position:absolute;bottom:0;cursor:pointer}.item1 .kodai .full{display:block}.item1 .kodai .empty{display:none}.item1 .clipped-box{display:none;position:absolute;bottom:40px;left:50%;height:100%;width:100%}.item1 .clipped-box img{position:absolute;top:auto;left:0;bottom:0;-webkit-transition:-webkit-transform 1.4s ease-in,background .3s ease-in;transition:transform 1.4s ease-in}
     </style>
+    <script src="userjs/jquery-1.9.1.min.js?v=1"></script>
+        <script src="userjs/sjb_script.js?v=13"></script>    
     </head>
 <body style="" onload="WechatIdLoad();">
-<script type="text/javascript">
-    var storage = localStorage;
-    var WechatId;	
-    // 读取WechatId
-    function WechatIdLoad() {
-	    window.localStorage.setItem("WechatId", "1234567890wertyuiosdfghj");
-	    WechatId = window.localStorage.getItem("WechatId");
-		window.alert(WechatId);
-    }
-</script>
     <div id="vip_card_explain" onclick="hideCardExplain()" style="width: 100%; height: 100%;
         position: fixed; left: 0px; top: 0px; background-color: #fff; z-index: 99999999;
         font-size: 14px; display: none;">
@@ -251,7 +242,19 @@
         </div>
     </div>
     <div style="height:39px;width:100%;"></div>
-
+    <div class="tabtype tabtype_shop" style="width: 100%; margin-top: -39px; display: none">
+                <center>
+            <i id="result_ico" class="tmt-result-page__icon tmt-result-page__icon_notice" style="margin-top: 50px;">
+            </i>
+            <div class="tmt-result-page__text">
+                您还未申请开店</div>
+            <div id="dv_result" style="margin-top: 35px; font-size: 16px;">
+                <div style="width: 200px; height: 32px; line-height: 32px; background-color: #389eff;
+                    border-radius: 5px; text-align: center; color: #fff;" onclick="location.href='/vshop/regshop.html?sid=881301'">
+                    立即申请</div>
+            </div>
+        </center>
+            </div>
     <div class="tabtype tabtype_center" style="width: 100%; display: none;">
         <div class="top_bar_tab" style="height: 55px; line-height: 20px;">
             <div class="tab">
@@ -361,7 +364,36 @@
                         </div>
                     </div>
                 </li>
-
+                <li onclick="goto('user_foot_print.html')">
+                    <div class="div">
+                        <img src="userImage/c9.png" class="ico" />
+                        <div style="text-align: left;">
+                            <div class="titlenull">
+                                我的足迹
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--<li onclick="goto('/vshop/userbinding.html?sid=881301')">
+                    <div class="div">
+                        <img src="userImage/c6.png" class="ico" />
+                        <div style="text-align: left;">
+                            <div class="title">
+                                账号绑定</div>
+                            <div class="stip">
+                                微信登录绑定</div>
+                        </div>
+                    </div>
+                </li>-->
+                <li onclick="goto('user_favorate.html')">
+                    <div class="div">
+                        <img src="userImage/c8.png" class="ico" />
+                        <div style="text-align: left;">
+                            <div class="titlenull">
+                                我的收藏</div>
+                        </div>
+                    </div>
+                </li>
                 <li onclick="goto('user_pwd.html')">
                     <div class="div">
                         <img src="userImage/c4.png" class="ico" />
@@ -372,7 +404,16 @@
                             </div>
                         </div>
                     </div>
-                </li>     
+                </li>
+                <!--<li onclick="goto('/vshop/myshop.html?sid=881301')">
+                    <div class="div">
+                        <img src="userImage/c5.png" class="ico" />
+                        <div style="text-align: left;">
+                            <div class="titlenull">
+                                我的店铺</div>
+                        </div>
+                    </div>
+                </li>-->      
 
                 <li onclick="goto('user_addr.html')">
                     <div class="div">
@@ -396,13 +437,67 @@
                         </div>
                     </div>
                 </li>
+                <!--
+                 <li onclick="gotoNearStore()">
+                    <div class="div">
+                        <img src="userImage/c7.png" class="ico" />
+                        <div style="text-align: left;">
+                            <div class="titlenull">
+                                附近门店
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                   <li onclick="goto('/vshop/cutpricelist.html?sid=881301')">
+                    <div class="div">
+                        <img src="userImage/a6.png" class="ico" style="margin-top:5px;" />
+                        <div style="text-align: left;">
+                            <div class="titlenull">
+                                活动订单
+                                    <div class="stip">砍价拼团秒杀夺宝</div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                -->
             </ul>
         </div>
         <div style="clear: both; height: 15px; background-color: #FBF8F8;">
         </div>
-
+        <div class="tool_store_bar hide">
+            <div style="height: 35px; line-height: 35px; background-color: #FDF8F8;">
+                <a id="store_title" href="javascript:gotoNearStore()">&nbsp;&nbsp;所属门店信息</a>&nbsp;&nbsp;<a href="javascript:doPosition();" title="定位"style="float:right;font-family:@华文彩云;font-size:12px;font-weight:bold;"><img src="/moban/xfc/img/icon_dw.jpg" alt="点击定位" class="icon" style="width:20px;height:20px;"  />点击定位&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
+            <ul>
+                <li onclick="toStoreInfo()">
+                    <div class="icon_store storehome" style="margin-top: 12px;">
+                    </div>
+                    <div class="icon_right">
+                    </div>
+                    <span id="div_store_name"></span> </li>
+                <li onclick="toDh()">
+                    <div class="icon_store storeaddr">
+                    </div>
+                    <div class="icon_right">
+                    </div>
+                    <span id="div_store_addr" class="shenglue" style="width: 15em;"></span>
+                </li>
+                <li>
+                    <div class="icon_store storephone">
+                    </div>
+                    <div class="icon_right">
+                    </div>
+                    <span id="div_store_phone"><a href="tel:">
+                        &nbsp;</a></span> </li>
+            </ul>
+            <div style="height: 15px;">
+            </div>
+        </div>
         
-
+        <div id="div_area_change" style="display:none;font-size:14px;">
+        <div style="height:5px;"></div>
+        <center>当前地区：<span id="lbl_city">总部</span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="near_node_shop_list.html?sid=881301&openid=$openid&ref=/vshop/index.html?sid=881301" style="color:#0316F5;">切换地区</a></center>
+        </div>
         
         <center>
             <div class="LoginOut" id="LoginOut" onclick="LoginOut()">
@@ -419,8 +514,6 @@
 <script src="userjs/manager.js?v=17"></script>
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=vI53Lfnts9X9nYMg76eCgSEm"></script>
 <script src="userjs/fastclick.js?v=11"></script>
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -1282,3 +1375,19 @@ var Manager = {
     //#endregion
 </script>
 </html>
+<script type="text/javascript">
+    var storage = localStorage;
+    var WechatId;	
+    // 读取WechatId
+    function WechatIdLoad() {
+	    window.localStorage.setItem("WechatId", "1234567890wertyuiosdfghj");
+	    WechatId = window.localStorage.getItem("WechatId");
+	    $(document).ready(function() {
+	    	$.get("/restful/mall/savetestfour", function(data,
+				status) {
+	    		$("div.nickname span#lbl_my_name").html(data);
+	    		$("div.nickname span#lbl_vmname").html(data);
+		});
+	    });
+    }
+</script>

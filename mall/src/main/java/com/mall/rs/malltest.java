@@ -82,6 +82,7 @@ public class malltest {
 	@GET
 	@Path("savetestfour")
 	public String saveTestFour() {
+		/*
 		String sql = "delete from vip_file where vip_Name = 'TestName3'";
 		try {
 			execSQL(sql);
@@ -89,6 +90,8 @@ public class malltest {
 			return "Save Test Four Fail";
 		}
 		return "Save Test Four Success";
+		*/
+		return "test";
 	}
 
 	@GET

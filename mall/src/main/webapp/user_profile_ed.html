@@ -9,8 +9,9 @@
 <meta content="black" name="apple-mobile-web-app-status-bar-style" />
 <meta name="format-detection" content="telephone=no" />
 <link rel="shortcut icon" href="userImage/Ico.ico" type="image/x-icon">
-<script src="userjs/common.js?v=20140925" type="text/javascript"></script>
+<script src="userjs/customerprofile.js"></script>
 <script src="userjs/base_H5.js?v=20160130"></script>
+<script src="userjs/jquery-1.9.1.min.js?v=1"></script>
 <script>
     var Global = {
         payDomain:"pay.shenhua3688.com",
@@ -192,7 +193,7 @@ var _hmt = _hmt || [];
                     昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：
                 </td>
                 <td>
-                    <input id="Js_name" type="text" value="好好好" class="input" />
+                    <input id="nikename" type="text" value="好好好" class="input" />
                 </td>
             </tr>
             <tr>
@@ -200,7 +201,7 @@ var _hmt = _hmt || [];
                     真实姓名：
                 </td>
                 <td>
-                    <input id="Js_realname" type="text" value="" class="input" />
+                    <input id="realname" type="text" value="" class="input" />
                 </td>
             </tr>
             <tr>
@@ -208,7 +209,7 @@ var _hmt = _hmt || [];
                     性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：
                 </td>
                 <td>
-                    <select id="Js_sex" class="input"><option value=""></option>
+                    <select id="sex" class="input"><option value=""></option>
                         <option value="2">保密</option>
                         <option value="1">先生</option>
                         <option value="0">女士</option>
@@ -247,7 +248,7 @@ var _hmt = _hmt || [];
                     联系方式：
                 </td>
                 <td>
-                    <input id="Js_phone" type="text" value="" class="input" />
+                    <input id="phone" type="text" value="" class="input" />
                 </td>
             </tr>
             <tr>
@@ -255,7 +256,7 @@ var _hmt = _hmt || [];
                     微&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;信：
                 </td>
                 <td>
-                    <input id="Js_weixin" type="text" value="" class="input" />
+                    <input id="wechatid" type="text" value="" class="input" />
                 </td>
             </tr>
             <tr>
@@ -263,7 +264,7 @@ var _hmt = _hmt || [];
                     Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q：
                 </td>
                 <td>
-                    <input id="Js_qq" type="text" value="" class="input" />
+                    <input id="qqid" type="text" value="" class="input" />
                 </td>
             </tr>
             <tr>
@@ -271,7 +272,7 @@ var _hmt = _hmt || [];
                     邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：
                 </td>
                 <td>
-                    <input id="Js_email" type="text" value="" class="input" />
+                    <input id="email" type="text" value="" class="input" />
                 </td>
             </tr>
             <tr>
@@ -279,7 +280,7 @@ var _hmt = _hmt || [];
                     职&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业：
                 </td>
                 <td>
-                    <input id="Js_profession" type="text" value="" class="input" />
+                    <input id="job" type="text" value="" class="input" />
                 </td>
             </tr>
             <tr>
@@ -387,6 +388,8 @@ var _hmt = _hmt || [];
         });
 
         function saveInfo() {
+		    userprofilesave();
+		    /*
             var frmObj = new Object();
             frmObj['uid'] = '17713563';
             frmObj['photo'] = $('#Js_photo').attr('src');
@@ -439,7 +442,7 @@ var _hmt = _hmt || [];
                         alert(result == "" ? '修改失败' : result);
                     }
                 }
-            })
+            })*/
         }
         //鞋码，服装码，标签
         $(function () {
