@@ -1,5 +1,6 @@
 ﻿   var WechatId;	
 	var customer = {
+		name:"OK",
 	    nikename:"OK",
 		realname:"OKOK1",
 		sex:"男",
@@ -12,9 +13,10 @@
 		place:"中国陕西省西安市高新区科技二路",			
 		};	
 	
+		
 	function createcustomer(name) {
         var s = Object.create(customer);
-        s.nikename = "First";
+        s.name = "First";
         return s;
     }
 	
@@ -107,6 +109,66 @@
 		    alert('恭喜您，资料修改成功'); window.location.replace('user_profile.html');
 		}else{
 			alert(result == "" ? '修改失败' : result);
-		}
-			
+		}		
+    }
+		
+	function createcustomeraddr(name) {
+        var s = Object.create(customer);
+        s.name = "First";
+        return s;
     }	
+
+    function useraddrsave() {
+		
+		var useraddr = createcustomeraddr();		
+		useraddr.name = $("#nam").val();
+		useraddr.tele = $("#tele").val();
+		useraddr.country = $("#country").val();		
+		useraddr.province = $("#province").val();	
+		useraddr.city = $("#city").val();	
+		useraddr.district = $("#district").val();
+		useraddr.town = $("#town").val();
+		useraddr.detail_add = $("#detail_add").val();	
+		useraddr.def = ($("#def").checked)?1:0;
+
+	    var jsonuser = JSON.stringify(useraddr);						
+		
+	    window.localStorage.setItem("def_address1", useraddr.def);
+	    window.localStorage.setItem("detail_address1", jsonuser);	
+
+	    window.localStorage.setItem("def_address2", 0);
+	    window.localStorage.setItem("detail_address2", jsonuser);	
+
+	    window.localStorage.setItem("def_address3", 0);
+	    window.localStorage.setItem("detail_address3", jsonuser);		
+			
+		var def = 0;
+		var jsonuser2;
+		def = window.localStorage.getItem("def_address1");
+		jsonuser2 = window.localStorage.getItem("detail_address1");	
+
+		def = window.localStorage.getItem("def_address2");
+		jsonuser2 = window.localStorage.getItem("detail_address2");
+
+		def = window.localStorage.getItem("def_address3");
+		jsonuser2 = window.localStorage.getItem("detail_address3");		
+    }
+	
+	function useraddrload() {
+		
+		var def = 0;
+		var jsonuser2;
+		def = window.localStorage.getItem("def_address1");
+		jsonuser2 = window.localStorage.getItem("detail_address1");
+
+		var useraddr = createcustomeraddr();
+		useraddr.def = get_address1.def;		
+		useraddr = JSON.parse(get_address1.detail_addr);		
+		
+		$("span#place").html(useraddr.country 
+		                   + useraddr.province + "省" 
+						   + useraddr.city 
+						   + useraddr.district 
+						   + useraddr.town 
+						   + useraddr.detail_add);
+    }
